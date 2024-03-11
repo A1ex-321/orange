@@ -15,16 +15,14 @@ use App\Http\Controllers\Web\LoginController;
 use App\Http\Controllers\Web\RegisterController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\GalleryController;
-use App\Http\Controllers\Web\ProductDetailsController;
-use App\Http\Controllers\web\CartController;
-use App\Http\Controllers\web\CheckoutController;
-use App\Http\Controllers\web\OrderDetailsController;
+
 use App\Http\Controllers\Admin\FranchiseController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\DemoController;
 use App\Http\Controllers\Admin\ScoController;
 use App\Http\Controllers\Machine\MachineController;
 use App\Http\Controllers\Admin\MachineController1;
+use App\Http\Controllers\Enterprice\EnterpriceController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SitemapController;
 
@@ -165,8 +163,9 @@ Route::get('admin/admin/delete/{id}', [AdminController::class, 'admin_add_delete
 });
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
- Route::get('/', [MachineController::class, 'index']);
- Route::get('/about', [MachineController::class, 'about']);
+ Route::get('/', [EnterpriceController::class, 'index']);
+ Route::get('/about', [EnterpriceController::class, 'about']);
+ 
  Route::get('/service', [MachineController::class, 'service']);
  Route::get('/getservice', [MachineController::class, 'getservice'])->name('getservice');
 
