@@ -26,7 +26,7 @@
                                     <li class="breadcrumb-item active">Dashboard</li>
                                 </ol>
 
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fas fa-plus"></i> Add About service</button>
+                               
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#test" data-whatever="@mdo"><i class="fas fa-plus"></i> Add Service</button>
                             </div>
                         </div>
@@ -35,62 +35,7 @@
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document"> <!-- Added modal-lg class for large width -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add content service</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="{{ route('add-client') }}" method="post" enctype="multipart/form-data">
-                                {{ csrf_field() }}
-                                <div class="row">
-                                    <div class="col-md-6"> <!-- Each input takes half of the row width on medium screens -->
-                                        <div class="form-group">
-                                            <label for="title" class="col-form-label">Title:</label>
-                                            <input type="text" class="form-control" id="title" name="title" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6"> <!-- Each input takes half of the row width on medium screens -->
-                                        <div class="form-group">
-                                            <label for="spantitle" class="col-form-label">Color Title:</label>
-                                            <input type="text" class="form-control" id="spantitle" name="spantitle" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Content</label>
-                                    <textarea class="form-control" id="message-text" name="content" required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Photo:</label>
-                                    <input type="file" class="form-control" id="recipient-name" name="image" required>
-                                </div>
-
-                                <h5 class="modal-title" id="exampleModalLabel">Add ourservice service</h5>
-                                <div class="col-md-12"> <!-- Each input takes half of the row width on medium screens -->
-                                    <div class="form-group">
-                                        <label for="spantitle" class="col-form-label">Service Title</label>:</label>
-                                        <input type="text" class="form-control" id="spantitle" name="servicetitle">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">service content</label>
-                                    <textarea class="form-control" id="message-text" name="servicedescription"></textarea>
-                                </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add</button>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+           
 
             <div class="modal fade" id="test" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -135,125 +80,10 @@
     </div>
 </div>
 
-            <div class="modal fade" id="editModal1" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="editModalLabel">Edit Record</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="editForm1" method="post" enctype="multipart/form-data">
-                                @csrf
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="title" class="col-form-label">Title:</label>
-                                            <input type="text" class="form-control" id="1" name="title" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="spantitle" class="col-form-label">Color Title:</label>
-                                            <input type="text" class="form-control" id="2" name="spantitle" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="content" class="col-form-label">Content</label>
-                                    <textarea class="form-control" id="3" name="content" required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="image" class="col-form-label">Photo:</label>
-                                    <input type="file" class="form-control" id="image" name="image">
-                                </div>
-                                <img src="" alt="Image" id="4" width="100px" height="100px">
-
-                                <h5 class="modal-title" id="exampleModalLabel">Add ourservice </h5>
-                                <div class="col-md-12"> <!-- Each input takes half of the row width on medium screens -->
-                                    <div class="form-group">
-                                        <label for="spantitle" class="col-form-label">Service Title</label>:</label>
-                                        <input type="text" class="form-control" id="servicetitle" name="servicetitle">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">service content</label>
-                                    <textarea class="form-control" id="servicedescription" name="servicedescription"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" id="updateRecord1">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
 
-            <section class="section">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <p style="color: red;">(*First Record only Display.Delete Exists*)</p>
-                                <div class="card-body">
-                                    <h5 class="card-title"> Tables</h5>
-
-
-                                    <!-- Table with stripped rows -->
-                                    <div class="table-responsive">
-                                        <table class="table table-striped datatable">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Title</th>
-                                                    <th>SpanTitle</th>
-                                                    <th>Description</th>
-                                                    <th>Photo</th>
-                                                    <th>#</th>
-                                                    <th>Service Title</th>
-                                                    <th>Service Description</th>
-
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach($getRecord as $value)
-                                                <tr>
-                                                    <td>{{$value->id}}</td>
-                                                    <td>{{$value->title}}</td>
-                                                    <td>{{$value->spantitle}}</td>
-                                                    <td>{{ strlen($value->content) > 50 ? substr($value->content, 0, 50) . '...' : $value->content }}</td>
-
-                                                    <td><img src="{{ asset('public/images/' . $value->image) }}" style="width:100px;height:60px;" alt="Image"></td>
-                                                    <td></td>
-                                                    <td>{{$value->servicetitle}}</td>
-                                                    <td>{{ strlen($value->servicedescription) > 50 ? substr($value->servicedescription, 0, 50) . '...' : $value->servicedescription }}</td>
-
-                                                    <td>
-                                                        <a href="#" class="btn btn-info edit-btn1" data-id="{{ $value->id }}" data-toggle="modal" data-target="#editModal1"><i class="fas fa-edit"></i></a>
-
-                                                        <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/addclient/deleteclient/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                                                    </td>
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-
-
-                                    </div>
-                                    <!-- End Table with stripped rows -->
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
             <section class="section">
                 <div class="container-fluid">
                     <div class="row">

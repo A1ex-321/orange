@@ -162,6 +162,7 @@ Route::get('admin/admin/delete/{id}', [AdminController::class, 'admin_add_delete
 
 });
 
+
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('/', [EnterpriceController::class, 'index']);
  Route::get('/about', [EnterpriceController::class, 'about']);

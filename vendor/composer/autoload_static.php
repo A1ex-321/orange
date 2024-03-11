@@ -657,6 +657,7 @@ class ComposerStaticInit89f8d40b7197778d512a62e79804370b
         'App\\Http\\Controllers\\Admin\\ScoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ScoController.php',
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Enterprice\\EnterpriceController' => __DIR__ . '/../..' . '/app/Http/Controllers/Enterprice/EnterpriceController.php',
         'App\\Http\\Controllers\\Machine\\MachineController' => __DIR__ . '/../..' . '/app/Http/Controllers/Machine/MachineController.php',
         'App\\Http\\Controllers\\SitemapController' => __DIR__ . '/../..' . '/app/Http/Controllers/SitemapController.php',
         'App\\Http\\Controllers\\Web\\CartController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/CartController.php',

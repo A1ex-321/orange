@@ -25,6 +25,7 @@ return array(
     'App\\Http\\Controllers\\Admin\\ScoController' => $baseDir . '/app/Http/Controllers/Admin/ScoController.php',
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\Enterprice\\EnterpriceController' => $baseDir . '/app/Http/Controllers/Enterprice/EnterpriceController.php',
     'App\\Http\\Controllers\\Machine\\MachineController' => $baseDir . '/app/Http/Controllers/Machine/MachineController.php',
     'App\\Http\\Controllers\\SitemapController' => $baseDir . '/app/Http/Controllers/SitemapController.php',
     'App\\Http\\Controllers\\Web\\CartController' => $baseDir . '/app/Http/Controllers/Web/CartController.php',
