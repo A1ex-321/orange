@@ -165,13 +165,26 @@ Route::get('admin/admin/delete/{id}', [AdminController::class, 'admin_add_delete
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('/', [EnterpriceController::class, 'index']);
  Route::get('/about', [EnterpriceController::class, 'about']);
- 
- Route::get('/service', [MachineController::class, 'service']);
+ Route::get('/service', [EnterpriceController::class, 'service']);
+ Route::get('/ceiling', [EnterpriceController::class, 'ceiling']);
+ Route::get('/product', [EnterpriceController::class, 'product']);
+ Route::get('/port', [EnterpriceController::class, 'port']);
+ Route::get('/blog', [EnterpriceController::class, 'blog']);
+ Route::get('/contact', [EnterpriceController::class, 'contact']);
+ Route::get('/singleblog', [EnterpriceController::class, 'singleblog']);
+
+
+
+
+
+
+
+
  Route::get('/getservice', [MachineController::class, 'getservice'])->name('getservice');
 
- Route::get('/blog', [MachineController::class, 'blog']);
- Route::get('/contact', [MachineController::class, 'contact']);
- Route::get('/singleblog', [MachineController::class, 'singleblog']);
+//  Route::get('/blog', [MachineController::class, 'blog']);
+//  Route::get('/contact', [MachineController::class, 'contact']);
+//  Route::get('/singleblog', [MachineController::class, 'singleblog']);
  Route::get('admin', [AuthController::class, 'login']);
  Route::post('admin', [AuthController::class, 'auth_login_admin']);
  Route::get('admin/logout', [AuthController::class, 'logout_admin']);

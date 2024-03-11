@@ -52,6 +52,35 @@ class EnterpriceController extends Controller
         $data['service'] = Machineservice::where('is_service', 0)->get();
         return view('Enterprice.about');
     }
+    public function service()
+    {
+        return view('Enterprice.service');
+    }
+    public function ceiling()
+    {
+        return view('Enterprice.ceiling');
+    }
+    public function product()
+    {
+        return view('Enterprice.product');
+    }
+    public function port()
+    {
+        return view('Enterprice.port');
+    }
+    public function blog()
+    {
+        return view('Enterprice.blog');
+    }
+    public function contact()
+    {
+        return view('Enterprice.contact');
+    }
+    public function singleblog()
+    {
+        return view('Enterprice.singleblog');
+    }
+
 //     public function service()
 //     {
 //         $data['content'] = Machineservice::where('is_service', 0)->get();

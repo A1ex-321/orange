@@ -123,27 +123,27 @@
 
                         </li>
                         <li>
-                            <a href="service.html">Services</a>
+                            <a href="{{ url('/service') }}">Services</a>
 
                         </li>
                         <li>
-                            <a href="falseCeiling.html">false Ceiling</a>
+                            <a href="{{ url('/ceiling') }}">false Ceiling</a>
 
                         </li>
                         <li>
-                            <a href="product.html">products</a>
+                            <a href="{{ url('/product') }}">products</a>
 
                         </li>
                         <li>
-                            <a href="portfolio.html">Portfolio</a>
+                            <a href="{{ url('/port') }}">Portfolio</a>
 
                         </li>
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a href="{{ url('/blog') }}">Blog</a>
 
                         </li>
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="{{ url('/contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->

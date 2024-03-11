@@ -3,6 +3,7 @@
 @section('content')
 
     <div class="breadcrumb-area text-center shadow dark bg-fixed padding-xl text-light" style="background-image: url('{{ asset('public/Enterprice/assets/img/aboutbanner.png') }}');"
+
 >
         <div class="container">
             <div class="breadcrumb-items">
