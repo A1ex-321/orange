@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Enterprice;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 use App\Models\User;
 use App\Models\Gallery;
@@ -11,10 +12,13 @@ use App\Models\Scolink;
 use App\Models\home;
 use App\Models\social;
 use App\Models\about;
-use App\Models\service;
+use App\Models\Port;
+use App\Models\Banner;
+
 use App\Models\soloblog;
 use Illuminate\Support\Facades\Log; // Don't forget to import the Log facade
 use Illuminate\Support\Carbon;
+use App\Models\Product;
 
 
 use App\Models\contacts;
@@ -54,35 +58,51 @@ class EnterpriceController extends Controller
     }
     public function service()
     {
-        $data['getRecord1'] = Machineservice::get();
-
-        return view('Enterprice.service');
+        $data['service'] = Machineservice::where('is_service', 1 )->get();
+// dd($data['service']);
+        return view('Enterprice.service',$data);
     }
     public function ceiling()
     {
         $data['getRecord'] = Ceiling::get();
 
-        return view('Enterprice.ceiling');
+        return view('Enterprice.ceiling',$data);
     }
     public function product()
     {
-        return view('Enterprice.product');
+        $data['getRecord'] = Product::get();
+
+        return view('Enterprice.product',$data);
     }
     public function port()
     {
-        return view('Enterprice.port');
+        $data['getRecord'] = Port::get();
+        return view('Enterprice.port',$data);
     }
     public function blog()
     {
-        return view('Enterprice.blog');
+        $data['getRecord'] = banner::get();
+        return view('Enterprice.blog',$data);
     }
     public function contact()
     {
         return view('Enterprice.contact');
     }
-    public function singleblog()
+    public function singleblog(Request $request, $id)
     {
-        return view('Enterprice.singleblog');
+        try {
+            // Attempt to find the record with the specified ID
+            $user['single'] = banner::findOrFail($id);
+            
+            // Get all blog records (if needed)
+            $user['blog'] = banner::get();
+            
+            // Return the view with the data
+            return view('Enterprice.singleblog', $user);
+        } catch (ModelNotFoundException $e) {
+            // Handle the case where the record with the specified ID is not found
+            return response()->view('errors.404', [], 404);
+        }
     }
 
 //     public function service()

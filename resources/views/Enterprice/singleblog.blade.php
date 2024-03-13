@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <ul class="breadcrumb">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <!-- <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li> -->
                  
                     <li class="active">Blog Details</li>
                 </ul>
@@ -33,30 +33,35 @@
                             <div class="single-item">
                                 <div class="item wow fadeInUp">
                                     <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/about.jpg') }}" alt="Thumb" height="400px" width="100%">
+                                        <img src="{{ asset('public/images/' . $single->singleimage) }}"  alt="Thumb" height="400px" width="100%">
 
-                                        </a>
                                     </div>
                                     <div class="info">
-                                        <!-- <div class="tags">
-                                            <a href="#">Donation</a>
-                                            <a href="#">Poor</a>
-                                        </div> -->
-                                        <!-- <div class="meta">
-                                            <ul>
-                                                <li><i class="fas fa-calendar-alt"></i> 18 Nov, 2020</li>
-                                                <li>By <a href="#">Park Lee</a></li>
-                                            </ul>
-                                        </div> -->
+                                      
                                         <h4>
-                                            <a href="#">Recent Works Showcase</a>
+                                            <a href="#">{{$single->title}}</a>
                                         </h4>
                                         <p>
-                                            We transformed a dull corporate office space into a modern and vibrant work environment. Our team installed sleek gypsum false ceilings with integrated LED lighting, creating a more energy-efficient and aesthetically pleasing atmosphere.
+                                          {{$single->description}}
                                         </p>
                                        
                                     </div>
+                                    <div class="thumb">
+                                    <div class="thumb">
+                                    <div class="thumb">
+    @php
+        // Explode the image_data string by comma and remove empty elements
+        $images = array_filter(explode(',', $single->image_data));
+    @endphp
+    @foreach ($images as $image)
+        <img src="{{ asset('public/images/' . trim($image)) }}" alt="Thumb" width="100%" style="padding-top:15px;">
+    @endforeach
+</div>
+
+</div>
+
+</div>
+
                                 </div>
                             </div>
                          
@@ -75,93 +80,29 @@
                                     <h4>Recent Post</h4>
                                 </div>
                                 <ul>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="blog-single.html">
-                                            <img src="{{ asset('public/Enterprice/assets/img/b1.png') }}" alt="Thumb">
+                                @foreach ($blog as $blog)
+    <li>
+        <div class="thumb">
+            <a href="{{ route('singleblog', ['id' => $blog->id]) }}">
+                <img src="{{ asset('public/images/'.$blog->singleimage) }}" alt="Thumb">
+            </a>
+        </div>
+        <div class="info">
+            <a href="{{ route('singleblog', ['id' => $blog->id]) }}">{{ $blog->title }}</a>
+            <h6 style="color: crimson;">By {{ substr($blog->description, 0, 70) }}{{ strlen($blog->description) > 50 ? '...' : '' }}</h6>
+            <div class="meta-title">
+                <span class="post-date"><i class="fas fa-clock"></i> {{ $blog->created_at->format('d M, Y') }}</span>
+            </div>
+        </div>
+    </li>
+@endforeach
 
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="blog-single.html">What kind of installation process is required for your false ceiling products?</a>
-                                            <h6 style="color: crimson;">By Joes</h6>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 12 Feb, 2023</span>
-                                                
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="blog-single.html">
-                                            <img src="{{ asset('public/Enterprice/assets/img/b2.png') }}" alt="Thumb">
-
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="blog-single.html">Are your false ceiling products fire-resistant or compliant with building safety codes?</a>
-                                            <h6 style="color: crimson;">By Frankilin</h6>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 05 Jul, 2023</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="blog-single.html">
-                                            <img src="{{ asset('public/Enterprice/assets/img/b3.png') }}" alt="Thumb">
-
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="blog-single.html">How do your false ceiling products compare in terms of durability and longevity?</a>
-                                            <h6 style="color: crimson;">By Xaviour</h6>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 29 Aug, 2023</span>
-                                            </div>
-                                        </div>
-                                    </li>
+                                   
                                 </ul>
                             </div>
                          
                             <div class="sidebar-item gallery">
-    <div class="title">
-        <h4>Gallery</h4>
-    </div>
-    <div class="sidebar-info">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('public/Enterprice/assets/img/portfolio5.png') }}" alt="thumb">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('public/Enterprice/assets/img/product.png') }}" alt="thumb">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('public/Enterprice/assets/img/portfolio1.png') }}" alt="thumb">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('public/Enterprice/assets/img/portfolio2.png') }}" alt="thumb">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('public/Enterprice/assets/img/portfolio3.png') }}" alt="thumb">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('public/Enterprice/assets/img/portfolio4.png') }}" alt="thumb">
-                </a>
-            </li>
-        </ul>
-    </div>
+
 </div>
 
                            

@@ -37,52 +37,26 @@
                                     <h4>Recent Post</h4>
                                 </div>
                                 <ul>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="blog-single.html">
-                                            <img src="{{ asset('public/Enterprice/assets/img/b1.png') }}" alt="Thumb">
+                                @foreach($getRecord as $record)
+        <li>
+            <div class="thumb">
+                <a href="blog-single.html">
+                <img src="{{ asset('public/images/'.$record->singleimage) }}" alt="Product Image" >
+                </a>
+            </div>
+            <div class="info">
+            <a href="{{ route('singleblog', ['id' => $record->id]) }}">{{ $record->title }}</a>
 
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="blog-single.html">What kind of installation process is required for your false ceiling products?</a>
-                                            <h6 style="color: crimson;">By Joes</h6>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 12 Feb, 2023</span>
-                                                
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="blog-single.html">
-                                            <img src="{{ asset('public/Enterprice/assets/img/b2.png') }}" alt="Thumb">
-
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="blog-single.html">Are your false ceiling products fire-resistant or compliant with building safety codes?</a>
-                                            <h6 style="color: crimson;">By Frankilin</h6>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 05 Jul, 2023</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thumb">
-                                            <a href="blog-single.html">
-                                            <img src="{{ asset('public/Enterprice/assets/img/b3.png') }}" alt="Thumb">
-
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <a href="blog-single.html">How do your false ceiling products compare in terms of durability and longevity?</a>
-                                            <h6 style="color: crimson;">By Xaviour</h6>
-                                            <div class="meta-title">
-                                                <span class="post-date"><i class="fas fa-clock"></i> 29 Aug, 2023</span>
-                                            </div>
-                                        </div>
-                                    </li>
+                <h6 style="color: crimson;">By {{ $record->description }}</h6>
+                <div class="meta-title">
+                    <span class="post-date"><i class="fas fa-clock"></i> {{ $record->created_at->format('d M, Y') }}</span>
+                    <!-- Adjust the date format as needed -->
+                </div>
+            </div>
+        </li>
+    @endforeach
+                                    
+                                    
                                 </ul>
                             </div>
                           

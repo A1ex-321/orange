@@ -48,102 +48,30 @@
                 <div class="col-lg-12 ">
                     <div class="recent-causes-carousel owl-carousel owl-theme">
                         <!-- Single Item -->
-                        <div class="item"> 
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="{{ asset('public/Enterprice/assets/img/Gypsum-False-Ceiling.png') }}" style="height: 300px;border-radius: 5%;" alt="Thumb">
+                        @foreach($service as $item)
+<div class="item"> 
+    <div class="thumb">
+        <a href="#">
+            <img src="{{ asset('public/images/' . $item->machineimage) }}" style="height: 300px;border-radius: 5%;" alt="Thumb">
+        </a>
+    </div>
+    <div class="info">
+        <h4>
+            <a href="#">{{ $item->machinetitle }}</a>
+        </h4>
+        <p>
+            {{ $item->description }}
+        </p>
+    </div>
+</div>
+@endforeach
 
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">All Types of GYPSUM</a>
-                                </h4>
-                                <p>
-                                    Suspended, curved, decorative gypsum ceilings. Versatile, durable, easy installation. Enhance spaces with various finishes, textures. Perfect for any environment.
-                                </p>
 
-                            </div>
-                        </div>
+
+                        
                         <!-- End Single Item -->
                         <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                <img src="{{ asset('public/Enterprice/assets/img/plaster-of-paris.png') }}" style="height: 300px; border-radius: 5%;" alt="Thumb">
-
-
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">Plaster of Paris</a>
-                                </h4>
-                                <p>
-                                    Versatile Plaster of Paris. Ideal for sculpting, molds, and false ceiling designs. Easy to shape and lightweight. Perfect for creative projects.
-                                </p>
-
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                <img src="{{ asset('public/Enterprice/assets/img/carnish.jpg') }}" style="height: 300px; border-radius: 5%;" alt="Thumb">
-
-
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">Carnish Designs</a>
-                                </h4>
-                                <p>
-                                    Unique Carnish designs for false ceilings. Add elegance and style. Enhance aesthetic appeal of any space. Customized solutions available.
-
-                                </p>
-
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                <img src="{{ asset('public/Enterprice/assets/img/pvc.jpg') }}" style="height: 300px; border-radius: 5%;" alt="Thumb">
-
-
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">PVC Panel Work</a>
-                                </h4>
-                                <p>
-                                    Expert PVC panel installations. Enhance interiors with durable, low-maintenance solutions. Wide range of designs and finishes available. Perfect for modern spaces.
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                <img src="{{ asset('public/Enterprice/assets/img/flower.jpg') }}" style="height: 300px; border-radius: 5%;" alt="Thumb">
-
-
-                                </a>
-                            </div>
-                            <div class="info">
-                                <h4>
-                                    <a href="#">Flower Designs</a>
-                                </h4>
-                                <p>
-                                    Flower-inspired false ceiling designs. Bring nature indoors. Enhance ambiance with delicate floral patterns. Customize to suit your space.
-                                </p>
-
-                            </div>
-                        </div>
+                       
                         <!-- <div class="item">
                             <div class="thumb">
                                 <a href="#">
@@ -164,8 +92,8 @@
                         <!-- End Single Item -->
                     </div>
                 </div>
-                <a class="btn circle btn-md btn-gradient wow fadeInUp" style="float: right;" href="service.html">View All <i
-                        class="fas fa-angle-right"></i></a>
+                <!-- <a class="btn circle btn-md btn-gradient wow fadeInUp" style="float: right;" href="service.html">View All <i
+                        class="fas fa-angle-right"></i></a> -->
 
             </div>
         </div>

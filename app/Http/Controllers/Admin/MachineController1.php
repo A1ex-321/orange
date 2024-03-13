@@ -59,7 +59,7 @@ class MachineController1 extends Controller
     {
         // Validate the request data
         $request->validate([
-            'machineimage' => 'required|image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+            'machineimage' => 'required|max:1500', // Adjust max file size as needed
         ]);
     
         // Check if the request contains the 'machineimage' file
@@ -93,7 +93,7 @@ class MachineController1 extends Controller
     {
         // Validate the request data
         $request->validate([
-            'machineimage' => 'required|image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+            'machineimage' => 'required|max:1500', // Adjust max file size as needed
         ]);
     
         // Check if the request contains the 'machineimage' file
@@ -126,7 +126,7 @@ class MachineController1 extends Controller
         $user = Machineservice::find($id);
 
         $request->validate([
-            'machineimage' => 'image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+            'machineimage' => 'image|max:1500', // Adjust max file size as needed
         ]);
     
         // Check if the request contains the 'machineimage' file
@@ -183,7 +183,7 @@ public function product_add(Request $request)
     {
         // Validate the request data
         $request->validate([
-            'machineimage' => 'required|image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+            'machineimage' => 'required|max:1500', // Adjust max file size as needed
         ]);
     
         // Check if the request contains the 'machineimage' file
@@ -224,7 +224,7 @@ public function product_add(Request $request)
         $user = Product::find($id);
 
         $request->validate([
-            'machineimage' => 'image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+            'machineimage' => 'image|max:1500', // Adjust max file size as needed
         ]);
     
         // Check if the request contains the 'machineimage' file
@@ -237,6 +237,7 @@ public function product_add(Request $request)
     
             // Resize and save the image with fixed width and height
             $resizedImage = Image::make($image)->fit(420, 344)->save(public_path('images') . '/' . $filename);
+            $user->machineimage=$filename;
         }else {
             $user->machineimage = $user->machineimage;
         }
@@ -260,7 +261,7 @@ public function portadd(Request $request)
         // dd($request->all());
         // Validate the request data
         $request->validate([
-            'machineimage' => 'required|image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+            'machineimage' => 'required|max:1500', // Adjust max file size as needed
         ]);
     
         // Check if the request contains the 'machineimage' file

@@ -38,96 +38,26 @@
         <div class="blog-items">
             <div class="row">
                 <!-- Single Item -->
-                <div class="single-item col-lg-4 col-md-6">
-                    <div class="item">
-                        <div class="thumb">
-                            <a href="#">
-                            <img src="{{ asset('public/Enterprice/assets/img/c1.png') }}" style="border-radius: 5%;" alt="Thumb">
-                              
-                            </a>
-                        </div>
-                    
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="single-item col-lg-4 col-md-6">
-                    <div class="item">
-                        <div class="thumb">
-                            <a href="#">
-                            <img src="{{ asset('public/Enterprice/assets/img/c2.png') }}" style="border-radius: 5%;" alt="Thumb">
+    @foreach($getRecord as $ceiling)
 
-                              
-                            </a>
-                        </div>
-                      
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
                 <div class="single-item col-lg-4 col-md-6">
     <div class="item">
         <div class="thumb">
             <a href="#">
-                <img src="{{ asset('public/Enterprice/assets/img/c3.png') }}" style="border-radius: 5%;" alt="Thumb">
+                <img src="{{ asset('public/images/'.$ceiling->image) }}" style="border-radius: 5%;" alt="image">
             </a>
         </div>
+        
     </div>
 </div>
-<div class="single-item col-lg-4 col-md-6">
-    <div class="item">
-        <div class="thumb">
-            <a href="#">
-                <img src="{{ asset('public/Enterprice/assets/img/c4.png') }}" style="border-radius: 5%;" alt="Thumb">
-            </a>
-        </div>
-    </div>
-</div>
-<div class="single-item col-lg-4 col-md-6">
-    <div class="item">
-        <div class="thumb">
-            <a href="#">
-                <img src="{{ asset('public/Enterprice/assets/img/c5.png') }}" style="border-radius: 5%;" alt="Thumb">
-            </a>
-        </div>
-    </div>
-</div>
-<div class="single-item col-lg-4 col-md-6">
-    <div class="item">
-        <div class="thumb">
-            <a href="#">
-                <img src="{{ asset('public/Enterprice/assets/img/c6.png') }}" style="border-radius: 5%;" alt="Thumb">
-            </a>
-        </div>
-    </div>
-</div>
-<div class="single-item col-lg-4 col-md-6">
-    <div class="item">
-        <div class="thumb">
-            <a href="#">
-                <img src="{{ asset('public/Enterprice/assets/img/c7.png') }}" style="border-radius: 5%;" alt="Thumb">
-            </a>
-        </div>
-    </div>
-</div>
-<div class="single-item col-lg-4 col-md-6">
-    <div class="item">
-        <div class="thumb">
-            <a href="#">
-                <img src="{{ asset('public/Enterprice/assets/img/c8.png') }}" style="border-radius: 5%;" alt="Thumb">
-            </a>
-        </div>
-    </div>
-</div>
-<div class="single-item col-lg-4 col-md-6">
-    <div class="item">
-        <div class="thumb">
-            <a href="#">
-                <img src="{{ asset('public/Enterprice/assets/img/c9.png') }}" style="border-radius: 5%;" alt="Thumb">
-            </a>
-        </div>
-    </div>
-</div>
+@endforeach
+
+                <!-- End Single Item -->
+           
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                
+
 
                 <!-- End Single Item -->
             </div>

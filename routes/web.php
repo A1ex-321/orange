@@ -172,7 +172,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('/port', [EnterpriceController::class, 'port']);
  Route::get('/blog', [EnterpriceController::class, 'blog']);
  Route::get('/contact', [EnterpriceController::class, 'contact']);
- Route::get('/singleblog', [EnterpriceController::class, 'singleblog']);
+ Route::get('/singleblog/{id}', [EnterpriceController::class, 'singleblog'])->name('singleblog');
 
 
 
@@ -193,9 +193,9 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::post('/contact', [MachineController::class, 'store'])->name('contact.store');
  Route::get('/profile', [MachineController::class, 'get_profile']);
  Route::get('/service1', [MachineController::class, 'get_service']);
- Route::get('/singleblog/{id}/{slug}', [MachineController::class, 'get_blog']);
+//  Route::get('/singleblog/{id}/{slug}', [MachineController::class, 'get_blog']);
  Route::get('/allget', [MachineController::class, 'get_all']);
- Route::get('/singleblog/{id}', [MachineController::class, 'get_single_blog']);
+//  Route::get('/singleblog/{id}', [MachineController::class, 'get_single_blog']);
  Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
 
@@ -233,7 +233,7 @@ Route::post('/upload-images',[MachineController1::class, 'uploadImages'] )->name
 
     Route::get('admin/blog/bloglist', [MachineController1::class, 'Bannerlist'])->name('Banner-list');
     Route::post('admin/banner/add', [MachineController1::class, 'create_banner'])->name('create-banner');
-    Route::get('admin/blog/delete/{id}', [MachineController1::class, 'banner_delete']);
+    Route::get('admin/blog5/delete/{id}', [MachineController1::class, 'banner_delete']);
     Route::get('admin/blog3/edit/{id}', [MachineController1::class, 'banner_edit']);
     Route::post('admin/blog1/update/{id}', [MachineController1::class, 'banner_update'])->name('blog-update');
     //details

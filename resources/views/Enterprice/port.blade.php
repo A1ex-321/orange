@@ -118,159 +118,26 @@
                     <div class="blog-item-box">
                         <div class="row">
                             <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/port1.png') }}" alt="Thumb">
+                            @foreach($getRecord as $record)
+        <div class="col-lg-4 col-md-6 single-item">
+            <div class="item wow fadeInUp">
+                <div class="thumb">
+                    <a href="#">
+                    <img src="{{ asset('public/images/'.$record->machineimage) }}" alt="Product Image" > <!-- Ensure image fills container -->
 
-                                        </a>
-                                    </div>
-                              
-                                </div>
-                            </div>
+                    </a>
+                </div>
+                <!-- You can add more details from the $record here -->
+            </div>
+        </div>
+    @endforeach
                             <!-- End Single Item -->
                             <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/portfolio1.png') }}" alt="Thumb">
-
-                                        </a>
-                                    </div>
-                                  
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/portfolio5.png') }}" alt="Thumb">
-
-                                        </a>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/portfolio4.png') }}" alt="Thumb">
-
-                                        </a>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/portfolio2.png') }}" alt="Thumb">
-
-                                        </a>
-                                    </div>
-                                  
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/portfolio3.png') }}" alt="Thumb">
-
-                                        </a>
-                                    </div>
-                                  
-                                </div>
-                            </div>
+                          
                             <!-- End Single Item -->
                         </div>
                         
-                        <div class="row">
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/add6.png') }}" alt="Thumb">
-                                        </a>
-                                    </div>
-                              
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/add5.png') }}" alt="Thumb">
-                                        </a>
-                                    </div>
-                                  
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/add4.png') }}" alt="Thumb">
-                                        </a>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/add3.png') }}" alt="Thumb">
-                                        </a>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp">
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/add2.png') }}" alt="Thumb">
-                                        </a>
-                                    </div>
-                                  
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-4 col-md-6 single-item">
-                                <div class="item wow fadeInUp" >
-                                    <div class="thumb">
-                                        <a href="#">
-                                        <img src="{{ asset('public/Enterprice/assets/img/add1.png') }}" alt="Thumb">
-                                        </a>
-                                    </div>
-                                  
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                        </div>
+                        
                         
                         <!-- Pagination -->
                      

@@ -128,7 +128,7 @@
 
                                                     <td>
                                                         <a href="{{url('admin/blog3/edit/'.$value->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                                        <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/blog/delete/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                                        <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/blog5/delete/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 @endforeach
