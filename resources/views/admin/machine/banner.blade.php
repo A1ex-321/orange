@@ -51,15 +51,15 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="recipient-name" class="col-form-label">Title:</label>
-                                                <input type="text" class="form-control" id="recipient-name" name="title"  value="{{ old('title') }}">
+                                                <input type="text" class="form-control" id="recipient-name" name="title"  value="{{ old('title') }}" required>
 
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Description<span style="color:red"></span><textarea name="description" class="form-control" id="exampleInputEmail1" placeholder="Description" style="width: 440%; height: 100px;">{{ old('description') }}</textarea>
+                                                <label for="exampleInputEmail1">Description<span style="color:red"></span><textarea name="description" class="form-control" id="exampleInputEmail1" placeholder="Description" style="width: 440%; height: 100px;" required>{{ old('description') }}</textarea>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1"> Image<span style="color:red">*</span></label>
-                                                <input type="file" name="image" class="form-control" id="exampleInputEmail1" placeholder="Image" value="{{ old('image') }}" >
+                                                <input type="file" name="singleimage" class="form-control" id="exampleInputEmail1" placeholder="Image" value="{{ old('singleimage') }}" required>
                                             </div>
                                             <div class="form-group">
     <label for="exampleInputImages">Multi Images<span style="color:red">*</span></label>
@@ -121,14 +121,14 @@
                                                 @foreach ($getRecord as $value)
                                                 <tr>
                                                     <td>{{ $counter++ }}</td>
-                                                    <td>{{ json_decode($value->title)->title }}</td>
-                                                    <td>{{ json_decode($value->description)->description }}</td>
+                                                    <td>{{ $value->title }}</td>
+                                                    <td>{{ $value->description }}</td>
 
-                                                    <td><img src="{{ asset('public/images/' . $value->image) }}" alt="Thumb Image" style="max-width: 100px; max-height: 100px;"></td>
+                                                    <td><img src="{{ asset('public/images/' . $value->singleimage) }}" alt="Thumb Image" style="max-width: 100px; max-height: 100px;"></td>
 
                                                     <td>
-                                                        <a href="{{url('admin/banner/edit/'.$value->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                                        <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/banner/delete/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                                        <a href="{{url('admin/blog3/edit/'.$value->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                        <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/blog/delete/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                                                     </td>
                                                 </tr>
                                                 @endforeach

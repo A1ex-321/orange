@@ -324,27 +324,27 @@ public function portadd(Request $request)
     
     public function create_banner(Request $request)
     {
-          dd($request->all());
-        $data = new Banner();
-        $title = $request->input('title');
-        $description = $request->input('description');
-        $data->title = json_encode(['title' => $title]);
-        $data->description = json_encode(['description' => $description]);
-        if ($request->hasFile('image')) {
-            $images = $request->file('image');
-
+        //   dd($request->all());
+        $data = new Banner();       
+        $data->title = $request->input('title');
+        $data->description = $request->input('description');
+        if ($request->hasFile('singleimage')) {
+            $images = $request->file('singleimage');
             $filename = time() . '_' . str_replace(' ', '_', $images->getClientOriginalName());
-            $images->move(public_path('images'), $filename);
+    
+            // Resize and save the image with fixed width and height
+            $resizedImage = Image::make($images)->fit(500, 500)->save(public_path('images') . '/' . $filename);
         }
-        $data->image = $filename;
+        $data->singleimage = $filename;
+        $data->image_data = $request->input('image-data');
         $data->save();
-        return redirect('admin/Banner/Bannerlist')->with('success', ' Added successfully.');
+        return redirect('admin/blog/bloglist')->with('success', ' Added successfully.');
     }
     public function banner_delete($id, Request $request)
     {
         $image = Banner::find($id);
         $image->delete();
-        return redirect('admin/Banner/Bannerlist')->with('success', ' Deleted successful');
+        return redirect('admin/blog/bloglist')->with('success', ' Deleted successful');
     }
     public function banner_edit($id, Request $request)
     {
@@ -354,25 +354,36 @@ public function portadd(Request $request)
     }
     public function banner_update($id, Request $request)
     {
+        //    dd($request->all());
 
 
         $data = Banner::find($id);
-        $title = $request->input('title');
-        $description = $request->input('description');
-        $data->title = json_encode(['title' => $title]);
-        $data->description = json_encode(['description' => $description]);
-        if ($request->hasFile('image')) {
-            $images = $request->file('image');
-
+        
+        $data->title = $request->input('title');
+        $data->description = $request->input('description');
+        if ($request->hasFile('singleimage')) {
+            $images = $request->file('singleimage');
             $filename = time() . '_' . str_replace(' ', '_', $images->getClientOriginalName());
-            $images->move(public_path('images'), $filename);
-            $data->image = $filename;
+    
+            // Resize and save the image with fixed width and height
+            $resizedImage = Image::make($images)->fit(500, 500)->save(public_path('images') . '/' . $filename);
+            $data->singleimage = $filename;
         } else {
-            $data->image = $data->image;
+            $data->singleimage = $data->singleimage;
         }
+        $data->image_data = $request->input('image-data');
+
         $data->save();
-        return redirect('admin/Banner/Bannerlist')->with('success', ' updated');
+        return redirect('admin/blog/bloglist')->with('success', ' updated');
     }
+
+
+
+
+
+
+
+
     public function detail_list()
     {
         $data['getRecord'] = Detail::get();

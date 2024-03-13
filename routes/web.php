@@ -233,9 +233,9 @@ Route::post('/upload-images',[MachineController1::class, 'uploadImages'] )->name
 
     Route::get('admin/blog/bloglist', [MachineController1::class, 'Bannerlist'])->name('Banner-list');
     Route::post('admin/banner/add', [MachineController1::class, 'create_banner'])->name('create-banner');
-    Route::get('admin/banner/delete/{id}', [MachineController1::class, 'banner_delete']);
-    Route::get('admin/banner/edit/{id}', [MachineController1::class, 'banner_edit']);
-    Route::post('admin/banner/update/{id}', [MachineController1::class, 'banner_update'])->name('banner-update');
+    Route::get('admin/blog/delete/{id}', [MachineController1::class, 'banner_delete']);
+    Route::get('admin/blog3/edit/{id}', [MachineController1::class, 'banner_edit']);
+    Route::post('admin/blog1/update/{id}', [MachineController1::class, 'banner_update'])->name('blog-update');
     //details
     Route::get('admin/detail/list', [MachineController1::class, 'detail_list'])->name('detail-list');
      Route::post('admin/detail/add', [MachineController1::class, 'detail_add'])->name('add-detail');
