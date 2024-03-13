@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Enterprice;
 use App\Models\User;
 use App\Models\Gallery;
 use App\Models\detail;
-use App\Models\Banner;
+use App\Models\Ceiling;
 use App\Models\Machineservice;
 use App\Models\Scolink;
 use App\Models\home;
@@ -33,7 +33,7 @@ class EnterpriceController extends Controller
     public function index()
     {
         $data['index']= home::get();
-        $data['getRecord'] = Banner::get();
+        // $data['getRecord'] = Banner::get();
         $data['content'] = Machineservice::where('is_service', 0)->get();
         $data['service'] = Machineservice::where('is_service', 1)->select('machinetitle', 'machineimage', 'description')->get();
         $data['link'] = Scolink::get();
@@ -54,10 +54,14 @@ class EnterpriceController extends Controller
     }
     public function service()
     {
+        $data['getRecord1'] = Machineservice::get();
+
         return view('Enterprice.service');
     }
     public function ceiling()
     {
+        $data['getRecord'] = Ceiling::get();
+
         return view('Enterprice.ceiling');
     }
     public function product()

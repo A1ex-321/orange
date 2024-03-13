@@ -213,8 +213,25 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('admin/addclient/deleteclient/{id}', [MachineController1::class, 'deleteclient']);
     
     Route::get('admin/test/delete/{id}', [MachineController1::class, 'testdelete']);
+    //ceiling
+    Route::get('admin/ceiling/list', [MachineController1::class, 'ceilinglist'])->name('ceiling-list');
+    Route::post('admin/ceiling/add', [MachineController1::class, 'ceilingadd'])->name('add-ceiling');
+    Route::get('admin/ceiling/delete/{id}', [MachineController1::class, 'ceilingdelete']);
+
+//product
+Route::get('admin/product/list', [MachineController1::class, 'product_list'])->name('product-list');
+Route::post('admin/product/add', [MachineController1::class, 'product_add'])->name('add-product');
+Route::get('admin/product/delete/{id}', [MachineController1::class, 'productdelete']);
+Route::get('admin/product/edit/{id}', [MachineController1::class, 'productedit']);
+Route::post('admin/product/update/{id}', [MachineController1::class, 'product_update'])->name('updateproduct');
+   //portfolio
+   Route::get('admin/port/list', [MachineController1::class, 'portlist'])->name('port-list');
+   Route::post('admin/port/add', [MachineController1::class, 'portadd'])->name('add-port');
+   Route::get('admin/port/delete/{id}', [MachineController1::class, 'portdelete']);
 //Banner
-    Route::get('admin/Banner/Bannerlist', [MachineController1::class, 'Bannerlist'])->name('Banner-list');
+Route::post('/upload-images',[MachineController1::class, 'uploadImages'] )->name('upload.images');
+
+    Route::get('admin/blog/bloglist', [MachineController1::class, 'Bannerlist'])->name('Banner-list');
     Route::post('admin/banner/add', [MachineController1::class, 'create_banner'])->name('create-banner');
     Route::get('admin/banner/delete/{id}', [MachineController1::class, 'banner_delete']);
     Route::get('admin/banner/edit/{id}', [MachineController1::class, 'banner_edit']);

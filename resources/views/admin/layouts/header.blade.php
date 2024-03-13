@@ -129,11 +129,26 @@
         <i class="bi bi-person"></i><span>Service</span>
       </a>
     </li>
-    <!-- <li class="nav-item">
-      <a href="{{route('Banner-list')}}" class="nav-link {{ request()->segment(2) === 'Banner' ? '' : 'collapsed' }}">
-      <i class="bi-align-center"></i><span>Banner</span>
+    <li class="nav-item">
+      <a href="{{route('ceiling-list')}}" class="nav-link {{ request()->segment(2) === 'ceiling' ? '' : 'collapsed' }}">
+        <i class="bi bi-journal-text"></i><span>Add ceiling</span>
       </a>
-    </li> -->
+    </li>
+    <li class="nav-item">
+      <a href="{{route('product-list')}}" class="nav-link {{ request()->segment(2) === 'product' ? '' : 'collapsed' }}">
+        <i class="bi-align-center"></i><span>product</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="{{route('port-list')}}" class="nav-link {{ request()->segment(2) === 'port' ? '' : 'collapsed' }}">
+        <i class="bi bi-layout-text-window-reverse"></i><span>Portfolio</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="{{route('Banner-list')}}" class="nav-link {{ request()->segment(2) === 'blog' ? '' : 'collapsed' }}">
+      <i class="bi-align-center"></i><span>Blog</span>
+      </a>
+    </li>
     <!-- <li class="nav-item">
       <a href="{{route('blog-list')}}" class="nav-link {{ request()->segment(2) === 'blog' ? '' : 'collapsed' }}">
         <i class="bi bi-journal-text"></i><span>Work</span>

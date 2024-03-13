@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 namespace App\Http\Controllers\Admin;
 namespace App\Http\Controllers\Admin;
 
+
 use App\Models\BrandModel;
 use App\Models\Detail;
 use App\Models\Mailstores;
@@ -13,9 +14,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Addservice;
 use App\Models\Banner;
 use App\Models\social;
-use App\Models\raalcontact;
+use App\Models\Ceiling;
 use App\Models\Gallery;
 use App\Models\Machineservice;
+use App\Models\Product;
+use App\Models\Port;
 use Intervention\Image\Facades\Image;
 
 
@@ -37,16 +40,55 @@ class MachineController1 extends Controller
 
     public function client_list()
     {
-        $data['getRecord'] = Machineservice::where('is_service', 0)->get();
         $data['getRecord1'] = Machineservice::where('is_service', 1)->get();
 
         $data['header_title'] = "Admin List";
 
         return view('admin.machine.service', $data);
     }
+    public function ceilinglist()
+    {
+        $data['getRecord1'] = Ceiling::get();
 
-   
 
+        $data['header_title'] = "Admin List";
+
+        return view('admin.machine.ceiling', $data);
+    }
+    public function ceilingadd(Request $request)
+    {
+        // Validate the request data
+        $request->validate([
+            'machineimage' => 'required|image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+        ]);
+    
+        // Check if the request contains the 'machineimage' file
+        if ($request->hasFile('machineimage')) {
+            // Get the 'machineimage' file from the request
+            $image = $request->file('machineimage');
+    
+            // Generate a unique filename for the image
+            $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
+    
+            // Resize and save the image with fixed width and height
+            $resizedImage = Image::make($image)->fit(500, 500)->save(public_path('images') . '/' . $filename);
+        }
+    
+        // Create a new Machineservice record with the uploaded image and other data
+        Ceiling::create([
+            'image' => $filename,
+         
+        ]);
+    
+        // Redirect back with a success message
+        return redirect('admin/ceiling/list')->with('success', 'Uploaded successfully.');
+    }
+    public function ceilingdelete($id)
+    {
+        $user = Ceiling::find($id);
+        $user->delete();
+        return redirect()->back()->with('success', 'Deleted');
+    }
     public function service_add(Request $request)
     {
         // Validate the request data
@@ -63,7 +105,7 @@ class MachineController1 extends Controller
             $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
     
             // Resize and save the image with fixed width and height
-            $resizedImage = Image::make($image)->fit(800, 600)->save(public_path('images') . '/' . $filename);
+            $resizedImage = Image::make($image)->fit(510, 300)->save(public_path('images') . '/' . $filename);
         }
     
         // Create a new Machineservice record with the uploaded image and other data
@@ -83,13 +125,21 @@ class MachineController1 extends Controller
     {
         $user = Machineservice::find($id);
 
+        $request->validate([
+            'machineimage' => 'image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+        ]);
+    
+        // Check if the request contains the 'machineimage' file
         if ($request->hasFile('machineimage')) {
-            $images = $request->file('machineimage');
-
-            $filename = time() . '_' . str_replace(' ', '_', $images->getClientOriginalName());
-            $images->move(public_path('images'), $filename);
-            $user->machineimage = $filename;
-        } else {
+            // Get the 'machineimage' file from the request
+            $image = $request->file('machineimage');
+    
+            // Generate a unique filename for the image
+            $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
+    
+            // Resize and save the image with fixed width and height
+            $resizedImage = Image::make($image)->fit(510, 300)->save(public_path('images') . '/' . $filename);
+        }else {
             $user->machineimage = $user->machineimage;
         }
         $user->description = $request->description;
@@ -119,15 +169,162 @@ class MachineController1 extends Controller
         $record = Machineservice::find($id);
         return response()->json($record);
     }
+//product
+public function product_list()
+{
+    // $data['getRecord1'] = Machineservice::where('is_service', 1)->get();
+    $data['getRecord1'] = Product::all();
+
+    $data['header_title'] = "Admin List";
+
+    return view('admin.machine.product', $data);
+}
+public function product_add(Request $request)
+    {
+        // Validate the request data
+        $request->validate([
+            'machineimage' => 'required|image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+        ]);
+    
+        // Check if the request contains the 'machineimage' file
+        if ($request->hasFile('machineimage')) {
+            // Get the 'machineimage' file from the request
+            $image = $request->file('machineimage');
+    
+            // Generate a unique filename for the image
+            $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
+    
+            // Resize and save the image with fixed width and height
+            $resizedImage = Image::make($image)->fit(420, 344)->save(public_path('images') . '/' . $filename);
+        }
+    
+        // Create a new Machineservice record with the uploaded image and other data
+        product::create([
+            'machineimage' => $filename,
+            'machinetitle' => $request->machinetitle,
+            'description' => $request->description,
+        ]);
+    
+        // Redirect back with a success message
+        return redirect('admin/product/list')->with('success', 'Uploaded successfully.');
+    }
+    public function productdelete($id)
+    {
+        $user = Product::find($id);
+        $user->delete();
+        return redirect()->back()->with('success', 'Deleted');
+    }
+    public function productedit($id)
+    {
+        $record = Product::find($id);
+        return response()->json($record);
+    }
+    public function product_update(Request $request, $id)
+    {
+        $user = Product::find($id);
+
+        $request->validate([
+            'machineimage' => 'image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+        ]);
+    
+        // Check if the request contains the 'machineimage' file
+        if ($request->hasFile('machineimage')) {
+            // Get the 'machineimage' file from the request
+            $image = $request->file('machineimage');
+    
+            // Generate a unique filename for the image
+            $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
+    
+            // Resize and save the image with fixed width and height
+            $resizedImage = Image::make($image)->fit(420, 344)->save(public_path('images') . '/' . $filename);
+        }else {
+            $user->machineimage = $user->machineimage;
+        }
+        $user->description = $request->description;
+        $user->machinetitle = $request->machinetitle;
+        $user->save();
+        return redirect('admin/product/list')->with('success', 'updated successfully.');
+    }
+//port
+public function portlist()
+{
+    $data['getRecord1'] = port::get();
+
+
+    $data['header_title'] = "Admin List";
+
+    return view('admin.machine.port', $data);
+}
+public function portadd(Request $request)
+    {
+        // dd($request->all());
+        // Validate the request data
+        $request->validate([
+            'machineimage' => 'required|image|mimes:jpeg,png,jpg,gif,png|max:1500', // Adjust max file size as needed
+        ]);
+    
+        // Check if the request contains the 'machineimage' file
+        if ($request->hasFile('machineimage')) {
+            // Get the 'machineimage' file from the request
+            $image = $request->file('machineimage');
+    
+            // Generate a unique filename for the image
+            $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
+    
+            // Resize and save the image with fixed width and height
+            $resizedImage = Image::make($image)->fit(500, 500)->save(public_path('images') . '/' . $filename);
+        }
+    
+        // Create a new Machineservice record with the uploaded image and other data
+        Port::create([
+            'machineimage' => $filename,
+         
+        ]);
+    
+        // Redirect back with a success message
+        return redirect('admin/port/list')->with('success', 'Uploaded successfully.');
+    }
+    public function portdelete($id)
+    {
+        $user = Port::find($id);
+        $user->delete();
+        return redirect()->back()->with('success', 'Deleted');
+    }
+
+
+
+
     public function Bannerlist(Request $request)
     {
         $data['getRecord'] = Banner::all();
 
         return view('admin.machine.banner', $data);
     }
+    public function uploadImages(Request $request)
+    {
+        $paths = [];
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                // Check if the image file has an original name
+                if ($image->getClientOriginalName()) {
+                    // Generate a unique filename for each image
+                    $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
+    
+                    // Resize and save each image with fixed width and height
+                    $resizedImage = Image::make($image)->fit(500, 500)->save(public_path('images') . '/' . $filename);
+    
+                    // Store the path to the resized image
+                    $paths[] = asset('public/images/' . $filename);
+                }
+            }
+        }
+    
+        return response()->json($paths);
+    }
+    
     public function create_banner(Request $request)
     {
-        //  dd($request->all());
+          dd($request->all());
         $data = new Banner();
         $title = $request->input('title');
         $description = $request->input('description');
