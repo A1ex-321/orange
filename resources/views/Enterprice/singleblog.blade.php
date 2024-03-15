@@ -83,12 +83,12 @@
                                 @foreach ($blog as $blog)
     <li>
         <div class="thumb">
-            <a href="{{ route('singleblog', ['id' => $blog->id]) }}">
+            <a href="{{ route('singleblog', ['id' => $blog->id, 'slug' => str_replace(' ', '-', $blog->slug)]) }}">
                 <img src="{{ asset('public/images/'.$blog->singleimage) }}" alt="Thumb">
             </a>
         </div>
         <div class="info">
-            <a href="{{ route('singleblog', ['id' => $blog->id]) }}">{{ $blog->title }}</a>
+            <a href="{{ route('singleblog', ['id' => $blog->id, 'slug' => str_replace(' ', '-', $blog->slug)]) }}">{{ $blog->title }}</a>
             <h6 style="color: crimson;">By {{ substr($blog->description, 0, 70) }}{{ strlen($blog->description) > 50 ? '...' : '' }}</h6>
             <div class="meta-title">
                 <span class="post-date"><i class="fas fa-clock"></i> {{ $blog->created_at->format('d M, Y') }}</span>

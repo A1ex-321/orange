@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Scoblog extends Model
+class blogseocontent extends Model
 {
     use HasFactory;
-    protected $table = 'solowork';
+    protected $table = 'blogscocontent';
 
     protected $fillable = [
-        'metadescription','metatitle' 
+        'metadescription','metatitle','ogtitle' 
     ];
  
 }

@@ -233,7 +233,7 @@
             # Recent Causes Carousel
          ===============================================*/
         $('.recent-causes-carousel').owlCarousel({
-            loop: true,
+            loop: false,
             nav: false,
             margin:30,
             dots: true,
@@ -246,7 +246,7 @@
             responsive: {
                 1000: {
                     stagePadding: 100,
-                    items: 2
+                    items: 2.5
                 },
 
                 1400: {

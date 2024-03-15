@@ -15,6 +15,9 @@ use App\Models\Service;
 use App\Models\About;
 use App\Models\Port;
 use App\Models\Banner;
+use App\Models\blogseocontent;
+use App\Models\soloblog;
+use App\Models\scoblog;
 
 use App\Models\Work;
 use Illuminate\Support\Facades\Log; // Don't forget to import the Log facade
@@ -64,18 +67,24 @@ class EnterpriceController extends Controller
     }
     public function ceiling()
     {
+        $data['ceilingseo'] = soloblog::get();
+        $data['link'] = Scolink::get();
         $data['getRecord'] = Ceiling::get();
 
         return view('Enterprice.ceiling', $data);
     }
     public function product()
     {
+        $data['productseo'] = blogseocontent::get();
+        $data['link'] = Scolink::get();
         $data['getRecord'] = Product::get();
 
         return view('Enterprice.product', $data);
     }
     public function port()
     {
+        $data['portseo'] = scoblog::get();
+        $data['link'] = Scolink::get();
         $data['getRecord'] = Port::get();
         return view('Enterprice.port', $data);
     }
@@ -97,7 +106,9 @@ class EnterpriceController extends Controller
         try {
             // Attempt to find the record with the specified ID
         $user['link'] = Scolink::get();
-
+        $user['singleseo'] = banner::findOrFail($id);
+        $user['singleseo']->ogimage = asset('public/images/' . $user['singleseo']->ogimage);
+// dd($user['singleseo']);
             $user['single'] = banner::findOrFail($id);
 
             // Get all blog records (if needed)

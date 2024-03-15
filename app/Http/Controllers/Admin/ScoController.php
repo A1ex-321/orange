@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 namespace App\Http\Controllers\Admin;
 
 use App\Models\BrandModel;
-use App\Models\Smtp;
+use App\Models\blogseocontent;
 use App\Models\Mailstores;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -22,6 +22,8 @@ use App\Models\Scoblog;
 use App\Models\Work;
 use App\Models\solowork;
 use App\Models\soloblog;
+use App\Models\Banner;
+
 use Illuminate\Support\Facades\Validator;
 
 
@@ -508,7 +510,7 @@ class ScoController extends Controller
     public function sco_update($id, Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'slug' => 'required|unique:blogsco,slug,' . $id,
+            'slug' => 'required|unique:Banner,slug,' . $id,
             // Add other validation rules as needed
         ]);
 
@@ -517,7 +519,7 @@ class ScoController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        $data = blogsco::find($id);
+        $data = Banner::find($id);
         $data->metatitle = $request->metatitle;
         $data->metadescription = $request->metadescription;
         $data->ogtitle = $request->ogtitle;
@@ -536,7 +538,7 @@ class ScoController extends Controller
         }
         $data->slug = $request->slug;
         $data->save();
-        return redirect('admin/blogseo/bloglist')->with('success', ' updated');
+        return redirect('admin/blog/bloglist')->with('success', ' updated');
     }
     public function checkSlugAvailability(Request $request)
     {
@@ -565,4 +567,96 @@ class ScoController extends Controller
 
         return view('admin.sco.view_blogcontent', compact('content'));
     }
+        // sco false ceiling
+        public function falselist(Request $request)
+        {
+            $data['getRecord'] = soloblog::all();
+    
+            return view('admin.sco.falselist', $data);
+        }
+        public function create_false(Request $request)
+        {
+            // dd($request->all());
+            $data = new soloblog();
+            $data->metatitle = $request->metatitle;
+            $data->metadescription = $request->metadescription;
+            $data->ogtitle = $request->ogtitle;
+            $data->ogdescription = $request->ogdescription;
+            $data->ogimage = $request->ogimage;
+            $data->ogurl = $request->ogurl;
+            $data->ogtype = $request->ogtype;
+    
+            $data->save();
+            return redirect('admin/false/falselist')->with('success', ' Added successfully.');
+        }
+        public function false_delete($id, Request $request)
+        {
+            $image = soloblog::find($id);
+            $image->delete();
+            return redirect('admin/false/falselist')->with('success', ' Deleted successful');
+        }
+        public function false_edit($id, Request $request)
+        {
+            $data['getRecord'] = soloblog::find($id);
+            return view('admin.sco.edit_false', $data);
+        }
+        public function false_update($id, Request $request)
+        {
+            $data = soloblog::find($id);
+            $data->metatitle = $request->metatitle;
+            $data->metadescription = $request->metadescription;
+            $data->ogtitle = $request->ogtitle;
+            $data->ogdescription = $request->ogdescription;
+            $data->ogimage = $request->ogimage;
+            $data->ogurl = $request->ogurl;
+            $data->ogtype = $request->ogtype;
+            $data->save();
+            return redirect('admin/false/falselist')->with('success', ' updated');
+        }
+        // sco product
+        public function productseolist(Request $request)
+        {
+            $data['getRecord'] = blogseocontent::all();
+    
+            return view('admin.sco.productseolist', $data);
+        }
+        public function create_productseo(Request $request)
+        {
+            // dd($request->all());
+            $data = new blogseocontent();
+            $data->metatitle = $request->metatitle;
+            $data->metadescription = $request->metadescription;
+            $data->ogtitle = $request->ogtitle;
+            $data->ogdescription = $request->ogdescription;
+            $data->ogimage = $request->ogimage;
+            $data->ogurl = $request->ogurl;
+            $data->ogtype = $request->ogtype;
+    
+            $data->save();
+            return redirect('admin/productseo/productseolist')->with('success', ' Added successfully.');
+        }
+        public function productseo_delete($id, Request $request)
+        {
+            $image = blogseocontent::find($id);
+            $image->delete();
+            return redirect('admin/productseo/productseolist')->with('success', ' Deleted successful');
+        }
+        public function productseo_edit($id, Request $request)
+        {
+            $data['getRecord'] = blogseocontent::find($id);
+            return view('admin.sco.edit_productseo', $data);
+        }
+        public function productseo_update($id, Request $request)
+        {
+            $data = blogseocontent::find($id);
+            $data->metatitle = $request->metatitle;
+            $data->metadescription = $request->metadescription;
+            $data->ogtitle = $request->ogtitle;
+            $data->ogdescription = $request->ogdescription;
+            $data->ogimage = $request->ogimage;
+            $data->ogurl = $request->ogurl;
+            $data->ogtype = $request->ogtype;
+            $data->save();
+            return redirect('admin/productseo/productseolist')->with('success', ' updated');
+        }
 }

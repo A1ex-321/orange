@@ -131,12 +131,7 @@ Route::get('admin/admin/delete/{id}', [AdminController::class, 'admin_add_delete
     Route::get('admin/contact/edit/{id}', [ScoController::class, 'contact_edit']);
     Route::post('admin/contact/edit/{id}', [ScoController::class, 'contact_update'])->name('contact-update');
 
-    //   SCO content blog
-    Route::get('admin/scoblog/scobloglist', [ScoController::class, 'scobloglist'])->name('scoblog-list');
-    Route::post('admin/scoblog/addscoblog', [ScoController::class, 'create_scoblog'])->name('create-scoblog');
-    Route::get('admin/scoblog/delete/{id}', [ScoController::class, 'scoblog_delete']);
-    Route::get('admin/scoblog/edit/{id}', [ScoController::class, 'edit_scoblog']);
-    Route::post('admin/scoblog/edit/{id}', [ScoController::class, 'scoblog_update'])->name('scoblog-update');
+  
     //   SCO work
     Route::get('admin/work/worklist', [ScoController::class, 'worklist'])->name('work-list');
     Route::post('admin/work/addwork', [ScoController::class, 'create_work'])->name('create-work');
@@ -144,11 +139,11 @@ Route::get('admin/admin/delete/{id}', [AdminController::class, 'admin_add_delete
     Route::get('admin/work/edit/{id}', [ScoController::class, 'work_edit']);
     Route::post('admin/work/edit/{id}', [ScoController::class, 'work_update'])->name('work-update');
     //SCO work find id page
-    Route::get('admin/solo/solowork', [ScoController::class, 'soloworklist'])->name('solowork-list');
-    Route::post('admin/solo/solowork', [ScoController::class, 'solowork_work'])->name('create-solowork');
-    Route::get('admin/solowork/delete/{id}', [ScoController::class, 'solowork_delete']);
-    Route::get('admin/solowork/edit/{id}', [ScoController::class, 'solowork_edit']);
-    Route::post('admin/solowork/edit/{id}', [ScoController::class, 'solowork_update'])->name('solowork-update');
+    // Route::get('admin/solo/solowork', [ScoController::class, 'soloworklist'])->name('solowork-list');
+    // Route::post('admin/solo/solowork', [ScoController::class, 'solowork_work'])->name('create-solowork');
+    // Route::get('admin/solowork/delete/{id}', [ScoController::class, 'solowork_delete']);
+    // Route::get('admin/solowork/edit/{id}', [ScoController::class, 'solowork_edit']);
+    // Route::post('admin/solowork/edit/{id}', [ScoController::class, 'solowork_update'])->name('solowork-update');
     //SCO blog page find id page
     Route::get('admin/oneblog/onebloglist', [ScoController::class, 'onebloglist'])->name('oneblog-list');
     Route::post('admin/oneblog/onebloglist', [ScoController::class, 'create_oneblog'])->name('create-oneblog');
@@ -157,9 +152,26 @@ Route::get('admin/admin/delete/{id}', [AdminController::class, 'admin_add_delete
     Route::post('admin/oneblog/edit/{id}', [ScoController::class, 'oneblog_update'])->name('oneblog-update');
     Route::post('/check-slug-availability', [ScoController::class, 'checkSlugAvailability']);
     Route::post('/validate-slug', 'ScoController@validateSlug')->name('validate-slug');
-
-
-
+  //   SCO false ceiling
+  Route::get('admin/false/falselist', [ScoController::class, 'falselist'])->name('false-list');
+  Route::post('admin/false/addfalse', [ScoController::class, 'create_false'])->name('createceiling');
+  Route::get('admin/false/delete/{id}', [ScoController::class, 'false_delete']);
+  Route::get('admin/false/edit/{id}', [ScoController::class, 'false_edit']);
+  Route::post('admin/false/edit/{id}', [ScoController::class, 'false_update'])->name('false-update');
+//   SCO product
+Route::get('admin/productseo/productseolist', [ScoController::class, 'productseolist'])->name('productseo-list');
+Route::post('admin/productseo/productseo', [ScoController::class, 'create_productseo'])->name('create-productseo');
+Route::get('admin/productseo/delete/{id}', [ScoController::class, 'productseo_delete']);
+Route::get('admin/productseo/edit/{id}', [ScoController::class, 'productseo_edit']);
+Route::post('admin/productseo/edit/{id}', [ScoController::class, 'productseo_update'])->name('productseo-update');
+  //   SCO port
+  Route::get('admin/scoblog/scobloglist', [ScoController::class, 'scobloglist'])->name('scoblog-list');
+  Route::post('admin/scoblog/addscoblog', [ScoController::class, 'create_scoblog'])->name('create-scoblog');
+  Route::get('admin/scoblog/delete/{id}', [ScoController::class, 'scoblog_delete']);
+  Route::get('admin/scoblog/edit/{id}', [ScoController::class, 'edit_scoblog']);
+  Route::post('admin/scoblog/edit/{id}', [ScoController::class, 'scoblog_update'])->name('scoblog-update');
+//   blog sco update
+Route::post('admin/sco/edit/{id}', [ScoController::class, 'sco_update'])->name('sco-update');
 });
 
 
@@ -172,7 +184,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('/port', [EnterpriceController::class, 'port']);
  Route::get('/blog', [EnterpriceController::class, 'blog']);
  Route::get('/contact', [EnterpriceController::class, 'contact']);
- Route::get('/singleblog/{id}', [EnterpriceController::class, 'singleblog'])->name('singleblog');
+ Route::get('/singleblog/{id}/{slug}', [EnterpriceController::class, 'singleblog'])->name('singleblog');
  Route::post('/contacts', [EnterpriceController::class, 'store'])->name('contacts');
  Route::get('/header', [EnterpriceController::class, 'get_logo1']);
  Route::get('/getservice', [EnterpriceController::class, 'getservice']);
@@ -193,8 +205,8 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('admin/logout', [AuthController::class, 'logout_admin']);
 //  Route::get('/header', [MachineController::class, 'get_logo1']);
 //  Route::post('/contact', [MachineController::class, 'store'])->name('contact.store');
- Route::get('/profile', [MachineController::class, 'get_profile']);
- Route::get('/service1', [MachineController::class, 'get_service']);
+//  Route::get('/profile', [MachineController::class, 'get_profile']);
+//  Route::get('/service1', [MachineController::class, 'get_service']);
 //  Route::get('/singleblog/{id}/{slug}', [MachineController::class, 'get_blog']);
  Route::get('/allget', [MachineController::class, 'get_all']);
 //  Route::get('/singleblog/{id}', [MachineController::class, 'get_single_blog']);
@@ -273,7 +285,7 @@ Route::post('/upload-images',[MachineController1::class, 'uploadImages'] )->name
         Route::get('admin/blogseo/edit/{id}', [ScoController::class, 'blogsco_edit']);
         Route::post('admin/blogseo/edit/{id}', [ScoController::class, 'blogsco_update'])->name('blogsco-update');
     
-        Route::post('admin/sco/edit/{id}', [ScoController::class, 'sco_update'])->name('sco-update');
+        // Route::post('admin/sco/edit/{id}', [ScoController::class, 'sco_update'])->name('sco-update');
         Route::get('view_blogcontent/{id}', [ScoController::class, 'content_view'])->name('view_blogcontent');
         //logo
         Route::get('admin/logo/logo', [BlogController::class, 'logo'])->name('blog-logo');

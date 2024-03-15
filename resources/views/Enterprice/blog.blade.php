@@ -40,12 +40,15 @@
                                 @foreach($getRecord as $record)
         <li>
             <div class="thumb">
-                <a href="blog-single.html">
+                <a href="{{ url('singleblog', ['id' => $record->id, 'slug' => str_replace(' ', '-', $record->slug)]) }}">
                 <img src="{{ asset('public/images/'.$record->singleimage) }}" alt="Product Image" >
                 </a>
             </div>
             <div class="info">
-            <a href="{{ route('singleblog', ['id' => $record->id]) }}">{{ $record->title }}</a>
+            <a href="{{ url('singleblog', ['id' => $record->id, 'slug' => str_replace(' ', '-', $record->slug)]) }}">
+
+                                    <h5 class="post-title">{{ $record->title }}</h5>
+                                </a>
 
                 <h6 style="color: crimson;">By {{ $record->description }}</h6>
                 <div class="meta-title">

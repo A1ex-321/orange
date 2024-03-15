@@ -25,6 +25,21 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>{{ url('/ceiling') }}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>{{ url('/product') }}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>{{ url('/port') }}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>{{ url('/blog') }}</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>

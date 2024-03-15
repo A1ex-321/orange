@@ -421,14 +421,17 @@
                 @foreach($blog as $blogItem) <!-- Renamed variable to avoid confusion -->
                 <div class="item">
                     <div class="thumb">
-                        <a href="{{ route('singleblog', ['id' => $blogItem->id]) }}">
+                        <a href="{{ route('singleblog', ['id' => $blogItem->id, 'slug' => str_replace(' ', '-', $blogItem->slug)]) }}">
                             <img src="{{ asset('public/images/' . $blogItem->singleimage) }}" style="height: 300px; border-radius: 5%;" alt="Thumb">
                         </a>
                     </div>
                     <div class="info">
-                        <h4>
-                            <a href="#">{{ $blogItem->title }}</a>
-                        </h4>
+                    <div class="text-center">
+    <h4>
+        <a href="{{ route('singleblog', ['id' => $blogItem->id, 'slug' => str_replace(' ', '-', $blogItem->slug)]) }}">{{ $blogItem->title }}</a>
+    </h4>
+</div>
+
                     </div>
                 </div>
                 @endforeach
@@ -442,45 +445,7 @@
         <a class="btn circle btn-md btn-gradient wow fadeInUp" href="{{ url('/blog') }}">View All <i class="fas fa-angle-right"></i></a>
     </div>
 @endsection
-<script>
-$(document).ready(function() {
-    // Initialize Owl Carousel with conditional loop setting
-    var itemCount = $('.recent-causes-carousel .item').length; // Count the number of items in the carousel
 
-    $('.recent-causes-carousel').owlCarousel({
-        loop: itemCount > 1, // Only enable looping if more than 1 item is present
-        nav: false, // Navigation arrows disabled
-        margin: 30,
-        dots: true, // Show pagination dots
-        autoplay: true, // Enable autoplay mode
-        autoplayTimeout: 5000, // Delay between transitions (5s)
-        autoplayHoverPause: true, // Pause on hover
-        items: 1, // Start with 1 item
-        navText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ],
-        responsive: {
-            0: {
-                items: 1, // Defaults for XS screens
-                stagePadding: 0 // Adjust if necessary for small screens
-            },
-            800: {
-                items: 2, // Show 2 items on MD screens
-                stagePadding: 0 // Adjust stage padding for MD screens
-            },
-            1000: {
-                items: 2, // Show 2 items on LG screens
-                stagePadding: 100 // Custom stage padding for LG screens
-            },
-            1400: {
-                items: 3, // Show 3 items on XL screens
-                stagePadding: 100 // Custom stage padding for XL screens
-            }
-        }
-    });
-});
-</script>
 
 @push('scripts')
 <script></script>

@@ -337,6 +337,12 @@ public function portadd(Request $request)
             $resizedImage = Image::make($images)->fit(640, 360)->save(public_path('images') . '/' . $filename);
         }
         $data->singleimage = $filename;
+        $data->metatitle = $request->input('title');
+
+        $data->metadescription = $request->input('description');
+        $data->ogimage = $filename;
+        $data->slug = $request->input('title');
+
         $data->image_data = $request->input('image-data');
         $data->save();
         return redirect('admin/blog/bloglist')->with('success', ' Added successfully.');

@@ -68,6 +68,52 @@
         <meta property="og:url" content="{{ $contacts->ogurl }}">
         <meta property="og:type" content="{{ $contacts->ogtype }}">
     @endforeach
+    @elseif(isset($portseo) && $portseo->isNotEmpty())
+    @foreach($portseo as $portseo1)
+        <meta charset="UTF-8">
+        <title>{{ $portseo1->metatitle }}</title>
+        <meta name="description" content="{{ $portseo1->metadescription }}">
+
+        <meta property="og:title" content="{{ $portseo1->ogtitle }}">
+        <meta property="og:description" content="{{ $portseo1->ogdescription }}">
+        <meta property="og:image" content="{{ $portseo1->ogimage }}">
+        <meta property="og:url" content="{{ $portseo1->ogurl }}">
+        <meta property="og:type" content="{{ $portseo1->ogtype }}">
+    @endforeach
+    @elseif(isset($ceilingseo) && $ceilingseo->isNotEmpty())
+    @foreach($ceilingseo as $ceilingseo1)
+        <meta charset="UTF-8">
+        <title>{{ $ceilingseo1->metatitle }}</title>
+        <meta name="description" content="{{ $ceilingseo1->metadescription }}">
+
+        <meta property="og:title" content="{{ $ceilingseo1->ogtitle }}">
+        <meta property="og:description" content="{{ $ceilingseo1->ogdescription }}">
+        <meta property="og:image" content="{{ $ceilingseo1->ogimage }}">
+        <meta property="og:url" content="{{ $ceilingseo1->ogurl }}">
+        <meta property="og:type" content="{{ $ceilingseo1->ogtype }}">
+    @endforeach
+    @elseif(isset($productseo) && $productseo->isNotEmpty())
+    @foreach($productseo as $productseo1)
+        <meta charset="UTF-8">
+        <title>{{ $productseo1->metatitle }}</title>
+        <meta name="description" content="{{ $productseo1->metadescription }}">
+
+        <meta property="og:title" content="{{ $productseo1->ogtitle }}">
+        <meta property="og:description" content="{{ $productseo1->ogdescription }}">
+        <meta property="og:image" content="{{ $productseo1->ogimage }}">
+        <meta property="og:url" content="{{ $productseo1->ogurl }}">
+        <meta property="og:type" content="{{ $productseo1->ogtype }}">
+    @endforeach
+    @elseif(isset($singleseo))
+    <meta charset="UTF-8">
+    <title>{{ $singleseo->metatitle }}</title>
+    <meta name="description" content="{{ $singleseo->metadescription }}">
+
+    <meta property="og:title" content="{{ $singleseo->ogtitle }}">
+    <meta property="og:description" content="{{ $singleseo->ogdescription }}">
+    <meta property="og:image" content="{{ $singleseo->ogimage }}">
+    <meta property="og:url" content="{{ $singleseo->ogurl }}">
+    <meta property="og:type" content="{{ $singleseo->ogtype }}">
 @endif
 
     <meta charset="utf-8">
