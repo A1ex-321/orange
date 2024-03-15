@@ -221,7 +221,7 @@ class MachineController extends Controller
     public function store(Request $request)
     {
         // Extract form data
-        //  dd($request->all());
+          dd($request->all());
         $name = $request->input('name');
         $phone = $request->input('phone');
         $message = $request->input('msg');

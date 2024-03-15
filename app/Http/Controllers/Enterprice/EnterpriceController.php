@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Enterprice;
+
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 use App\Models\User;
@@ -33,56 +34,54 @@ use Illuminate\Support\Facades\Redis;
 
 class EnterpriceController extends Controller
 {
-    
+
     public function index()
     {
-        $data['index']= home::get();
-        // $data['getRecord'] = Banner::get();
-        $data['content'] = Machineservice::where('is_service', 0)->get();
-        $data['service'] = Machineservice::where('is_service', 1)->select('machinetitle', 'machineimage', 'description')->get();
+        $data['index'] = home::get();
         $data['link'] = Scolink::get();
-        // dd($data['link']);
+        $data['service'] = Machineservice::where('is_service', 1)->get();
+        $data['ceiling'] = Ceiling::get();
+        $data['product'] = Product::get();
+        $data['port'] = Port::get();
+        $data['blog'] = banner::get();
 
-
-        //   dd($data['content']);
-        // $data['header_title'] ="Admin List";
-
-        return view('Enterprice.index');
+        return view('Enterprice.index', $data);
     }
     public function about()
     {
-        $data['about']= about::get();
+        $data['about'] = about::get();
         $data['link'] = Scolink::get();
         $data['service'] = Machineservice::where('is_service', 0)->get();
+
         return view('Enterprice.about');
     }
     public function service()
     {
-        $data['service'] = Machineservice::where('is_service', 1 )->get();
-// dd($data['service']);
-        return view('Enterprice.service',$data);
+        $data['service'] = Machineservice::where('is_service', 1)->get();
+        // dd($data['service']);
+        return view('Enterprice.service', $data);
     }
     public function ceiling()
     {
         $data['getRecord'] = Ceiling::get();
 
-        return view('Enterprice.ceiling',$data);
+        return view('Enterprice.ceiling', $data);
     }
     public function product()
     {
         $data['getRecord'] = Product::get();
 
-        return view('Enterprice.product',$data);
+        return view('Enterprice.product', $data);
     }
     public function port()
     {
         $data['getRecord'] = Port::get();
-        return view('Enterprice.port',$data);
+        return view('Enterprice.port', $data);
     }
     public function blog()
     {
         $data['getRecord'] = banner::get();
-        return view('Enterprice.blog',$data);
+        return view('Enterprice.blog', $data);
     }
     public function contact()
     {
@@ -93,10 +92,10 @@ class EnterpriceController extends Controller
         try {
             // Attempt to find the record with the specified ID
             $user['single'] = banner::findOrFail($id);
-            
+
             // Get all blog records (if needed)
             $user['blog'] = banner::get();
-            
+
             // Return the view with the data
             return view('Enterprice.singleblog', $user);
         } catch (ModelNotFoundException $e) {
@@ -104,282 +103,321 @@ class EnterpriceController extends Controller
             return response()->view('errors.404', [], 404);
         }
     }
+    public function store(Request $request)
+    {
+        // Extract form data
+        //   dd($request->all());
+        $name = $request->input('name');
+        $phone = $request->input('phone');
+        $message = $request->input('msg');
 
-//     public function service()
-//     {
-//         $data['content'] = Machineservice::where('is_service', 0)->get();
-//         $cacheKey = 'machineservice_is_service_1';
-    
-//         // Attempt to retrieve data from the cache
-//         $data['service'] = Cache::remember($cacheKey, now()->addHours(1), function () use ($cacheKey) {
-//             // Log that a cache miss occurred and data is being fetched from the database
-//             Log::info("Cache miss for key: {$cacheKey}. Fetching from database.");
-//             return Machineservice::where('is_service', 1)->get();
-//         });
-    
-//         // Additional data fetching
-//         $data['serviceseo'] = service::get();
-//         $data['link'] = Scolink::get();
-    
-//         return view('machine.service', $data);
-//     }
-//     // public function getservice()  
-//     // {
-//     //     $services = Machineservice::where('is_service', 1)->get();
-//     //     return response()->json($services);
-//     // }
-//     public function blog()
-//     {
-//         // Check if the cache key exists
-//         $cacheKey = 'cached_get_record';
-//         $cachedTimestamp = Cache::get('cached_get_record_timestamp');
-    
-//         // Fetch the latest timestamp from the database
-//         $latestTimestamp = Blogsco::latest('updated_at')->pluck('updated_at')->first();
-    
-//         // If there is no cached timestamp or if the latest timestamp is different from the cached one
-//         if (!$cachedTimestamp || $latestTimestamp != $cachedTimestamp) {
-//             // Fetch data from the database
-//             $getRecord = Blogsco::select('id','title', 'description', 'image', 'slug')->get()->map(function ($item) {
-//                 $item->slug = str_replace(' ', '-', $item->slug);
-//                 return $item;
-//             });
-    
-//             // Cache the data and update the timestamp
-//             Cache::forever($cacheKey, $getRecord);
-//             Cache::forever('cached_get_record_timestamp', $latestTimestamp);
-    
-//             // Assign the data to the $data array
-//             $data['getRecord'] = $getRecord;
-//         } else {
-//             // If the cached data is up to date, retrieve it from the cache
-//             $data['getRecord'] = Cache::get($cacheKey);
-//         }
-    
-//         // Fetch other data that you want to include in the view
-//         $data['blogseo'] = soloblog::get();
-//         $data['link'] = Scolink::get();
-    
-//         // Return the view with the $data array
-//         return view('machine.blog', $data);
-//     }
-    
-//     public function updateDatabase()
-// {
-//     // Perform the database update
+        // Create a new record in the database
+        Mailstores::create([
+            'name' => $name,
+            'phone' => $phone,
+            'msg' => $message,
+        ]);
 
-//     // Clear the cache for the 'getRecord' data
-//     $cacheKey = 'cached_get_record';
-//     Cache::forget($cacheKey);
-// }
+        // Redirect or return a response
+        return redirect('/contact')->with('success', 'Message sent successfully');
+    }
+    public function get_logo1()
+    {
+        try {
+            $logo = Gallery::first();
+            // dd($logo);
+            if ($logo) {
+                $image = asset('public/images/' . $logo->image);
+                return response()->json(['image' => $image]);
+                // dd($logo);
 
-    
-    
-//     public function contact()
-//     {
-//         $data['contact'] = contacts::get();
-//         $data['link'] = Scolink::get();
+            } else {
+                return response()->json(['error' => 'No record found in the Gallery table']);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Internal Server Error']);
+        }
+    }
+    public function getservice()
+    {
+        $services = Machineservice::where('is_service', 1)->get();
+        return response()->json($services);
+    }
+    //     public function service()
+    //     {
+    //         $data['content'] = Machineservice::where('is_service', 0)->get();
+    //         $cacheKey = 'machineservice_is_service_1';
 
-//         return view('machine.contact',$data);
-//     }
-//     public function singleblog()
-//     {
-//         return view('machine.singleblog');
-//     }
-//     public function admin_add()
-//     {
-//         $data['header_title'] = "Add Admin ";
+    //         // Attempt to retrieve data from the cache
+    //         $data['service'] = Cache::remember($cacheKey, now()->addHours(1), function () use ($cacheKey) {
+    //             // Log that a cache miss occurred and data is being fetched from the database
+    //             Log::info("Cache miss for key: {$cacheKey}. Fetching from database.");
+    //             return Machineservice::where('is_service', 1)->get();
+    //         });
 
-//         return view('admin.admin.add_admin', $data);
-//     }
-//     public function add_admin_edit($id)
-//     {
-//         $data['getRecord'] = User::getSingle($id);
+    //         // Additional data fetching
+    //         $data['serviceseo'] = service::get();
+    //         $data['link'] = Scolink::get();
 
-//         $data['header_title'] = "Edit Admin ";
+    //         return view('machine.service', $data);
+    //     }
+    //     // public function getservice()  
+    //     // {
+    //     //     $services = Machineservice::where('is_service', 1)->get();
+    //     //     return response()->json($services);
+    //     // }
+    //     public function blog()
+    //     {
+    //         // Check if the cache key exists
+    //         $cacheKey = 'cached_get_record';
+    //         $cachedTimestamp = Cache::get('cached_get_record_timestamp');
 
-//         return view('admin.admin.add_admin_edit', $data);
-//     }
-//     public function admin_add_update($id, Request $request)
-//     {
+    //         // Fetch the latest timestamp from the database
+    //         $latestTimestamp = Blogsco::latest('updated_at')->pluck('updated_at')->first();
 
-//         request()->validate(['email' => 'required|email|unique:users,email,' . $id]);
-//         // dd($request->all() );
+    //         // If there is no cached timestamp or if the latest timestamp is different from the cached one
+    //         if (!$cachedTimestamp || $latestTimestamp != $cachedTimestamp) {
+    //             // Fetch data from the database
+    //             $getRecord = Blogsco::select('id','title', 'description', 'image', 'slug')->get()->map(function ($item) {
+    //                 $item->slug = str_replace(' ', '-', $item->slug);
+    //                 return $item;
+    //             });
 
-//         $user = User::getSingle($id);
-//         $user->name = $request->name;
-//         $user->email = $request->email;
-//         if ($request->filled('password')) {
-//             $user->password = Hash::make($request->password);
-//         }
-//         $user->status = $request->status;
-//         $user->is_admin = 1;
-//         $user->role = $request->role;
-//         $user->save();
+    //             // Cache the data and update the timestamp
+    //             Cache::forever($cacheKey, $getRecord);
+    //             Cache::forever('cached_get_record_timestamp', $latestTimestamp);
 
-//         return redirect('admin/admin/list')->with('success', 'Admin Successfully Updated');
-//     }
-//     public function admin_add_delete($id)
-//     {
+    //             // Assign the data to the $data array
+    //             $data['getRecord'] = $getRecord;
+    //         } else {
+    //             // If the cached data is up to date, retrieve it from the cache
+    //             $data['getRecord'] = Cache::get($cacheKey);
+    //         }
 
+    //         // Fetch other data that you want to include in the view
+    //         $data['blogseo'] = soloblog::get();
+    //         $data['link'] = Scolink::get();
 
-//         $user = User::getSingle($id);
+    //         // Return the view with the $data array
+    //         return view('machine.blog', $data);
+    //     }
 
-//         $user->is_delete = 1;
-//         $user->save();
-//         return redirect()->back()->with('success', 'Admin Successfully Deleted');
-//     }
-//     public function add_admin_insert(Request $request)
-//     {
+    //     public function updateDatabase()
+    // {
+    //     // Perform the database update
 
-//         request()->validate(['email' => 'required|email|unique:users']);
-
-//         // dd($request->all() );
-//         $user = new User();
-//         $user->name = $request->name;
-//         $user->email = $request->email;
-//         if (!empty($request->password)) {
-//             $user->password = Hash::make($request->password);
-//         }
-
-//         $user->status = $request->status;
-//         $user->is_admin = 1;
-//         $user->role = $request->role;
-//         $user->save();
-
-//         return redirect('admin/admin/list')->with('success', 'Admin Successfully Created');
-//     }
-//     public function get_logo1()
-//     {
-//         try {
-//             $logo = Gallery::first();
-//             // dd($logo);
-//             if ($logo) {
-//                 $image = asset('public/images/' . $logo->image);
-//                 return response()->json(['image' => $image]);
-//                 // dd($logo);
-
-//             } else {
-//                 return response()->json(['error' => 'No record found in the Gallery table']);
-//             }
-//         } catch (\Exception $e) {
-//             return response()->json(['error' => 'Internal Server Error']);
-//         }
-//     }
-//     public function store(Request $request)
-//     {
-//         // Extract form data
-//         //  dd($request->all());
-//         $name = $request->input('name');
-//         $phone = $request->input('phone');
-//         $message = $request->input('msg');
-
-//         // Create a new record in the database
-//         Mailstores::create([
-//             'name' => $name,
-//             'phone' => $phone,
-//             'msg' => $message,
-//         ]);
-
-//         // Redirect or return a response
-//         return redirect('/contact')->with('success', 'Message sent successfully');
-//     }
-//     public function get_profile()
-//     {
-//         try {
-//             $profile = detail::first();
-//             // dd($logo);
-//             if ($profile) {
-//                 //  $image = asset('public/images/' . $logo->image);
-//                 return response()->json(['profile' => $profile]);
-//                 // dd($logo);
-
-//             } else {
-//                 return response()->json(['error' => 'No record found in the Gallery table']);
-//             }
-//         } catch (\Exception $e) {
-//             return response()->json(['error' => 'Internal Server Error']);
-//         }
-//     }
-//     public function get_service()
-//     {
-//         try {
-//             $service = Machineservice::where('is_service', 1)->get();
-//             // dd($logo);
-//             if ($service) {
-//                 //  $image = asset('public/images/' . $logo->image);
-//                 return response()->json(['service' => $service]);
-//                 // dd($logo);
-
-//             } else {
-//                 return response()->json(['error' => 'No record found in the Gallery table']);
-//             }
-//         } catch (\Exception $e) {
-//             return response()->json(['error' => 'Internal Server Error']);
-//         }
-//     }
-//     public function get_blog(Request $request, $id)
-//     {
-//         $data['link'] = Scolink::get();
-    
-//         // Find the blog record with the given ID
-//         $data['getRecord3'] = Blogsco::get()->map(function ($item) {
-//             $item->slug = str_replace(' ', '-', $item->slug);
-//             return $item;
-//         });
-//         $data['getRecord'] = Blogsco::find($id);
-//         if ($data['getRecord']) {
-//             $data['getRecord']->slug = str_replace(' ', '-', $data['getRecord']->slug);
-//         }
-//         // $data['blog'] = Blogsco::find($id);
-//         $blog = Blogsco::find($id);
-    
-//         if ($blog) {
-//             // If the blog record is found, update the ogimage property
-//             $blog->ogimage = asset('public/images/' . $blog->ogimage);
-        
-//             // Assign the modified blog record to the 'getRecord' key in the data array
-//             $data['getRecord5'] = $blog;
-//             // dd($data['getRecord']);
-//         } else {
-//             // If the blog record is not found, set $getRecord to null
-//             $data['getRecord5'] = null;
-//         }
-//             //  dd($data['getRecord5']);
-        
-    
-//         // Return the view with the data array
-//         return view('machine.singleblog', $data);
-//     }
-    
+    //     // Clear the cache for the 'getRecord' data
+    //     $cacheKey = 'cached_get_record';
+    //     Cache::forget($cacheKey);
+    // }
 
 
 
-//     public function get_all()
-//     {
-//         try {
-//             $home = home::get();
-//             $link = Scolink::get();
-//             $sociallink = social::where('is_social', 0)->get();
-//             $gather = social::where('is_social', 1)->get();
-//             $about = about::get();
-//             $blog = soloblog::get();
-//             $service = service::get();
-//             $contact = contacts::get();
+    //     public function contact()
+    //     {
+    //         $data['contact'] = contacts::get();
+    //         $data['link'] = Scolink::get();
 
-//             return response()->json([
-//                 'home' => $home,
-//                 'link' => $link,
-//                 'sociallink' => $sociallink,
-//                 'gather' => $gather,
-//                 'about' => $about,
-//                 'blog' => $blog,
-//                 'service' => $service,
-//                 'contact' => $contact
+    //         return view('machine.contact',$data);
+    //     }
+    //     public function singleblog()
+    //     {
+    //         return view('machine.singleblog');
+    //     }
+    //     public function admin_add()
+    //     {
+    //         $data['header_title'] = "Add Admin ";
 
-//             ]);
-//         } catch (\Exception $e) {
-//             return response()->json(['error' => 'Internal Server Error']);
-//         }
-//     }
+    //         return view('admin.admin.add_admin', $data);
+    //     }
+    //     public function add_admin_edit($id)
+    //     {
+    //         $data['getRecord'] = User::getSingle($id);
+
+    //         $data['header_title'] = "Edit Admin ";
+
+    //         return view('admin.admin.add_admin_edit', $data);
+    //     }
+    //     public function admin_add_update($id, Request $request)
+    //     {
+
+    //         request()->validate(['email' => 'required|email|unique:users,email,' . $id]);
+    //         // dd($request->all() );
+
+    //         $user = User::getSingle($id);
+    //         $user->name = $request->name;
+    //         $user->email = $request->email;
+    //         if ($request->filled('password')) {
+    //             $user->password = Hash::make($request->password);
+    //         }
+    //         $user->status = $request->status;
+    //         $user->is_admin = 1;
+    //         $user->role = $request->role;
+    //         $user->save();
+
+    //         return redirect('admin/admin/list')->with('success', 'Admin Successfully Updated');
+    //     }
+    //     public function admin_add_delete($id)
+    //     {
+
+
+    //         $user = User::getSingle($id);
+
+    //         $user->is_delete = 1;
+    //         $user->save();
+    //         return redirect()->back()->with('success', 'Admin Successfully Deleted');
+    //     }
+    //     public function add_admin_insert(Request $request)
+    //     {
+
+    //         request()->validate(['email' => 'required|email|unique:users']);
+
+    //         // dd($request->all() );
+    //         $user = new User();
+    //         $user->name = $request->name;
+    //         $user->email = $request->email;
+    //         if (!empty($request->password)) {
+    //             $user->password = Hash::make($request->password);
+    //         }
+
+    //         $user->status = $request->status;
+    //         $user->is_admin = 1;
+    //         $user->role = $request->role;
+    //         $user->save();
+
+    //         return redirect('admin/admin/list')->with('success', 'Admin Successfully Created');
+    //     }
+    //     public function get_logo1()
+    //     {
+    //         try {
+    //             $logo = Gallery::first();
+    //             // dd($logo);
+    //             if ($logo) {
+    //                 $image = asset('public/images/' . $logo->image);
+    //                 return response()->json(['image' => $image]);
+    //                 // dd($logo);
+
+    //             } else {
+    //                 return response()->json(['error' => 'No record found in the Gallery table']);
+    //             }
+    //         } catch (\Exception $e) {
+    //             return response()->json(['error' => 'Internal Server Error']);
+    //         }
+    //     }
+    //     public function store(Request $request)
+    //     {
+    //         // Extract form data
+    //         //  dd($request->all());
+    //         $name = $request->input('name');
+    //         $phone = $request->input('phone');
+    //         $message = $request->input('msg');
+
+    //         // Create a new record in the database
+    //         Mailstores::create([
+    //             'name' => $name,
+    //             'phone' => $phone,
+    //             'msg' => $message,
+    //         ]);
+
+    //         // Redirect or return a response
+    //         return redirect('/contact')->with('success', 'Message sent successfully');
+    //     }
+    //     public function get_profile()
+    //     {
+    //         try {
+    //             $profile = detail::first();
+    //             // dd($logo);
+    //             if ($profile) {
+    //                 //  $image = asset('public/images/' . $logo->image);
+    //                 return response()->json(['profile' => $profile]);
+    //                 // dd($logo);
+
+    //             } else {
+    //                 return response()->json(['error' => 'No record found in the Gallery table']);
+    //             }
+    //         } catch (\Exception $e) {
+    //             return response()->json(['error' => 'Internal Server Error']);
+    //         }
+    //     }
+    //     public function get_service()
+    //     {
+    //         try {
+    //             $service = Machineservice::where('is_service', 1)->get();
+    //             // dd($logo);
+    //             if ($service) {
+    //                 //  $image = asset('public/images/' . $logo->image);
+    //                 return response()->json(['service' => $service]);
+    //                 // dd($logo);
+
+    //             } else {
+    //                 return response()->json(['error' => 'No record found in the Gallery table']);
+    //             }
+    //         } catch (\Exception $e) {
+    //             return response()->json(['error' => 'Internal Server Error']);
+    //         }
+    //     }
+    //     public function get_blog(Request $request, $id)
+    //     {
+    //         $data['link'] = Scolink::get();
+
+    //         // Find the blog record with the given ID
+    //         $data['getRecord3'] = Blogsco::get()->map(function ($item) {
+    //             $item->slug = str_replace(' ', '-', $item->slug);
+    //             return $item;
+    //         });
+    //         $data['getRecord'] = Blogsco::find($id);
+    //         if ($data['getRecord']) {
+    //             $data['getRecord']->slug = str_replace(' ', '-', $data['getRecord']->slug);
+    //         }
+    //         // $data['blog'] = Blogsco::find($id);
+    //         $blog = Blogsco::find($id);
+
+    //         if ($blog) {
+    //             // If the blog record is found, update the ogimage property
+    //             $blog->ogimage = asset('public/images/' . $blog->ogimage);
+
+    //             // Assign the modified blog record to the 'getRecord' key in the data array
+    //             $data['getRecord5'] = $blog;
+    //             // dd($data['getRecord']);
+    //         } else {
+    //             // If the blog record is not found, set $getRecord to null
+    //             $data['getRecord5'] = null;
+    //         }
+    //             //  dd($data['getRecord5']);
+
+
+    //         // Return the view with the data array
+    //         return view('machine.singleblog', $data);
+    //     }
+
+
+
+
+    //     public function get_all()
+    //     {
+    //         try {
+    //             $home = home::get();
+    //             $link = Scolink::get();
+    //             $sociallink = social::where('is_social', 0)->get();
+    //             $gather = social::where('is_social', 1)->get();
+    //             $about = about::get();
+    //             $blog = soloblog::get();
+    //             $service = service::get();
+    //             $contact = contacts::get();
+
+    //             return response()->json([
+    //                 'home' => $home,
+    //                 'link' => $link,
+    //                 'sociallink' => $sociallink,
+    //                 'gather' => $gather,
+    //                 'about' => $about,
+    //                 'blog' => $blog,
+    //                 'service' => $service,
+    //                 'contact' => $contact
+
+    //             ]);
+    //         } catch (\Exception $e) {
+    //             return response()->json(['error' => 'Internal Server Error']);
+    //         }
+    //     }
 }

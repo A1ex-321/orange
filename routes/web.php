@@ -173,6 +173,9 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('/blog', [EnterpriceController::class, 'blog']);
  Route::get('/contact', [EnterpriceController::class, 'contact']);
  Route::get('/singleblog/{id}', [EnterpriceController::class, 'singleblog'])->name('singleblog');
+ Route::post('/contacts', [EnterpriceController::class, 'store'])->name('contacts');
+ Route::get('/header', [EnterpriceController::class, 'get_logo1']);
+ Route::get('/getservice', [EnterpriceController::class, 'getservice']);
 
 
 
@@ -180,8 +183,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
-
- Route::get('/getservice', [MachineController::class, 'getservice'])->name('getservice');
+//  Route::get('/getservice', [MachineController::class, 'getservice'])->name('getservice');
 
 //  Route::get('/blog', [MachineController::class, 'blog']);
 //  Route::get('/contact', [MachineController::class, 'contact']);
@@ -189,8 +191,8 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::get('admin', [AuthController::class, 'login']);
  Route::post('admin', [AuthController::class, 'auth_login_admin']);
  Route::get('admin/logout', [AuthController::class, 'logout_admin']);
- Route::get('/header', [MachineController::class, 'get_logo1']);
- Route::post('/contact', [MachineController::class, 'store'])->name('contact.store');
+//  Route::get('/header', [MachineController::class, 'get_logo1']);
+//  Route::post('/contact', [MachineController::class, 'store'])->name('contact.store');
  Route::get('/profile', [MachineController::class, 'get_profile']);
  Route::get('/service1', [MachineController::class, 'get_service']);
 //  Route::get('/singleblog/{id}/{slug}', [MachineController::class, 'get_blog']);

@@ -33,7 +33,7 @@
                             <div class="single-item">
                                 <div class="item wow fadeInUp">
                                     <div class="thumb">
-                                        <img src="{{ asset('public/images/' . $single->singleimage) }}"  alt="Thumb" height="400px" width="100%">
+                                        <img src="{{ asset('public/images/' . $single->singleimage) }}"  alt="Thumb"  width="100%">
 
                                     </div>
                                     <div class="info">

@@ -105,7 +105,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('public/Enterprice/assets/img/newlogo1.png') }}" class="logo" alt="Logo">
+                    <img src="{{ asset('public/Enterprice/assets/img/newlogo1.png') }}" class="logo" id="logo1"alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->

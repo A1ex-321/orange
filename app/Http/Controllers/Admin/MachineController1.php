@@ -312,7 +312,7 @@ public function portadd(Request $request)
                     $filename = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
     
                     // Resize and save each image with fixed width and height
-                    $resizedImage = Image::make($image)->fit(500, 500)->save(public_path('images') . '/' . $filename);
+                    $resizedImage = Image::make($image)->fit(640, 360)->save(public_path('images') . '/' . $filename);
     
                     // Store the path to the resized image
                     $paths[] = asset('public/images/' . $filename);
@@ -334,7 +334,7 @@ public function portadd(Request $request)
             $filename = time() . '_' . str_replace(' ', '_', $images->getClientOriginalName());
     
             // Resize and save the image with fixed width and height
-            $resizedImage = Image::make($images)->fit(500, 500)->save(public_path('images') . '/' . $filename);
+            $resizedImage = Image::make($images)->fit(640, 360)->save(public_path('images') . '/' . $filename);
         }
         $data->singleimage = $filename;
         $data->image_data = $request->input('image-data');
@@ -367,7 +367,7 @@ public function portadd(Request $request)
             $filename = time() . '_' . str_replace(' ', '_', $images->getClientOriginalName());
     
             // Resize and save the image with fixed width and height
-            $resizedImage = Image::make($images)->fit(500, 500)->save(public_path('images') . '/' . $filename);
+            $resizedImage = Image::make($images)->fit(640, 360)->save(public_path('images') . '/' . $filename);
             $data->singleimage = $filename;
         } else {
             $data->singleimage = $data->singleimage;
