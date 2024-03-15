@@ -10,13 +10,13 @@ use App\Models\detail;
 use App\Models\Ceiling;
 use App\Models\Machineservice;
 use App\Models\Scolink;
-use App\Models\home;
-use App\Models\social;
-use App\Models\about;
+use App\Models\Home;
+use App\Models\Service;
+use App\Models\About;
 use App\Models\Port;
 use App\Models\Banner;
 
-use App\Models\soloblog;
+use App\Models\Work;
 use Illuminate\Support\Facades\Log; // Don't forget to import the Log facade
 use Illuminate\Support\Carbon;
 use App\Models\Product;
@@ -51,13 +51,14 @@ class EnterpriceController extends Controller
     {
         $data['about'] = about::get();
         $data['link'] = Scolink::get();
-        $data['service'] = Machineservice::where('is_service', 0)->get();
 
-        return view('Enterprice.about');
+        return view('Enterprice.about',$data);
     }
     public function service()
     {
         $data['service'] = Machineservice::where('is_service', 1)->get();
+        $data['serviceseo'] = service::get();
+        $data['link'] = Scolink::get();
         // dd($data['service']);
         return view('Enterprice.service', $data);
     }
@@ -80,17 +81,23 @@ class EnterpriceController extends Controller
     }
     public function blog()
     {
+        $data['blogseo'] = Work::get();
+        $data['link'] = Scolink::get();
         $data['getRecord'] = banner::get();
         return view('Enterprice.blog', $data);
     }
     public function contact()
     {
-        return view('Enterprice.contact');
+        $data['contact'] = contacts::get();
+        $data['link'] = Scolink::get();
+        return view('Enterprice.contact',$data);
     }
     public function singleblog(Request $request, $id)
     {
         try {
             // Attempt to find the record with the specified ID
+        $user['link'] = Scolink::get();
+
             $user['single'] = banner::findOrFail($id);
 
             // Get all blog records (if needed)

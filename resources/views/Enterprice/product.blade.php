@@ -96,7 +96,7 @@
                 </div>
             </div>
             <ul class="breadcrumb">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="{{ url('/') }}"><i class="fas fa-home"></i> Home</a></li>
 
                 <li class="active">Products</li>
             </ul>

@@ -3,13 +3,79 @@
 
 <head>
     <!-- ========== Meta Tags ========== -->
+    @if($link->isNotEmpty())
+    @foreach($link as $item2)
+    {!! $item2->scolink !!}
+@endforeach
+@endif
+@if(isset($index) && $index->isNotEmpty())
+    @foreach($index as $item)
+        <meta charset="UTF-8">
+        <title>{{ $item->metatitle }}</title>
+        <meta name="description" content="{{ $item->metadescription }}">
+
+        <meta property="og:title" content="{{ $item->ogtitle }}">
+        <meta property="og:description" content="{{ $item->ogdescription }}">
+        <meta property="og:image" content="{{ $item->ogimage }}">
+        <meta property="og:url" content="{{ $item->ogurl }}">
+        <meta property="og:type" content="{{ $item->ogtype }}">
+    @endforeach
+    @elseif(isset($about) && $about->isNotEmpty())
+    @foreach($about as $aboutItem)
+        <meta charset="UTF-8">
+        <title>{{ $aboutItem->metatitle }}</title>
+        <meta name="description" content="{{ $aboutItem->metadescription }}">
+
+        <meta property="og:title" content="{{ $aboutItem->ogtitle }}">
+        <meta property="og:description" content="{{ $aboutItem->ogdescription }}">
+        <meta property="og:image" content="{{ $aboutItem->ogimage }}">
+        <meta property="og:url" content="{{ $aboutItem->ogurl }}">
+        <meta property="og:type" content="{{ $aboutItem->ogtype }}">
+    @endforeach
+    @elseif(isset($serviceseo) && $serviceseo->isNotEmpty())
+    @foreach($serviceseo as $serviceseo1)
+        <meta charset="UTF-8">
+        <title>{{ $serviceseo1->metatitle }}</title>
+        <meta name="description" content="{{ $serviceseo1->metadescription }}">
+
+        <meta property="og:title" content="{{ $serviceseo1->ogtitle }}">
+        <meta property="og:description" content="{{ $serviceseo1->ogdescription }}">
+        <meta property="og:image" content="{{ $serviceseo1->ogimage }}">
+        <meta property="og:url" content="{{ $serviceseo1->ogurl }}">
+        <meta property="og:type" content="{{ $serviceseo1->ogtype }}">
+    @endforeach
+    @elseif(isset($blogseo) && $blogseo->isNotEmpty())
+    @foreach($blogseo as $blog1)
+        <meta charset="UTF-8">
+        <title>{{ $blog1->metatitle }}</title>
+        <meta name="description" content="{{ $blog1->metadescription }}">
+
+        <meta property="og:title" content="{{ $blog1->ogtitle }}">
+        <meta property="og:description" content="{{ $blog1->ogdescription }}">
+        <meta property="og:image" content="{{ $blog1->ogimage }}">
+        <meta property="og:url" content="{{ $blog1->ogurl }}">
+        <meta property="og:type" content="{{ $blog1->ogtype }}">
+    @endforeach
+    @elseif(isset($contact) && $contact->isNotEmpty())
+    @foreach($contact as $contacts)
+        <meta charset="UTF-8">
+        <title>{{ $contacts->metatitle }}</title>
+        <meta name="description" content="{{ $contacts->metadescription }}">
+
+        <meta property="og:title" content="{{ $contacts->ogtitle }}">
+        <meta property="og:description" content="{{ $contacts->ogdescription }}">
+        <meta property="og:image" content="{{ $contacts->ogimage }}">
+        <meta property="og:url" content="{{ $contacts->ogurl }}">
+        <meta property="og:type" content="{{ $contacts->ogtype }}">
+    @endforeach
+@endif
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Poora - Fundraising & Charity Template">
 
     <!-- ========== Page Title ========== -->
-    <title>Priyanka Enterprises</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="{{ asset('public/Enterprice/assets/img/logoimage.png') }}" type="image/x-icon">
@@ -62,7 +128,7 @@
                   
                     <div class="social">
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
@@ -76,7 +142,7 @@
                                 <a href="#">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
