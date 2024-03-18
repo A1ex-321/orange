@@ -109,7 +109,6 @@
     </div>
     <!-- End Breadcrumb -->
 
-    <h1 style="text-align: center;font-weight: bold;">Our Portfolio</h1>
 
     <div class="blog-area full-blog blog-standard full-blog grid-colum default-padding">
         <div class="container">
@@ -122,10 +121,8 @@
         <div class="col-lg-4 col-md-6 single-item">
             <div class="item wow fadeInUp">
                 <div class="thumb">
-                    <a href="#">
                     <img src="{{ asset('public/images/'.$record->machineimage) }}" alt="Product Image" > <!-- Ensure image fills container -->
 
-                    </a>
                 </div>
                 <!-- You can add more details from the $record here -->
             </div>

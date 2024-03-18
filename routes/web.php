@@ -188,6 +188,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
  Route::post('/contacts', [EnterpriceController::class, 'store'])->name('contacts');
  Route::get('/header', [EnterpriceController::class, 'get_logo1']);
  Route::get('/getservice', [EnterpriceController::class, 'getservice']);
+ Route::get('/profile', [EnterpriceController::class, 'get_profile']);
 
 
 

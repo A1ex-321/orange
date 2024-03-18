@@ -51,7 +51,7 @@
         font-size: 19px;
         font-weight: bold;
         color: #333;
-        margin-top: 5px;
+        margin-top: -8px;
     }
 
     .add-to-cart-btn {
@@ -119,7 +119,7 @@
             </div>
             <div class="product-details">
                 <h2 class="product-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ $product->machinetitle }}</h2>
-                <p class="product-price" style="margin-bottom: 10px;">₹ {{ $product->description }}</p>
+                <p class="product-price">₹ {{ $product->description }}</p>
             </div>
         </div>
         @php $counter++; @endphp

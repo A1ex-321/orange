@@ -162,11 +162,11 @@
       </a>
     </li> -->
     <!-- End Tables Nav -->
-    <!-- <li class="nav-item">
+     <li class="nav-item">
       <a href="{{ route('detail-list') }}" class="nav-link {{ request()->is('admin/detail/*') ? '' : 'collapsed' }}">
         <i class="bi bi-ticket-detailed-fill" aria-hidden="true"></i><span> Details</span>
       </a>
-    </li> -->
+    </li> 
 
     <!-- <li class="nav-item">
       <a href="{{ route('social-list') }}" class="nav-link {{ request()->is('admin/social/*') ? '' : 'collapsed' }}">

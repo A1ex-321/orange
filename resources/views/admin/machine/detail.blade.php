@@ -50,16 +50,25 @@
                                 <div class="row">
                                     <div class="col-md-6"> <!-- Each input takes half of the row width on medium screens -->
                                         <div class="form-group">
-                                            <label for="title" class="col-form-label">Dial Number:</label>
+                                            <label for="title" class="col-form-label">Dial Number: 1</label>
                                             <input type="text" class="form-control" id="title" name="dnumber" >
                                         </div>
                                     </div>
                                     <div class="col-md-6"> <!-- Each input takes half of the row width on medium screens -->
                                         <div class="form-group">
-                                            <label for="spantitle" class="col-form-label">Whatapp Number:</label>
-                                            <input type="text" class="form-control" id="spantitle" name="wnumber" >
+                                            <label for="spantitle" class="col-form-label">Dial Number: 2</label>
+                                            <input type="text" class="form-control" id="" name="address" >
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"> <!-- Each input takes half of the row width on medium screens -->
+                                        <div class="form-group">
+                                            <label for="title" class="col-form-label">Whatsapp:</label>
+                                            <input type="text" class="form-control" id="title" name="wnumber" >
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-12"> <!-- Each input takes half of the row width on medium screens -->
                                         <div class="form-group">
@@ -67,18 +76,18 @@
                                             <input type="mail" class="form-control" id="spantitle" name="mail" >
                                         </div>
                                     </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="message-text" class="col-form-label">Address</label>
                                     <textarea class="form-control" id="message-text" name="address" ></textarea>
-                                </div>
-                                <h5 class="modal-title" id="exampleModalLabel">Add header and footer description</h5>
+                                </div> -->
+                                <!-- <h5 class="modal-title" id="exampleModalLabel">Add header and footer description</h5>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Footer</label>
                                     <textarea class="form-control" id="" name="header" ></textarea>
                                 </div><div class="form-group">
                                     <label for="message-text" class="col-form-label">Header</label>
                                     <textarea class="form-control" id="" name="footer" ></textarea>
-                                </div>
+                                </div> -->
                                
                         </div>
                         <div class="modal-footer">
@@ -106,7 +115,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="title" class="col-form-label">Dial Number:</label>
+                                <label for="title" class="col-form-label">Dial Number:1</label>
                                 <input type="text" class="form-control" id="1" name="dnumber" >
                             </div>
                         </div>
@@ -117,17 +126,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="title" class="col-form-label">Dial Number:2</label>
+                                <input type="text" class="form-control" id="4" name="address" >
+                            </div>
+                        </div>
+                        
+                    </div>
                     <div class="col-md-12">
                             <div class="form-group">
                                 <label for="spantitle" class="col-form-label">Email </label>
                                 <input type="text" class="form-control" id="3" name="mail" >
                             </div>
                         </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="content" class="col-form-label">address</label>
-                        <textarea class="form-control" id="4" name="address" ></textarea>
-                    </div>
-                    <h5 class="modal-title" id="editModalLabel">Edit Record</h5>
+                        <textarea class="form-control" id="" name="address" ></textarea>
+                    </div> -->
+                    <!-- <h5 class="modal-title" id="editModalLabel">Edit Record</h5>
                
                     <div class="form-group">
                         <label for="content" class="col-form-label">header</label>
@@ -135,7 +153,7 @@
                     </div><div class="form-group">
                         <label for="content" class="col-form-label">footer</label>
                         <textarea class="form-control" id="footer1" name="footer" ></textarea>
-                    </div>
+                    </div> -->
                 </form>
             </div>
             <div class="modal-footer">
@@ -163,13 +181,10 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Dial Number</th>
+                                                    <th>Dial Number : 1</th>
+                                                    <th>Dial Number : 2</th>
                                                     <th>Whatsapp Number</th>
-                                                    <th>Address</th>
                                                     <th>Email</th>
-                                                    <th></th>
-                                                    <th>Footer</th>
-                                                    <th>Header</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -177,14 +192,12 @@
                                                 @foreach($getRecord as $value)
                                                 <tr>
                                                     <td>{{$value->id}}</td>
-                                                    <td>{{$value->wnumber}}</td>
                                                     <td>{{$value->dnumber}}</td>
                                                     <td>{{$value->address}}</td>
+                                                    <td>{{$value->wnumber}}</td>
 
                                                     <td>{{$value->mail}}</td>
-                                                    <td></td>
-                                                    <td>{{ strlen($value->header) > 50 ? substr($value->header, 0, 50) . '...' : $value->header }}</td>
-                                                    <td>{{ strlen($value->footer) > 50 ? substr($value->footer, 0, 50) . '...' : $value->footer }}</td>
+                                                    
 
                                                    
                                                     <td>

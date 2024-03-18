@@ -3,13 +3,19 @@
 @section('content')
 
 <style>
+    .description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* Number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+
     .product-container {
         display: flex;
-
-
         height: 300px;
         margin-bottom: 100px;
-
     }
 
     .product-card {
@@ -175,7 +181,7 @@
 
             <div class="col-lg-6">
                 <div class="thumb">
-                    <img src="{{ asset('public/Enterprice/assets/img/about.jpg') }}" alt="Thumb">
+                    <img src="{{ asset('public/Enterprice/assets/img/1998.png') }}" alt="Thumb">
 
                 </div>
             </div>
@@ -191,9 +197,9 @@
 
                 </h2>
                 <p>
-                    At <b>Priyanka Enterprises,</b> we're passionate about creating stunning and functional spaces
-                    through innovative false ceiling solutions. With years of industry experience and a commitment
-                    to excellence, we have established ourselves as a trusted name in the false ceiling industry.
+                 
+
+                    <b>Priyanka Enterprises,</b> has been catering to the needs of the Aquaculture Industry across India by providing them with high quality products. Its diverse portfolio consists of an extensive range of products like Artemia, Hatchery Feeds, Nursery Feeds, Grow out Feeds, Probiotics, Chemicals.
                 </p>
 
 
@@ -234,20 +240,22 @@
                     @foreach($service as $service)
                     <div class="item">
                         <div class="thumb">
-                            <a href="#">
-                                <!-- Ensure you have an image or a placeholder for each service -->
-                                <img src="{{ asset('public/images/' . $service->machineimage) }}" style="height: 300px; border-radius: 5%;" alt="Thumb">
-                            </a>
+                            <!-- Ensure you have an image or a placeholder for each service -->
+                            <img src="{{ asset('public/images/' . $service->machineimage) }}" style="height: 300px; border-radius: 5%;" alt="Thumb">
+
                         </div>
                         <div class="info">
-                            <h4>
+                            <h5 style="text-align: center; margin-top: 10px;">
                                 <!-- Dynamic service name -->
-                                <a href="#">{{ $service->machinetitle }}</a>
-                            </h4>
-                            <p>
+                                {{ $service->machinetitle }}
+                            </h5>
+
+                            <p class="description" style="margin-top: 0; margin-bottom: 10px;">
                                 <!-- Dynamic service description -->
                                 {{ $service->description }}
                             </p>
+
+
                         </div>
                     </div>
                     @endforeach
@@ -295,9 +303,8 @@
                 @if($count < 6) <div class="single-item col-lg-4 col-md-6">
                     <div class="item">
                         <div class="thumb">
-                            <a href="#">
-                                <img src="{{ asset('public/images/' . $ceil->image) }}" style="border-radius: 5%;" alt="Thumb">
-                            </a>
+
+                            <img src="{{ asset('public/images/' . $ceil->image) }}" style="border-radius: 5%;" alt="Thumb">
                         </div>
                     </div>
             </div>
@@ -369,9 +376,7 @@
                         @if($count < 5) <div class="col-lg-4 col-md-6 single-item">
                             <div class="item wow fadeInUp">
                                 <div class="thumb">
-                                    <a href="#">
-                                        <img src="{{ asset('public/images/' . $port->machineimage) }}" alt="Thumb">
-                                    </a>
+                                    <img src="{{ asset('public/images/' . $port->machineimage) }}" alt="Thumb">
                                 </div>
 
                             </div>
@@ -414,7 +419,7 @@
 
 <!-- Start Footer 
     ============================================= -->
-    <div class="container-full">
+<div class="container-full">
     <div class="row">
         <div class="col-lg-12">
             <div class="recent-causes-carousel owl-carousel owl-theme">
@@ -426,24 +431,24 @@
                         </a>
                     </div>
                     <div class="info">
-                    <div class="text-center">
-    <h4>
-        <a href="{{ route('singleblog', ['id' => $blogItem->id, 'slug' => str_replace(' ', '-', $blogItem->slug)]) }}">{{ $blogItem->title }}</a>
-    </h4>
-</div>
+                        <div class="text-center">
+                            <h4 style="margin-top:10px;">
+                                <a href="{{ route('singleblog', ['id' => $blogItem->id, 'slug' => str_replace(' ', '-', $blogItem->slug)]) }}">{{ $blogItem->title }}</a>
+                            </h4>
+                        </div>
 
                     </div>
                 </div>
                 @endforeach
-                
+
             </div>
         </div>
     </div>
 </div>
 
 <div class="d-flex justify-content-center justify-content-lg-end"> <!-- Apply Bootstrap classes for flexbox and alignment -->
-        <a class="btn circle btn-md btn-gradient wow fadeInUp" href="{{ url('/blog') }}">View All <i class="fas fa-angle-right"></i></a>
-    </div>
+    <a class="btn circle btn-md btn-gradient wow fadeInUp" href="{{ url('/blog') }}">View All <i class="fas fa-angle-right"></i></a>
+</div>
 @endsection
 
 
