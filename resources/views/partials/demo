@@ -1,0 +1,38 @@
+@extends('partials.app')
+@section('content')
+
+<style>
+    .banner {
+  background-color:#E9F2FE; /* You can replace 'banner-image.jpg' with your own image file */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2em;
+}
+</style>
+
+<section class="banner">
+  <div class="banner-content">
+    <h2>Welcome to Our Company</h2>
+   
+  </div>
+</section>
+
+
+
+@endsection

@@ -15,6 +15,7 @@ use App\Http\Controllers\Web\LoginController;
 use App\Http\Controllers\Web\RegisterController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\OrangeController;
 
 use App\Http\Controllers\Admin\FranchiseController;
 use App\Http\Controllers\Admin\BlogController;
@@ -42,6 +43,71 @@ use App\Http\Controllers\SitemapController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [OrangeController::class, 'product']);
+Route::get('/about', [OrangeController::class, 'product1']);
+
+Route::get('/portfolio', [OrangeController::class, 'product3']);
+Route::get('/blog', [OrangeController::class, 'product4']);
+
+Route::get('/career', [OrangeController::class, 'product6']);
+Route::get('/faq', [OrangeController::class, 'product7']);
+Route::get('/contact', [OrangeController::class, 'product8']);
+Route::get('/blogDetail', [OrangeController::class, 'product9']);
+Route::get('/webdesign', [OrangeController::class, 'product10']);
+Route::get('/webdevelopment', [OrangeController::class, 'product11']);
+Route::get('/ecommerce', [OrangeController::class, 'product12']);
+Route::get('/mobapp', [OrangeController::class, 'product13']);
+Route::get('/digitalmarketing', [OrangeController::class, 'product14']);
+Route::get('/quality', [OrangeController::class, 'product15']);
+Route::get('/affordable', [OrangeController::class, 'product16']);
+Route::get('/corporate', [OrangeController::class, 'product17']);
+Route::get('/content', [OrangeController::class, 'product18']);
+Route::get('/creative', [OrangeController::class, 'product19']);
+Route::get('/html5', [OrangeController::class, 'product20']);
+Route::get('/responsive', [OrangeController::class, 'product21']);
+Route::get('/website', [OrangeController::class, 'product22']);
+Route::get('/phpweb', [OrangeController::class, 'product23']);
+Route::get('/react', [OrangeController::class, 'product24']);
+Route::get('/net', [OrangeController::class, 'product25']);
+Route::get('/realtime', [OrangeController::class, 'product26']);
+Route::get('/framework', [OrangeController::class, 'product27']);
+Route::get('/magento', [OrangeController::class, 'product28']);
+Route::get('/prestaShop', [OrangeController::class, 'product29']);
+Route::get('/startecomm', [OrangeController::class, 'product30']);
+Route::get('/premium', [OrangeController::class, 'product31']);
+Route::get('/magentoHosting', [OrangeController::class, 'product32']);
+Route::get('/prestaShopHosting', [OrangeController::class, 'product33']);
+Route::get('/android', [OrangeController::class, 'product34']);
+Route::get('/ios', [OrangeController::class, 'product35']);
+Route::get('/hybrid', [OrangeController::class, 'product36']);
+Route::get('/angular', [OrangeController::class, 'product37']);
+Route::get('/reactnative', [OrangeController::class, 'product38']);
+Route::get('/location', [OrangeController::class, 'product39']);
+Route::get('/nutrition', [OrangeController::class, 'product40']);
+Route::get('/flutter', [OrangeController::class, 'product41']);
+Route::get('/search', [OrangeController::class, 'product42']);
+Route::get('/off', [OrangeController::class, 'product43']);
+Route::get('/on', [OrangeController::class, 'product44']);
+Route::get('/global', [OrangeController::class, 'product45']);
+Route::get('/ebook', [OrangeController::class, 'product46']);
+Route::get('/contentMarketing', [OrangeController::class, 'product47']);
+Route::get('/trends', [OrangeController::class, 'product48']);
+Route::get('/testing', [OrangeController::class, 'product49']);
+Route::get('/audits', [OrangeController::class, 'product50']);
+Route::get('/control', [OrangeController::class, 'product51']);
+Route::get('/root', [OrangeController::class, 'product52']);
+Route::get('/supplier', [OrangeController::class, 'product53']);
+Route::get('/productHospital', [OrangeController::class, 'product54']);
+Route::get('/school', [OrangeController::class, 'product55']);
+Route::get('/restaurant', [OrangeController::class, 'product56']);
+Route::get('/car ', [OrangeController::class, 'product57']);
+Route::get('/facility ', [OrangeController::class, 'product58']);
+Route::get('/university ', [OrangeController::class, 'product59']);
+Route::get('/mobile ', [OrangeController::class, 'product60']);
+Route::get('/grocery ', [OrangeController::class, 'product61']);
+Route::get('/learning ', [OrangeController::class, 'product62']);
+Route::get('/online ', [OrangeController::class, 'product63']);
+Route::get('/update ', [OrangeController::class, 'product64']);
 
 Route::middleware('SuperAdmin')->group(function(){
     //  Route::get('admin/brand/mail1', function () {Mail::to('@gmail.com')->send(new SendMail($data));});
@@ -176,19 +242,19 @@ Route::post('admin/sco/edit/{id}', [ScoController::class, 'sco_update'])->name('
 
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
- Route::get('/', [EnterpriceController::class, 'index']);
- Route::get('/about', [EnterpriceController::class, 'about']);
- Route::get('/service', [EnterpriceController::class, 'service']);
- Route::get('/ceiling', [EnterpriceController::class, 'ceiling']);
- Route::get('/product', [EnterpriceController::class, 'product']);
- Route::get('/port', [EnterpriceController::class, 'port']);
- Route::get('/blog', [EnterpriceController::class, 'blog']);
- Route::get('/contact', [EnterpriceController::class, 'contact']);
- Route::get('/singleblog/{id}/{slug}', [EnterpriceController::class, 'singleblog'])->name('singleblog');
- Route::post('/contacts', [EnterpriceController::class, 'store'])->name('contacts');
- Route::get('/header', [EnterpriceController::class, 'get_logo1']);
- Route::get('/getservice', [EnterpriceController::class, 'getservice']);
- Route::get('/profile', [EnterpriceController::class, 'get_profile']);
+//  Route::get('/', [EnterpriceController::class, 'index']);
+//  Route::get('/about', [EnterpriceController::class, 'about']);
+//  Route::get('/service', [EnterpriceController::class, 'service']);
+//  Route::get('/ceiling', [EnterpriceController::class, 'ceiling']);
+//  Route::get('/product', [EnterpriceController::class, 'product']);
+//  Route::get('/port', [EnterpriceController::class, 'port']);
+//  Route::get('/blog', [EnterpriceController::class, 'blog']);
+//  Route::get('/contact', [EnterpriceController::class, 'contact']);
+//  Route::get('/singleblog/{id}/{slug}', [EnterpriceController::class, 'singleblog'])->name('singleblog');
+//  Route::post('/contacts', [EnterpriceController::class, 'store'])->name('contacts');
+//  Route::get('/header', [EnterpriceController::class, 'get_logo1']);
+//  Route::get('/getservice', [EnterpriceController::class, 'getservice']);
+//  Route::get('/profile', [EnterpriceController::class, 'get_profile']);
 
 
 
@@ -209,7 +275,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 //  Route::get('/profile', [MachineController::class, 'get_profile']);
 //  Route::get('/service1', [MachineController::class, 'get_service']);
 //  Route::get('/singleblog/{id}/{slug}', [MachineController::class, 'get_blog']);
- Route::get('/allget', [MachineController::class, 'get_all']);
+//  Route::get('/allget', [MachineController::class, 'get_all']);
 //  Route::get('/singleblog/{id}', [MachineController::class, 'get_single_blog']);
  Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
