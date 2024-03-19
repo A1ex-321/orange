@@ -98,6 +98,6 @@ class MailController extends Controller
         // dd($mail);
         $mail->delete();
         // return view('admin.category.list')->with('success', 'mail Successfully Deleted');
-        return redirect()->back()->with('success', 'Brand Successfully Deleted');
+        return redirect()->back()->with('success', ' Successfully Deleted');
     }
 }

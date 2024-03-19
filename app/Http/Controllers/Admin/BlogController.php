@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 namespace App\Http\Controllers\Admin;
+use Intervention\Image\Facades\Image;
 
 use App\Models\BrandModel;
 use App\Models\Smtp;
@@ -102,18 +103,20 @@ class BlogController extends Controller
 
         $image = $request->file('upload');
         $imageName = time() . '_' . str_replace(' ', '_', $image->getClientOriginalName());
-
+        $resizedImage = Image::make($image)->fit(640, 360)->save(public_path('images') . '/' . $imageName);
         // Log the file move result
-        $isMoved = $image->move(public_path('images'), $imageName);
 
         // Check if the file move was successful and log accordingly
-        if ($isMoved) {
+        if ($resizedImage) {
             Log::info('File Move Success:', ['imageName' => $imageName]);
         } else {
             Log::error('File Move Failed:', ['imageName' => $imageName]);
         }
         Log::error('File :', ['url' => asset('public/images/' . $imageName)]);
         return response()->json(['url' => asset('public/images/' . $imageName),'uploaded'=>1]);
+
+
+      
     }
     public function blog_add(Request $request)
     {

@@ -46,13 +46,13 @@
                 <div class="lab-item-3 port-item business">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio1.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio1.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio1.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio1.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -60,13 +60,13 @@
                 <div class="lab-item-3 port-item consumer">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio2.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio2.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio2.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio2.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -74,13 +74,13 @@
                 <div class="lab-item-3 port-item financial">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio3.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio3.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio3.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio3.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -88,13 +88,13 @@
                 <div class="lab-item-3 port-item business">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio4.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio4.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio4.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio4.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -102,13 +102,13 @@
                 <div class="lab-item-3 port-item consumer">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio5.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio5.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio5.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio5.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -116,13 +116,13 @@
                 <div class="lab-item-3 port-item financial">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio6.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio6.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio6.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio6.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
 
                             </div>
                             <div class="testi-body">
-                                <img src="public/orange/assets/images/ec1.png" alt="vpn-gaq">
+                                <img src="/public/orange/assets/images/ec1.png" alt="vpn-gaq">
 
                             </div>
                         </div>
@@ -173,7 +173,7 @@
 
                             </div>
                             <div class="testi-body">
-                                <img src="public/orange/assets/images/repo1.png" alt="vpn-gaq">
+                                <img src="/public/orange/assets/images/repo1.png" alt="vpn-gaq">
 
                             </div>
                         </div>
@@ -191,7 +191,7 @@
 
                             </div>
                             <div class="testi-body">
-                                <img src="public/orange/assets/images/crm1.png" alt="vpn-gaq">
+                                <img src="/public/orange/assets/images/crm1.png" alt="vpn-gaq">
 
                             </div>
                         </div>

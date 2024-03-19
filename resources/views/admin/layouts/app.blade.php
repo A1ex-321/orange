@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shop | {{ !empty($header_title) ? $header_title : '' }}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -26,6 +27,7 @@
 
     <meta content="" name="description">
   <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicons -->
   <link href="{{ url('public/assets/img/favicon.png') }}" rel="icon">
@@ -43,6 +45,8 @@
   <link href="{{ url('public/assets/vendor/quill/quill.bubble.css') }}" rel="stylesheet">
   <link href="{{ url('public/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
   <link href="{{ url('public/assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
   <!-- Template Main CSS File -->
   <link href="{{ url('public/assets/css/style.css') }}" rel="stylesheet">

@@ -45,7 +45,7 @@
                                         <div class="post-item">
                                             <div class="post-item-inner">
                                                 <div class="post-thumb">
-                                                    <a href="blogDetail"><img src="public/orange/assets/images/blog5.png" alt="lab-blog"></a>
+                                                    <a href="blogDetail"><img src="/public/orange/assets/images/blog5.png" alt="lab-blog"></a>
                                                 </div>
                                                 <div class="post-content">
                                                     <h4><a href="blogDetail">What are the benefits of using version control in software development?</a></h4>
@@ -66,10 +66,10 @@
                                                 <div class="post-thumb post-thumb-slider">
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
-                                                            <img src="public/orange/assets/images/blog7.png" alt="blog">
+                                                            <img src="/public/orange/assets/images/blog7.png" alt="blog">
                                                         </div>
                                                         <div class="swiper-slide">
-                                                            <img src="public/orange/assets/images/blog6.png" alt="blog">
+                                                            <img src="/public/orange/assets/images/blog6.png" alt="blog">
                                                         </div>
                                                     </div>
                                                     <div class="post-thumb-slider-next"><i class="icofont-double-left"></i></div>
@@ -93,7 +93,7 @@
                                             <div class="post-item-inner">
                                                 <div class="post-thumb">
                                                     <div class="video-thumb">
-                                                        <img src="public/orange/assets/images/blog8.png" alt="video">
+                                                        <img src="/public/orange/assets/images/blog8.png" alt="video">
                                                         <a href="https://www.youtube.com/embed/eTl2Cxb74r0" data-rel="lightcase" class="video-icon"><i class="icofont-youtube-play"></i></a>
                                                     </div>
                                                 </div>
@@ -115,7 +115,7 @@
                                             <div class="post-item-inner">
                                                 <div class="post-thumb">
                                                     <div class="qute-content">
-                                                        <img src="public/orange/assets/images/learning1.png" alt="qute">
+                                                        <img src="/public/orange/assets/images/learning1.png" alt="qute">
                                                         <h5>Rapdiou Qntegrat Distrbute Supply Chains Through Markey Position Bestng Chans Throug Marke Posito Bestin Practces Ieractve Fashon Sound Qources Fashion Economically And Sound Qources</h5>
                                                     </div>
                                                 </div>
@@ -212,7 +212,7 @@
                                 <ul class="widget-wrapper">
                                     <li class="d-flex flex-wrap justify-content-between">
                                         <div class="post-thumb">
-                                            <a href="#"><img src="public/orange/assets/images/blog1.png" alt="product"></a>
+                                            <a href="#"><img src="/public/orange/assets/images/blog1.png" alt="product"></a>
                                         </div>
                                         <div class="post-content">
                                             <a href="#"><h6>What role does automated testing play in the software development process?</h6></a>
@@ -221,7 +221,7 @@
                                     </li>
                                     <li class="d-flex flex-wrap justify-content-between">
                                         <div class="post-thumb">
-                                            <a href="#"><img src="public/orange/assets/images/blog2.png" alt="product"></a>
+                                            <a href="#"><img src="/public/orange/assets/images/blog2.png" alt="product"></a>
                                         </div>
                                         <div class="post-content">
                                             <a href="#"><h6>What are the advantages of adopting microservices architecture in software development?</h6></a>
@@ -230,7 +230,7 @@
                                     </li>
                                     <li class="d-flex flex-wrap justify-content-between">
                                         <div class="post-thumb">
-                                            <a href="#"><img src="public/orange/assets/images/blog4.png" alt="product"></a>
+                                            <a href="#"><img src="/public/orange/assets/images/blog4.png" alt="product"></a>
                                         </div>
                                         <div class="post-content">
                                             <a href="#"><h6>How can developers leverage cloud computing for their software projects?</h6></a>
@@ -239,7 +239,7 @@
                                     </li>
                                     <li class="d-flex flex-wrap justify-content-between">
                                         <div class="post-thumb">
-                                            <a href="#"><img src="public/orange/assets/images/what.png" alt="product"></a>
+                                            <a href="#"><img src="/public/orange/assets/images/what.png" alt="product"></a>
                                         </div>
                                         <div class="post-content">
                                             <a href="#"><h6> What are the emerging trends shaping the future of software development?</h6></a>
@@ -269,15 +269,15 @@
                                     <h5>Photo Gallery</h5>
                                 </div>
                                 <ul class="widget-wrapper d-flex flex-wrap justify-content-center">
-                                    <li><a href="#"><img src="public/orange/assets/images/bl1.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/blog1.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/blog2.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/what.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/blog4.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/teamwork.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/w3.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/w1.png" alt="product"></a></li>
-                                    <li><a href="#"><img src="public/orange/assets/images/w2.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/bl1.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/blog1.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/blog2.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/what.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/blog4.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/teamwork.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/w3.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/w1.png" alt="product"></a></li>
+                                    <li><a href="#"><img src="/public/orange/assets/images/w2.png" alt="product"></a></li>
                                 </ul>
                             </div>
 

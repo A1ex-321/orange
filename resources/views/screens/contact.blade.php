@@ -43,6 +43,7 @@
     
     
     
+@include('admin.layouts.message')
     
     
     <!-- Contact -->
@@ -53,7 +54,7 @@
                         <ul class="contact-area">
                             <li class="contact-item">
                                 <div class="contact-icon">
-                                    <img src="public/orange/assets/images/location.png" alt="contact">
+                                    <img src="/public/orange/assets/images/location.png" alt="contact">
                                 </div>
                                 <div class="content">
                                     <h6>Our Location</h6>
@@ -62,7 +63,7 @@
                             </li>
                             <li class="contact-item">
                                 <div class="contact-icon">
-                                    <img src="public/orange/assets/images/phone.png" alt="contact">
+                                    <img src="/public/orange/assets/images/phone.png" alt="contact">
                                 </div>
                                 <div class="content">
                                     <h6>Phone Number</h6>
@@ -71,7 +72,7 @@
                             </li>
                             <li class="contact-item">
                                 <div class="contact-icon">
-                                    <img src="public/orange/assets/images/email.png" alt="contact">
+                                    <img src="/public/orange/assets/images/email.png" alt="contact">
                                 </div>
                                 <div class="content">
                                     <h6>Email Address</h6>
@@ -80,13 +81,15 @@
                             </li>
                         </ul>
                     </div>
+
                     <div class="col-lg-8 col-md-6 col-xs-12">
-                        <form class="contact-form" action="/">
-                            <input type="text" name="name" placeholder="Your Name" class="contact-input">
-                            <input type="number" name="email" placeholder="Your phone Number" class="contact-input">
+                        <form class="contact-form" action="{{ url('/contacts') }}" method="POST">
+                        @csrf
+                            <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+                            <input type="number" name="phone" placeholder="Your phone Number" class="contact-input" required>
                         
-                            <textarea rows="5" class="contact-input" placeholder="Your Messages"></textarea>
-                            <input type="submit" name="submit" value="Send Message" class="lab-btn">
+                            <textarea rows="5" name="msg"class="contact-input" placeholder="Your Messages" required></textarea>
+                            <input type="submit" value="Send Message" class="lab-btn">
                         </form>
                     </div>
                 </div>

@@ -3,13 +3,13 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="public/orange/assets/images/logo1.png">
 
-<link rel="stylesheet" href="public/orange/assets/css/animate.css">
-<link rel="stylesheet" href="public/orange/assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="public/orange/assets/css/all.min.css">
-<link rel="stylesheet" href="public/orange/assets/css/icofont.min.css">
-<link rel="stylesheet" href="public/orange/assets/css/lightcase.css">
-<link rel="stylesheet" href="public/orange/assets/css/swiper.min.css">
-<link rel="stylesheet" href="public/orange/assets/css/style.css">
+<link rel="stylesheet" href="/public/orange/assets/css/animate.css">
+<link rel="stylesheet" href="/public/orange/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/orange/assets/css/all.min.css">
+<link rel="stylesheet" href="/public/orange/assets/css/icofont.min.css">
+<link rel="stylesheet" href="/public/orange/assets/css/lightcase.css">
+<link rel="stylesheet" href="/public/orange/assets/css/swiper.min.css">
+<link rel="stylesheet" href="/public/orange/assets/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <title>OrangeMegaSoftware</title>
@@ -30,18 +30,18 @@
 
 
 
-    <script src="public/orange/assets/js/jquery.js"></script>
-    <script src="public/orange/assets/js/fontawesome.min.js"></script>
-    <script src="public/orange/assets/js/waypoints.min.js"></script>
-    <script src="public/orange/assets/js/bootstrap.min.js"></script>
-    <script src="public/orange/assets/js/lightcase.js"></script>
-    <script src="public/orange/assets/js/isotope.pkgd.min.js"></script>
-    <script src="public/orange/assets/js/swiper.min.js"></script>
-    <script src="public/orange/assets/js/jquery.countdown.min.js"></script>
-    <script src="public/orange/assets/js/jquery.counterup.min.js"></script>
-    <script src="public/orange/assets/js/progress.js"></script>
-    <script src="public/orange/assets/js/wow.min.js"></script>
-    <script src="public/orange/assets/js/functions.js"></script>
+    <script src="/public/orange/assets/js/jquery.js"></script>
+    <script src="/public/orange/assets/js/fontawesome.min.js"></script>
+    <script src="/public/orange/assets/js/waypoints.min.js"></script>
+    <script src="/public/orange/assets/js/bootstrap.min.js"></script>
+    <script src="/public/orange/assets/js/lightcase.js"></script>
+    <script src="/public/orange/assets/js/isotope.pkgd.min.js"></script>
+    <script src="/public/orange/assets/js/swiper.min.js"></script>
+    <script src="/public/orange/assets/js/jquery.countdown.min.js"></script>
+    <script src="/public/orange/assets/js/jquery.counterup.min.js"></script>
+    <script src="/public/orange/assets/js/progress.js"></script>
+    <script src="/public/orange/assets/js/wow.min.js"></script>
+    <script src="/public/orange/assets/js/functions.js"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

@@ -15,6 +15,7 @@ use App\Http\Controllers\Web\LoginController;
 use App\Http\Controllers\Web\RegisterController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\OrangeController1;
 use App\Http\Controllers\OrangeController;
 
 use App\Http\Controllers\Admin\FranchiseController;
@@ -52,7 +53,7 @@ Route::get('/blog', [OrangeController::class, 'product4']);
 Route::get('/career', [OrangeController::class, 'product6']);
 Route::get('/faq', [OrangeController::class, 'product7']);
 Route::get('/contact', [OrangeController::class, 'product8']);
-Route::get('/blogDetail', [OrangeController::class, 'product9']);
+Route::get('/Blog/{id}', [OrangeController::class, 'product9'])->name('Blog');
 Route::get('/webdesign', [OrangeController::class, 'product10']);
 Route::get('/webdevelopment', [OrangeController::class, 'product11']);
 Route::get('/ecommerce', [OrangeController::class, 'product12']);
@@ -108,6 +109,10 @@ Route::get('/grocery ', [OrangeController::class, 'product61']);
 Route::get('/learning ', [OrangeController::class, 'product62']);
 Route::get('/online ', [OrangeController::class, 'product63']);
 Route::get('/update ', [OrangeController::class, 'product64']);
+Route::post('/contacts', [OrangeController::class, 'store'])->name('contacts');
+Route::post('/care', [OrangeController::class, 'care'])->name('care');
+
+// Route::get('/singleevent/{id}', [OrangeController::class, 'product9'])->name('singleevent');
 
 Route::middleware('SuperAdmin')->group(function(){
     //  Route::get('admin/brand/mail1', function () {Mail::to('@gmail.com')->send(new SendMail($data));});
@@ -262,21 +267,11 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
-//  Route::get('/getservice', [MachineController::class, 'getservice'])->name('getservice');
 
-//  Route::get('/blog', [MachineController::class, 'blog']);
-//  Route::get('/contact', [MachineController::class, 'contact']);
-//  Route::get('/singleblog', [MachineController::class, 'singleblog']);
  Route::get('admin', [AuthController::class, 'login']);
  Route::post('admin', [AuthController::class, 'auth_login_admin']);
  Route::get('admin/logout', [AuthController::class, 'logout_admin']);
-//  Route::get('/header', [MachineController::class, 'get_logo1']);
-//  Route::post('/contact', [MachineController::class, 'store'])->name('contact.store');
-//  Route::get('/profile', [MachineController::class, 'get_profile']);
-//  Route::get('/service1', [MachineController::class, 'get_service']);
-//  Route::get('/singleblog/{id}/{slug}', [MachineController::class, 'get_blog']);
-//  Route::get('/allget', [MachineController::class, 'get_all']);
-//  Route::get('/singleblog/{id}', [MachineController::class, 'get_single_blog']);
+
  Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
 
@@ -346,14 +341,14 @@ Route::post('/upload-images',[MachineController1::class, 'uploadImages'] )->name
     Route::get('admin/message', [MailController::class, 'maillist']);
     Route::get('admin/brand/deletemail/{id}', [MailController::class, 'deletemail']);
         //   SCO blog no sco
-        Route::get('admin/blogseo/bloglist', [ScoController::class, 'bloglist'])->name('blogsco-list');
-        Route::post('admin/blogseo/addblog', [ScoController::class, 'create_blogsco'])->name('create-blogsco');
-        Route::get('admin/blogseo/delete/{id}', [ScoController::class, 'blogsco_delete']);
-        Route::get('admin/blogseo/edit/{id}', [ScoController::class, 'blogsco_edit']);
-        Route::post('admin/blogseo/edit/{id}', [ScoController::class, 'blogsco_update'])->name('blogsco-update');
+        // Route::get('admin/blogseo/bloglist', [ScoController::class, 'bloglist'])->name('blogsco-list');
+        // Route::post('admin/blogseo/addblog', [ScoController::class, 'create_blogsco'])->name('create-blogsco');
+        // Route::get('admin/blogseo/delete/{id}', [ScoController::class, 'blogsco_delete']);
+        // Route::get('admin/blogseo/edit/{id}', [ScoController::class, 'blogsco_edit']);
+        // Route::post('admin/blogseo/edit/{id}', [ScoController::class, 'blogsco_update'])->name('blogsco-update');
     
-        // Route::post('admin/sco/edit/{id}', [ScoController::class, 'sco_update'])->name('sco-update');
-        Route::get('view_blogcontent/{id}', [ScoController::class, 'content_view'])->name('view_blogcontent');
+        // // Route::post('admin/sco/edit/{id}', [ScoController::class, 'sco_update'])->name('sco-update');
+        // Route::get('view_blogcontent/{id}', [ScoController::class, 'content_view'])->name('view_blogcontent');
         //logo
         Route::get('admin/logo/logo', [BlogController::class, 'logo'])->name('blog-logo');
         Route::post('admin/addlogo/logo', [BlogController::class, 'create_logo'])->name('create-logo');
@@ -383,5 +378,18 @@ Route::post('/upload-images',[MachineController1::class, 'uploadImages'] )->name
     Route::post('admin/updateblog/edit/{id}', [BlogController::class, 'create_content_update_blog'])->name('update-content');
     Route::get('admin/alex', [BlogController::class, 'demo']);
 
+
+
+
+
+        Route::get('admin/blogseo/bloglist', [OrangeController1::class, 'bloglist'])->name('blogsco-list');
+        Route::post('admin/blogseo/addblog', [OrangeController1::class, 'create_blogsco'])->name('create-blogsco');
+        Route::get('admin/blogseo/delete/{id}', [OrangeController1::class, 'blogsco_delete']);
+        Route::get('admin/blogseo/edit/{id}', [OrangeController1::class, 'blogsco_edit']);
+        Route::post('admin/blogseo/edit/{id}', [OrangeController1::class, 'blogsco_update'])->name('blogsco-update');
+        Route::get('view_blogcontent/{id}', [OrangeController1::class, 'content_view'])->name('view_blogcontent');
+
+        Route::get('admin/care', [OrangeController1::class, 'maillist']);
+        Route::get('admin/frans/deletemail/{id}', [OrangeController1::class, 'deletemail']);
     });
     

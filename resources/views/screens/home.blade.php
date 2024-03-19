@@ -72,12 +72,12 @@
                 <div class="col-lg-6 col-12">
                     <div class="section-wrapper">
                         <div class="banner-thumb">
-                            <img src="public/orange/assets/images/banner.png" alt="marketing-banner">
+                            <img src="/public/orange/assets/images/banner.png" alt="marketing-banner">
                             <div class="thumb-shape">
-                                <div class="th-shape th-shape-1"><img src="public/orange/assets/images/icon1.png" alt="th-shape"></div>
-                                <div class="th-shape th-shape-2"><img src="public/orange/assets/images/icon3.png" alt="th-shape"></div>
-                                <div class="th-shape th-shape-3"><img src="public/orange/assets/images/icon3.png" alt="th-shape"></div>
-                                <div class="th-shape th-shape-4"><img src="public/orange/assets/images/icon3.png" alt="th-shape"></div>
+                                <div class="th-shape th-shape-1"><img src="/public/orange/assets/images/icon1.png" alt="th-shape"></div>
+                                <div class="th-shape th-shape-2"><img src="/public/orange/assets/images/icon3.png" alt="th-shape"></div>
+                                <div class="th-shape th-shape-3"><img src="/public/orange/assets/images/icon3.png" alt="th-shape"></div>
+                                <div class="th-shape th-shape-4"><img src="/public/orange/assets/images/icon3.png" alt="th-shape"></div>
                             </div>
                         </div>
                     </div>
@@ -112,8 +112,8 @@
                             </div>
                             <div class="skill-item">
                                 <div class="skill-title">
-                                    <img src="public/orange/assets/images/i1.png" alt="th-shape">
-                                    <img src="public/orange/assets/images/i2.png" alt="th-shape">
+                                    <img src="/public/orange/assets/images/i1.png" alt="th-shape">
+                                    <img src="/public/orange/assets/images/i2.png" alt="th-shape">
                                 </div>
 
                             </div>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="public/orange/assets/images/ab.jpg" alt="mr-thumb">
+                        <img src="/public/orange/assets/images/ab.jpg" alt="mr-thumb">
                     </div>
                 </div>
 
@@ -157,7 +157,7 @@
             <div class="service-card" style="display: flex;">
                 <div style="width: 150px; height: 80px; border-radius: 50%; overflow: hidden; border: 1px solid #E84E0D; margin-top: 50px; background-color: #E84E0D">
 
-                    <img src="public/orange/assets/images/w1.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
+                    <img src="/public/orange/assets/images/w1.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
                 </div>
                 <div>
                     <h4 style="margin-top:30px;margin-left:60px">Web Design</h4>
@@ -169,7 +169,7 @@
             <div class="service-card" style="display: flex;">
                 <div style="width: 150px; height: 80px; border-radius: 50%; overflow: hidden; border: 1px solid #E84E0D; margin-top: 50px; background-color: #E84E0D">
 
-                    <img src="public/orange/assets/images/w5.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
+                    <img src="/public/orange/assets/images/w5.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
                 </div>
                 <div>
                     <h4 style="margin-top:30px;margin-left:60px">Web Development</h4>
@@ -181,7 +181,7 @@
             <div class="service-card" style="display: flex;">
                 <div style="width: 150px; height: 80px; border-radius: 50%; overflow: hidden; border: 1px solid #E84E0D; margin-top: 50px; background-color: #E84E0D">
 
-                    <img src="public/orange/assets/images/w6.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
+                    <img src="/public/orange/assets/images/w6.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
                 </div>
                 <div>
                     <h4 style="margin-top:30px;margin-left:60px">Ecommerce</h4>
@@ -193,7 +193,7 @@
             <div class="service-card" style="display: flex;">
                 <div style="width: 150px; height: 80px; border-radius: 50%; overflow: hidden; border: 1px solid #E84E0D; margin-top: 50px; background-color: #E84E0D">
 
-                    <img src="public/orange/assets/images/w2.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
+                    <img src="/public/orange/assets/images/w2.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
                 </div>
                 <div>
                     <h4 style="margin-top:30px;margin-left:60px">Mobile App Development</h4>
@@ -205,7 +205,7 @@
             <div class="service-card" style="display: flex;">
                 <div style="width: 150px; height: 80px; border-radius: 50%; overflow: hidden; border: 1px solid #E84E0D; margin-top: 50px; background-color: #E84E0D">
 
-                    <img src="public/orange/assets/images/w3.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
+                    <img src="/public/orange/assets/images/w3.png" alt="th-shape" style="margin-right:5px;margin-top:10px ;padding:5px">
                 </div>
                 <div>
                     <h4 style="margin-top:30px;margin-left:60px">Digital Marketing</h4>
@@ -237,7 +237,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="">
-                        <img src="public/orange/assets/images/br.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
+                        <img src="/public/orange/assets/images/br.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
                     </div>
                     <div class="lab-content">
                         <h4>Branding</h4>
@@ -248,7 +248,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div>
-                        <img src="public/orange/assets/images/mr.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
+                        <img src="/public/orange/assets/images/mr.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
                     </div>
                     <div class="lab-content">
                         <h4>Marketing Strategy</h4>
@@ -259,7 +259,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div>
-                        <img src="public/orange/assets/images/dev.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
+                        <img src="/public/orange/assets/images/dev.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
                     </div>
                     <div class="lab-content">
                         <h4>Growth Business</h4>
@@ -280,7 +280,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="public/orange/assets/images/what.png" alt="mr-thumb" style="border-radius: 5%; height:400px">
+                        <img src="/public/orange/assets/images/what.png" alt="mr-thumb" style="border-radius: 5%; height:400px">
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
@@ -397,7 +397,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="lab-thumb">
-                        <img src="public/orange/assets/images/hospital1.png" alt="service-vpn" style="border-radius: 10%;">
+                        <img src="/public/orange/assets/images/hospital1.png" alt="service-vpn" style="border-radius: 10%;">
                     </div>
                     <div class="lab-content">
                         <h4> Hospital Management System</h4>
@@ -408,7 +408,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="lab-thumb">
-                        <img src="public/orange/assets/images/school1.png" alt="service-vpn" style="border-radius: 10%;">
+                        <img src="/public/orange/assets/images/school1.png" alt="service-vpn" style="border-radius: 10%;">
                     </div>
                     <div class="lab-content">
                         <h4>School Management System</h4>
@@ -419,7 +419,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="lab-thumb">
-                        <img src="public/orange/assets/images/food2.png" alt="service-vpn" style="border-radius: 10%;">
+                        <img src="/public/orange/assets/images/food2.png" alt="service-vpn" style="border-radius: 10%;">
                     </div>
                     <div class="lab-content">
                         <h4>Restaurant Food Delivery App</h4>
@@ -430,7 +430,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="lab-thumb">
-                        <img src="public/orange/assets/images/ecomm1.png" alt="service-vpn" style="border-radius: 10%;">
+                        <img src="/public/orange/assets/images/ecomm1.png" alt="service-vpn" style="border-radius: 10%;">
                     </div>
                     <div class="lab-content">
                         <h4>Ecommerce Mobile App</h4>
@@ -441,7 +441,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="lab-thumb">
-                        <img src="public/orange/assets/images/onexam.png" alt="service-vpn" style="border-radius: 10%;">
+                        <img src="/public/orange/assets/images/onexam.png" alt="service-vpn" style="border-radius: 10%;">
                     </div>
                     <div class="lab-content">
                         <h4>Online Exam Software</h4>
@@ -452,7 +452,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="lab-thumb">
-                        <img src="public/orange/assets/images/learning1.png" alt="service-vpn" style="border-radius: 10%;">
+                        <img src="/public/orange/assets/images/learning1.png" alt="service-vpn" style="border-radius: 10%;">
                     </div>
                     <div class="lab-content">
                         <h4>LMS</h4>
@@ -475,7 +475,7 @@
             <div class="col-xl-6 col-12">
                 <div class="faq-right-part">
                     <div class="faq-thumb">
-                        <img src="public/orange/assets/images/faq.png" alt="vpn-gaq">
+                        <img src="/public/orange/assets/images/faq.png" alt="vpn-gaq">
                     </div>
                 </div>
             </div>
@@ -598,7 +598,7 @@
 
                             </div>
                             <div class="testi-body">
-                                <img src="public/orange/assets/images/ec1.png" alt="vpn-gaq">
+                                <img src="/public/orange/assets/images/ec1.png" alt="vpn-gaq">
 
                             </div>
                         </div>
@@ -616,7 +616,7 @@
 
                             </div>
                             <div class="testi-body">
-                                <img src="public/orange/assets/images/repo1.png" alt="vpn-gaq">
+                                <img src="/public/orange/assets/images/repo1.png" alt="vpn-gaq">
 
                             </div>
                         </div>
@@ -634,7 +634,7 @@
 
                             </div>
                             <div class="testi-body">
-                                <img src="public/orange/assets/images/crm1.png" alt="vpn-gaq">
+                                <img src="/public/orange/assets/images/crm1.png" alt="vpn-gaq">
 
                             </div>
                         </div>
@@ -651,7 +651,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-12">
                 <div class="pos-thmub">
-                    <img src="public/orange/assets/images/career.jpg" alt="pos-=thumb" style="border-radius: 5%;">
+                    <img src="/public/orange/assets/images/career.jpg" alt="pos-=thumb" style="border-radius: 5%;">
                 </div>
             </div>
             <div class="col-lg-6 col-12">
@@ -688,13 +688,13 @@
                 <div class="lab-item-3 port-item business">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio1.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio1.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio1.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio1.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -702,13 +702,13 @@
                 <div class="lab-item-3 port-item consumer">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio2.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio2.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio2.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio2.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -716,13 +716,13 @@
                 <div class="lab-item-3 port-item financial">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio3.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio3.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio3.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio3.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -730,13 +730,13 @@
                 <div class="lab-item-3 port-item business">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio4.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio4.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio4.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio4.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -744,13 +744,13 @@
                 <div class="lab-item-3 port-item consumer">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio5.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio5.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio5.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio5.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -758,13 +758,13 @@
                 <div class="lab-item-3 port-item financial">
                     <div class="lab-inner">
                         <div class="lab-thumb">
-                            <img src="public/orange/assets/images/portfolio6.png" alt="lab-rcpost">
+                            <img src="/public/orange/assets/images/portfolio6.png" alt="lab-rcpost">
                             <div class="port-share">
                                 <div class="lab-content">
 
                                 </div>
 
-                                <a href="public/orange/assets/images/portfolio6.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
+                                <a href="/public/orange/assets/images/portfolio6.png" data-rel="lightcase:myCollection"><i class="icofont-drag1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -790,56 +790,56 @@
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/lara.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/lara.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/node1.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/node1.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/net.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/net.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/react1.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/react1.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/angular1.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/angular1.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/html.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/html.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/css.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/css.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="sponsor-item">
                             <div class="sponsor-thumb">
-                                <a href="#"><img src="public/orange/assets/images/boot.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
+                                <a href="#"><img src="/public/orange/assets/images/boot.png" alt="lab-sponsor" style="border-radius: 5%;"></a>
                             </div>
                         </div>
                     </div>
@@ -863,16 +863,16 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active">
-                            <img src="public/orange/assets/images/avatara1.png" alt="testimonial">
+                            <img src="/public/orange/assets/images/avatara1.png" alt="testimonial">
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
-                            <img src="public/orange/assets/images/avatara1.png" alt="testimonial">
+                            <img src="/public/orange/assets/images/avatara1.png" alt="testimonial">
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
-                            <img src="public/orange/assets/images/avatara1.png" alt="testimonial">
+                            <img src="/public/orange/assets/images/avatara1.png" alt="testimonial">
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3">
-                            <img src="public/orange/assets/images/avatara1.png" alt="testimonial">
+                            <img src="/public/orange/assets/images/avatara1.png" alt="testimonial">
                         </li>
                     </ol>
                     <div class="carousel-inner">
@@ -880,7 +880,7 @@
                             <div class="testi-item">
                                 <div class="testi-inner">
                                     <div class="testi-thumb">
-                                        <img src="public/orange/assets/images/avatara1.png" alt="testimonial" height="50px" width="50px">
+                                        <img src="/public/orange/assets/images/avatara1.png" alt="testimonial" height="50px" width="50px">
                                     </div>
                                     <div class="testi-content">
                                         <p>We had a great time working with Entire Team. Their Creativity, Patience, Passion, Dedication & Commitment to Work have impressed us.</p>
@@ -900,7 +900,7 @@
                             <div class="testi-item">
                                 <div class="testi-inner">
                                     <div class="testi-thumb">
-                                        <img src="public/orange/assets/images/avatara1.png" alt="testimonial" height="50px">
+                                        <img src="/public/orange/assets/images/avatara1.png" alt="testimonial" height="50px">
                                     </div>
                                     <div class="testi-content">
 
@@ -922,7 +922,7 @@
                             <div class="testi-item">
                                 <div class="testi-inner">
                                     <div class="testi-thumb">
-                                        <img src="public/orange/assets/images/avatara1.png" alt="testimonial" height="50px">
+                                        <img src="/public/orange/assets/images/avatara1.png" alt="testimonial" height="50px">
                                     </div>
                                     <div class="testi-content">
 
@@ -943,7 +943,7 @@
                             <div class="testi-item">
                                 <div class="testi-inner">
                                     <div class="testi-thumb">
-                                        <img src="public/orange/assets/images/avatara1.png" alt="testimonial" height="50px">
+                                        <img src="/public/orange/assets/images/avatara1.png" alt="testimonial" height="50px">
                                     </div>
                                     <div class="testi-content">
 
@@ -981,7 +981,7 @@
                     <div class="post-item">
                         <div class="post-item-inner">
                             <div class="post-thumb">
-                                <a href="blog"><img src="public/orange/assets/images/computer.jpg" alt="lab-blog"></a>
+                                <a href="blog"><img src="/public/orange/assets/images/computer.jpg" alt="lab-blog"></a>
                             </div>
                             <div class="post-content">
                                 <h4><a href="blog">How can custom software development benefit businesses?</a></h4>
@@ -1001,7 +1001,7 @@
                     <div class="post-item">
                         <div class="post-item-inner">
                             <div class="post-thumb">
-                                <a href="blog"><img src="public/orange/assets/images/computer1.jpg" alt="lab-blog"></a>
+                                <a href="blog"><img src="/public/orange/assets/images/computer1.jpg" alt="lab-blog"></a>
                             </div>
                             <div class="post-content">
                                 <h4><a href="blog">What steps are involved in the software development life cycle?</a></h4>
@@ -1021,7 +1021,7 @@
                     <div class="post-item">
                         <div class="post-item-inner">
                             <div class="post-thumb">
-                                <a href="blog"><img src="public/orange/assets/images/computer2.jpg" alt="lab-blog"></a>
+                                <a href="blog"><img src="/public/orange/assets/images/computer2.jpg" alt="lab-blog"></a>
                             </div>
                             <div class="post-content">
                                 <h4><a href="blog">How can mobile app development to enhance their operations?</a></h4>

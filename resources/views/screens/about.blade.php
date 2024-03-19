@@ -53,8 +53,8 @@
                             </div>
                             <div class="skill-item">
                                 <div class="skill-title">
-                                    <img src="public/orange/assets/images/i1.png" alt="th-shape">
-                                    <img src="public/orange/assets/images/i2.png" alt="th-shape">
+                                    <img src="/public/orange/assets/images/i1.png" alt="th-shape">
+                                    <img src="/public/orange/assets/images/i2.png" alt="th-shape">
                                 </div>
 
                             </div>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="public/orange/assets/images/ab.jpg" alt="mr-thumb">
+                        <img src="/public/orange/assets/images/ab.jpg" alt="mr-thumb">
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div class="">
-                        <img src="public/orange/assets/images/br.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
+                        <img src="/public/orange/assets/images/br.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
                     </div>
                     <div class="lab-content">
                         <h4>Branding</h4>
@@ -109,7 +109,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div>
-                        <img src="public/orange/assets/images/mr.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
+                        <img src="/public/orange/assets/images/mr.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
                     </div>
                     <div class="lab-content">
                         <h4>Marketing Strategy</h4>
@@ -120,7 +120,7 @@
             <div class="lab-item">
                 <div class="lab-inner">
                     <div>
-                        <img src="public/orange/assets/images/dev.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
+                        <img src="/public/orange/assets/images/dev.png" alt="lab-thumb" style="height: 100px; width:100px;margin-left:60px">
                     </div>
                     <div class="lab-content">
                         <h4>Growth Business</h4>
@@ -141,7 +141,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="public/orange/assets/images/what.png" alt="mr-thumb">
+                        <img src="/public/orange/assets/images/what.png" alt="mr-thumb">
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">

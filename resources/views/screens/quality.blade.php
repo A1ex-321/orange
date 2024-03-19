@@ -36,7 +36,7 @@
 	<!-- Recent Case Section Start Here -->
     <section class="recent-case padding-tb">
 			<div class="pattern-img">
-				<img src="public/orange/assets/images/pattern/01.png" alt="pattern">
+				<img src="/public/orange/assets/images/pattern/01.png" alt="pattern">
 			</div>
 			<div class="container">
 				
@@ -44,7 +44,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-								<img src="public/orange/assets/images/quality1.png" alt="lab-rcpost" style="height:300px;width:600px">
+								<img src="/public/orange/assets/images/quality1.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Quality Testing</a></h5>
@@ -55,7 +55,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/quality2.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/quality2.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Quality Audits</a></h5>
@@ -66,7 +66,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/quality3.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/quality3.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Quality Control</a></h5>
@@ -77,7 +77,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/quality4.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/quality4.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Root Cause Analysis</a></h5>
@@ -88,7 +88,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/quality6.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/quality6.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Supplier Quality<br> Management</a></h5>

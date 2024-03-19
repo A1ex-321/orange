@@ -42,7 +42,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="public/orange/assets/images/web3.png" alt="mr-thumb" style="border-radius: 5%;height:400px;width:600px">
+                        <img src="/public/orange/assets/images/web3.png" alt="mr-thumb" style="border-radius: 5%;height:400px;width:600px">
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
@@ -59,7 +59,7 @@
                     <div class="section-header style-2">
 
                         <h2>Content Publishing and Distribution</h2>
-                        <p> Once content is created and organized, a CMS facilitates its publication to various digital channels, such as websites, blogs, social media platforms, and mobile apps. CMS platforms often provide tools for scheduling content publication, optimizing content for search engines, and analyzing audience engagement metrics.</p>
+                        <p> Once content is created and organized, a CMS facilitates its /publication to various digital channels, such as websites, blogs, social media platforms, and mobile apps. CMS platforms often provide tools for scheduling content /publication, optimizing content for search engines, and analyzing audience engagement metrics.</p>
                     </div>
 
                 </div>

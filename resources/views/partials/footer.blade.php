@@ -21,7 +21,7 @@
                     <div class="footer-inner">
                         <div class="footer-content">
                             <div class="logo" style="display: flex;">
-                                <a href="/"><img src="public/orange/assets/images/logo1.png" alt="logo"></a>
+                                <a href="/"><img src="/public/orange/assets/images/logo1.png" alt="logo"></a>
                                 <h5 style="margin-bottom: 25px;padding:10px">Orange<span style="color: #E84E0D;">Mega</span>Software</h5>
                             </div>
                             <div class="content">
@@ -42,10 +42,10 @@
                             <div class="text-center">
                                 <div style="display: flex; flex-direction: column;  ">
                                     <a href="whatsapp://send?phone=7845158684" target="_blank"  >
-                                    <img src="public/orange/assets/images/whatsapp2.png" alt="mr-thumb" style="height: 60px; width: 80px;">
+                                    <img src="/public/orange/assets/images/whatsapp2.png" alt="mr-thumb" style="height: 60px; width: 80px;">
                                     </a>
                                     <a href="tel:7845158684" >
-                                    <img src="public/orange/assets/images/call.png"  alt="Image Not Found" style="height: 45px; width: 45px;">
+                                    <img src="/public/orange/assets/images/call.png"  alt="Image Not Found" style="height: 45px; width: 45px;">
                                     </a>
                                 </div>
                             </div>
@@ -74,12 +74,12 @@
                             </div>
                             <div class="content">
                                 <ul>
-                                    <li><a href="webdesign">Web Design</a></li>
-                                    <li><a href="webdevelopment">Web Development</a></li>
-                                    <li><a href="ecommerce">Ecommerce</a></li>
-                                    <li><a href="mobapp">Mobile App Development</a></li>
-                                    <li><a href="digitalmarketing">Digital Marketing</a></li>
-                                    <li><a href="quality">Quality Assurance</a></li>
+                                    <li><a href="/webdesign">Web Design</a></li>
+                                    <li><a href="/webdevelopment">Web Development</a></li>
+                                    <li><a href="/ecommerce">Ecommerce</a></li>
+                                    <li><a href="/mobapp">Mobile App Development</a></li>
+                                    <li><a href="/digitalmarketing">Digital Marketing</a></li>
+                                    <li><a href="/quality">Quality Assurance</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -95,14 +95,14 @@
                             </div>
                             <div class="content">
                                 <ul>
-                                    <li><a href="productHospital">Hospital Management System</a></li>
-                                    <li><a href="school">School Management System</a></li>
-                                    <li><a href="restaurant">Restaurant Food Delivery App</a></li>
-                                    <li><a href="university">University/Institution/College ERP</a></li>
-                                    <li><a href="facility">Facility Management Software</a></li>
-                                    <li><a href="grocery">Grocery Mobile App</a></li>
-                                    <li><a href="learning">Learning Management Software</a></li>
-                                    <li><a href="online">Online Exam Software</a></li>
+                                    <li><a href="/productHospital">Hospital Management System</a></li>
+                                    <li><a href="/school">School Management System</a></li>
+                                    <li><a href="/restaurant">Restaurant Food Delivery App</a></li>
+                                    <li><a href="/university">University/Institution/College ERP</a></li>
+                                    <li><a href="/facility">Facility Management Software</a></li>
+                                    <li><a href="/grocery">Grocery Mobile App</a></li>
+                                    <li><a href="/learning">Learning Management Software</a></li>
+                                    <li><a href="/online">Online Exam Software</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -119,12 +119,12 @@
                             <div class="content">
                                 <ul>
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="about">About</a></li>                                  
-                                    <li><a href="portfolio">Portfolio</a></li>
-                                    <li><a href="blog">Blog</a></li>
-                                    <li><a href="career">Career</a></li>
-                                    <li><a href="faq">FAQ</a></li>
-                                    <li><a href="contact">Contact</a></li>
+                                    <li><a href="/about">About</a></li>                                  
+                                    <li><a href="/portfolio">Portfolio</a></li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/career">Career</a></li>
+                                    <li><a href="/faq">FAQ</a></li>
+                                    <li><a href="/contact">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

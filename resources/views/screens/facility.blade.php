@@ -42,14 +42,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="public/orange/assets/images/facility.png" alt="mr-thumb" style="border-radius: 5%;height:400px;width:600px">
+                        <img src="/public/orange/assets/images/facility.png" alt="mr-thumb" style="border-radius: 5%;height:400px;width:600px">
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="section-header style-2">
                         <span>Facility Management Software </span>
                         <h2>Overview of Facility Management Software</h2>
-                        <p>Facility management software is a crucial tool for streamlining the operations and maintenance of various facilities within your IT company. This software offers a comprehensive platform to manage public/orange/assets, space utilization, maintenance schedules, and resource allocation efficiently. By centralizing all facility-related data and processes, it enables your company to enhance productivity, reduce operational costs, and ensure compliance with regulatory standards. </p>
+                        <p>Facility management software is a crucial tool for streamlining the operations and maintenance of various facilities within your IT company. This software offers a comprehensive platform to manage /public/orange/assets, space utilization, maintenance schedules, and resource allocation efficiently. By centralizing all facility-related data and processes, it enables your company to enhance productivity, reduce operational costs, and ensure compliance with regulatory standards. </p>
                     </div>
                     <div class="section-header style-2">
 

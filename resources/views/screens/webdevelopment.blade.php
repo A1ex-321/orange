@@ -36,7 +36,7 @@
 	<!-- Recent Case Section Start Here -->
     <section class="recent-case padding-tb">
 			<div class="pattern-img">
-				<img src="public/orange/assets/images/pattern/01.png" alt="pattern">
+				<img src="/public/orange/assets/images/pattern/01.png" alt="pattern">
 			</div>
 			<div class="container">
 				
@@ -44,7 +44,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-								<img src="public/orange/assets/images/dev1.png" alt="lab-rcpost" style="height:300px;width:600px">
+								<img src="/public/orange/assets/images/dev1.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Php Web Development</a></h5>
@@ -55,7 +55,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/dev2.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/dev2.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">React Js Development</a></h5>
@@ -66,7 +66,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/dev3.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/dev3.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Dot Net Web Development</a></h5>
@@ -77,7 +77,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/dev4.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/dev4.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Real Time Web Application <br>Development</a></h5>
@@ -88,7 +88,7 @@
 					<div class="lab-item-3">
 						<div class="lab-inner">
 							<div class="lab-thumb">
-                            <img src="public/orange/assets/images/dev5.png" alt="lab-rcpost" style="height:300px;width:600px">
+                            <img src="/public/orange/assets/images/dev5.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
 								<h5><a href="portfolio-single.html">Special Framework <br>Development</a></h5>

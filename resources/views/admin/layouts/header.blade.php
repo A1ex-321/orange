@@ -123,65 +123,72 @@
         <i class="bi bi-menu-button-wide"></i><span>Message</span>
       </a>
 
-    </li><!-- End Components Nav -->
-    <li class="nav-item">
+    </li>
+    <!-- End Components Nav -->
+    <!-- <li class="nav-item">
       <a href="{{route('ser-list')}}" class="nav-link {{ request()->segment(2) === 'service1' ? '' : 'collapsed' }}">
         <i class="bi bi-person"></i><span>Service</span>
       </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <a href="{{route('ceiling-list')}}" class="nav-link {{ request()->segment(2) === 'ceiling' ? '' : 'collapsed' }}">
         <i class="bi bi-journal-text"></i><span>Add ceiling</span>
       </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <a href="{{route('product-list')}}" class="nav-link {{ request()->segment(2) === 'product' ? '' : 'collapsed' }}">
         <i class="bi-align-center"></i><span>product</span>
       </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <a href="{{route('port-list')}}" class="nav-link {{ request()->segment(2) === 'port' ? '' : 'collapsed' }}">
         <i class="bi bi-layout-text-window-reverse"></i><span>Portfolio</span>
       </a>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <a href="{{route('Banner-list')}}" class="nav-link {{ request()->segment(2) === 'blog' ? '' : 'collapsed' }}">
       <i class="bi-align-center"></i><span>Blog</span>
       </a>
-    </li>
+    </li> -->
     <!-- <li class="nav-item">
       <a href="{{route('blog-list')}}" class="nav-link {{ request()->segment(2) === 'blog' ? '' : 'collapsed' }}">
         <i class="bi bi-journal-text"></i><span>Work</span>
       </a>
     </li> -->
     <!-- End Forms Nav -->
-   
-    <!-- <li class="nav-item">
+    <li class="nav-item">
+      <a href="{{url('/admin/care')}}" class="nav-link {{ request()->is('admin/care/*') ? '' : 'collapsed' }}">
+        <i class="bi bi-journal-text" aria-hidden="true"></i><span> carreer</span>
+      </a>
+    </li> 
+     <li class="nav-item">
       <a href="{{ route('blogsco-list') }}" class="nav-link {{ request()->is('admin/blogseo/*') ? '' : 'collapsed' }}">
         <i class="bi bi-layout-text-window-reverse" aria-hidden="true"></i><span> Blog</span>
       </a>
-    </li> -->
+    </li> 
     <!-- End Tables Nav -->
-     <li class="nav-item">
+     <!-- <li class="nav-item">
       <a href="{{ route('detail-list') }}" class="nav-link {{ request()->is('admin/detail/*') ? '' : 'collapsed' }}">
         <i class="bi bi-ticket-detailed-fill" aria-hidden="true"></i><span> Details</span>
       </a>
-    </li> 
+    </li>  -->
 
     <!-- <li class="nav-item">
       <a href="{{ route('social-list') }}" class="nav-link {{ request()->is('admin/social/*') ? '' : 'collapsed' }}">
         <i class="bi bi-airplane-fill" aria-hidden="true"></i><span> Social link & query</span>
       </a>
     </li> -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a href="{{ route('blog-logo') }}" class="nav-link {{ request()->is('admin/logo/*') ? '' : 'collapsed' }}">
         <i class="bi bi-bar-chart" aria-hidden="true"></i><span>Logo</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li> -->
+    
+    <!-- End Charts Nav -->
    
 
 
-   
+<!--    
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-heading">SEO Pages</li>
     @endif
@@ -191,35 +198,35 @@
       <a href="{{ route('sco-list') }}" class="nav-link {{ request()->is('admin/seo/*') ? '' : 'collapsed' }}">
         <i class="bi bi-question-circle" aria-hidden="true"></i><span>SEO link</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li>
     @endif
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-item">
       <a href="{{ route('home-list') }}" class="nav-link {{ request()->is('admin/home/*') ? '' : 'collapsed' }}">
         <i class="bi bi-person" aria-hidden="true"></i><span>Home</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li>
     @endif
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-item">
       <a href="{{ route('about-list') }}" class="nav-link {{ request()->is('admin/about/*') ? '' : 'collapsed' }}">
         <i class="fa fa-tasks" aria-hidden="true"></i><span>About As</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li>
     @endif
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-item">
       <a href="{{ route('service-list') }}" class="nav-link {{ request()->is('admin/service/*') ? '' : 'collapsed' }}">
         <i class="bi bi-bar-chart"></i><span>Service</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li>
     @endif
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-item">
       <a href="{{ route('contact-list') }}" class="nav-link {{ request()->is('admin/contact/*') ? '' : 'collapsed' }}">
         <i class="bi bi-bell"></i><span>Contact</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li>
     @endif
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-item">
@@ -233,22 +240,22 @@
       <a href="{{ route('work-list') }}" class="nav-link {{ request()->is('admin/work/*') ? '' : 'collapsed' }}">
         <i class="fa fa-tasks"></i><span>Blog</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li>
     @endif
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-item">
       <a href="{{ route('false-list') }}" class="nav-link {{ request()->is('admin/false/*') ? '' : 'collapsed' }}">
         <i class="bi bi-question-circle"></i><span>False Ceiling</span>
       </a>
-    </li><!-- End Charts Nav -->
+    </li>
     @endif
     @if(Auth::check() && Auth::user()->role === 'SuperAdmin')
     <li class="nav-item">
       <a href="{{ route('productseo-list') }}" class="nav-link {{ request()->is('admin/productseo/*') ? '' : 'collapsed' }}">
         <i class="bi bi-bar-chart"></i><span>Product</span>
       </a>
-    </li><!-- End Charts Nav -->
-    @endif
+    </li>
+    @endif -->
   </ul>
 
 </aside><!-- End Sidebar-->

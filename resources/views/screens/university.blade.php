@@ -42,7 +42,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="public/orange/assets/images/college.png" alt="mr-thumb" style="border-radius: 5%;height:500px;width:500px">
+                        <img src="/public/orange/assets/images/college.png" alt="mr-thumb" style="border-radius: 5%;height:500px;width:500px">
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">

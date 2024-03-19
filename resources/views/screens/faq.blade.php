@@ -40,7 +40,7 @@
             <div class="col-xl-6 col-12">
                 <div class="faq-right-part">
                     <div class="faq-thumb">
-                        <img src="public/orange/assets/images/faq.png" alt="vpn-gaq">
+                        <img src="/public/orange/assets/images/faq.png" alt="vpn-gaq">
                     </div>
                 </div>
             </div>

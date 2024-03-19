@@ -10,6 +10,6 @@ class franchise extends Model
     use HasFactory;
     protected $table = 'franchise';
     protected $fillable = [
-        'name','city','phone','state'
+        'name','mail','number','location','position','data','message'
     ];
 }
