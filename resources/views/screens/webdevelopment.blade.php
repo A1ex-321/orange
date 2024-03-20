@@ -47,7 +47,7 @@
 								<img src="/public/orange/assets/images/dev1.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Php Web Development</a></h5>
+								<h5><a>Php Web Development</a></h5>
 								<span>Web Development</span>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
                             <img src="/public/orange/assets/images/dev2.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">React Js Development</a></h5>
+								<h5><a>React Js Development</a></h5>
 								<span>Web Development</span>
 							</div>
 						</div>
@@ -69,7 +69,7 @@
                             <img src="/public/orange/assets/images/dev3.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Dot Net Web Development</a></h5>
+								<h5><a>Dot Net Web Development</a></h5>
 								<span>Web Development</span>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
                             <img src="/public/orange/assets/images/dev4.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Real Time Web Application <br>Development</a></h5>
+								<h5><a>Real Time Web Application <br>Development</a></h5>
 								<span>Web Development</span>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
                             <img src="/public/orange/assets/images/dev5.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Special Framework <br>Development</a></h5>
+								<h5><a>Special Framework <br>Development</a></h5>
 								<span>Web Development</span>
 							</div>
 						</div>

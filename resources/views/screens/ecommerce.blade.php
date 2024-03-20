@@ -47,7 +47,7 @@
 								<img src="/public/orange/assets/images/ecom1.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Magento Development</a></h5>
+								<h5><a>Magento Development</a></h5>
 								<span>Ecommerce</span>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
                             <img src="/public/orange/assets/images/ecom2.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">PrestaShop Development</a></h5>
+								<h5><a>PrestaShop Development</a></h5>
 								<span>Ecommerce</span>
 							</div>
 						</div>
@@ -69,7 +69,7 @@
                             <img src="/public/orange/assets/images/ecom3.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Startup E-Commerce</a></h5>
+								<h5><a>Startup E-Commerce</a></h5>
 								<span>Ecommerce</span>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
                             <img src="/public/orange/assets/images/ecom4.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Premium E Commerce</a></h5>
+								<h5><a>Premium E Commerce</a></h5>
 								<span>Ecommerce</span>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
                             <img src="/public/orange/assets/images/ecom5.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Magento Hosting</a></h5>
+								<h5><a>Magento Hosting</a></h5>
 								<span>Ecommerce</span>
 							</div>
 						</div>
@@ -102,7 +102,7 @@
                             <img src="/public/orange/assets/images/ecom6.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">PrestaShop Hosting</a></h5>
+								<h5><a>PrestaShop Hosting</a></h5>
 								<span>Ecommerce</span>
 							</div>
 						</div>

@@ -47,7 +47,7 @@
 								<img src="/public/orange/assets/images/web2.png" alt="lab-rcpost" style="height:300PX;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Affordable Web Design</a></h5>
+								<h5><a>Affordable Web Design</a></h5>
 								<span>Web Design</span>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
                             <img src="/public/orange/assets/images/web1.png" alt="lab-rcpost"style="height:300PX;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Corporate Web Design</a></h5>
+								<h5><a>Corporate Web Design</a></h5>
 								<span>Web Design</span>
 							</div>
 						</div>
@@ -69,7 +69,7 @@
                             <img src="/public/orange/assets/images/web3.png" alt="lab-rcpost"style="height:300PX;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Content Management System</a></h5>
+								<h5><a>Content Management System</a></h5>
 								<span>Web Design</span>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
                             <img src="/public/orange/assets/images/web4.png" alt="lab-rcpost"style="height:300PX;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Creative Web Design</a></h5>
+								<h5><a>Creative Web Design</a></h5>
 								<span>Web Design</span>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
                             <img src="/public/orange/assets/images/web5.png" alt="lab-rcpost"style="height:300PX;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">HTML5 Web Design</a></h5>
+								<h5><a>HTML5 Web Design</a></h5>
 								<span>Web Design</span>
 							</div>
 						</div>
@@ -102,7 +102,7 @@
                             <img src="/public/orange/assets/images/web6.png" alt="lab-rcpost"style="height:300PX;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Responsive Web Design</a></h5>
+								<h5><a>Responsive Web Design</a></h5>
 								<span>Web Design</span>
 							</div>
 						</div>
@@ -113,7 +113,7 @@
                             <img src="/public/orange/assets/images/web7.png" alt="lab-rcpost"style="height:300PX;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Website Redesigning</a></h5>
+								<h5><a>Website Redesigning</a></h5>
 								<span>Web Design</span>
 							</div>
 						</div>

@@ -163,7 +163,7 @@
     </li> 
      <li class="nav-item">
       <a href="{{ route('blogsco-list') }}" class="nav-link {{ request()->is('admin/blogseo/*') ? '' : 'collapsed' }}">
-        <i class="bi bi-layout-text-window-reverse" aria-hidden="true"></i><span> Blog</span>
+        <i class="bi bi-layout-text-window-reverse" aria-hidden="true"></i><span> Blog and Update-Blog</span>
       </a>
     </li> 
     <!-- End Tables Nav -->

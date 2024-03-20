@@ -41,6 +41,8 @@
                                         <th>Name</th>
                                         <th>Message</th>
                                         <th>Number</th>
+                                        <th>Email</th>
+
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -51,6 +53,7 @@
                                         <td>{{$value->name}}</td>
                                         <td>{{$value->msg}}</td>
                                         <td>{{$value->phone}}</td>
+                                        <td>{{$value->mail}}</td>
                                         <td>
                                             <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/brand/deletemail/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</a>
                                         </td>

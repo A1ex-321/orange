@@ -47,7 +47,7 @@
 								<img src="/public/orange/assets/images/quality1.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Quality Testing</a></h5>
+								<h5><a>Quality Testing</a></h5>
 								<span>Quality Assurence</span>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
                             <img src="/public/orange/assets/images/quality2.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Quality Audits</a></h5>
+								<h5><a>Quality Audits</a></h5>
 								<span>Quality Assurence</span>
 							</div>
 						</div>
@@ -69,7 +69,7 @@
                             <img src="/public/orange/assets/images/quality3.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Quality Control</a></h5>
+								<h5><a>Quality Control</a></h5>
 								<span>Quality Assurence</span>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
                             <img src="/public/orange/assets/images/quality4.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Root Cause Analysis</a></h5>
+								<h5><a>Root Cause Analysis</a></h5>
 								<span>Quality Assurence</span>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
                             <img src="/public/orange/assets/images/quality6.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Supplier Quality<br> Management</a></h5>
+								<h5><a>Supplier Quality<br> Management</a></h5>
 								<span>Quality Assurence</span>
 							</div>
 						</div>

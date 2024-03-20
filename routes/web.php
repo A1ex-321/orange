@@ -111,6 +111,7 @@ Route::get('/online ', [OrangeController::class, 'product63']);
 Route::get('/update ', [OrangeController::class, 'product64']);
 Route::post('/contacts', [OrangeController::class, 'store'])->name('contacts');
 Route::post('/care', [OrangeController::class, 'care'])->name('care');
+Route::get('/update1 ', [OrangeController::class, 'update']);
 
 // Route::get('/singleevent/{id}', [OrangeController::class, 'product9'])->name('singleevent');
 

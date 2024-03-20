@@ -66,6 +66,7 @@ class OrangeController1 extends Controller
         //     $images->move(public_path('images'), $filename);
         // }
         // $data->image = $filename;
+        $data->is_blog = $request->blog;
         $data->metatitle = $request->title;
         $data->metadescription = $request->description;
         $data->ogimage = $filename;
@@ -98,6 +99,7 @@ class OrangeController1 extends Controller
         $data->title = $request->title;
         $data->description = $request->description;
         $data->content = $request->content;
+        $data->is_blog = $request->blog;
         if ($request->hasFile('image')) {
             $images = $request->file('image');
 

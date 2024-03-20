@@ -671,7 +671,7 @@
                             <li><i class="icofont-tick-mark"></i>Supportive and mentorship-oriented environment</li>
 
                         </ul>
-                        <a href="career" class="lab-btn"><span>Start your Career</span></a>
+                        <a href="/career" class="lab-btn"><span>Start your Career</span></a>
                     </div>
                 </div>
             </div>
@@ -977,67 +977,41 @@
         </div>
         <div class="section-wrapper">
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="post-item">
-                        <div class="post-item-inner">
-                            <div class="post-thumb">
-                                <a href="blog"><img src="/public/orange/assets/images/computer.jpg" alt="lab-blog"></a>
-                            </div>
-                            <div class="post-content">
-                                <h4><a href="blog">How can custom software development benefit businesses?</a></h4>
-                                <div class="author-date">
-                                    <a href="blog" class="date"><i class="icofont-calendar"></i>July 12, 2023</a>
-                                    <a href="blog" class="admin"><i class="icofont-ui-user"></i>Somrat Islam</a>
-                                </div>
-                                <div class="post-footer">
-                                    <a href="blog" class="text-btn">Read More<i class="icofont-double-right"></i></a>
-                                    <a href="blog" class="comments"><i class="icofont-comment"></i><span>2</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            @foreach($getRecord->take(3) as $record)
+    <div class="col-lg-4 col-sm-6 col-12">
+        <div class="post-item">
+            <div class="post-item-inner">
+                <div class="post-thumb">
+                    <!-- Assuming $record->image contains the image URL -->
+                    <a href="{{ route('Blog', ['id' => $record->id]) }}"><img  src="{{ asset('public/images/' . $record->image) }}" alt="lab-blog"></a>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="post-item">
-                        <div class="post-item-inner">
-                            <div class="post-thumb">
-                                <a href="blog"><img src="/public/orange/assets/images/computer1.jpg" alt="lab-blog"></a>
-                            </div>
-                            <div class="post-content">
-                                <h4><a href="blog">What steps are involved in the software development life cycle?</a></h4>
-                                <div class="author-date">
-                                    <a href="blog" class="date"><i class="icofont-calendar"></i>July 12, 2023</a>
-                                    <a href="blog" class="admin"><i class="icofont-ui-user"></i>Sugan</a>
-                                </div>
-                                <div class="post-footer">
-                                    <a href="blog" class="text-btn">Read More<i class="icofont-double-right"></i></a>
-                                    <a href="blog" class="comments"><i class="icofont-comment"></i><span>2</span></a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="post-content">
+                <h4 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: 2.4em;">
+    <a href="{{ route('Blog', ['id' => $record->id]) }}" style="display: block;">{{ $record->title }}</a>
+</h4>
+                    <div class="author-date">
+                        <!-- Assuming $record->date contains the date -->
+                        <a class="date"><i class="icofont-calendar"></i>{{ $record->created_at->format('F j, Y') }}</a>
+
+                        <!-- Assuming $record->author contains the author name -->
+                        
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                    <div class="post-item">
-                        <div class="post-item-inner">
-                            <div class="post-thumb">
-                                <a href="blog"><img src="/public/orange/assets/images/computer2.jpg" alt="lab-blog"></a>
-                            </div>
-                            <div class="post-content">
-                                <h4><a href="blog">How can mobile app development to enhance their operations?</a></h4>
-                                <div class="author-date">
-                                    <a href="blog" class="date"><i class="icofont-calendar"></i>July 12, 2023</a>
-                                    <a href="blog" class="admin"><i class="icofont-ui-user"></i>Sham</a>
-                                </div>
-                                <div class="post-footer">
-                                    <a href="blog" class="text-btn">Read More<i class="icofont-double-right"></i></a>
-                                    <a href="blog" class="comments"><i class="icofont-comment"></i><span>2</span></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="post-footer">
+                        <!-- You can change the href attribute to the appropriate URL -->
+                        <a href="{{ route('Blog', ['id' => $record->id]) }}" class="text-btn">Read More<i class="icofont-double-right"></i></a>
+                    
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+@endforeach
+
+
+                
+            </div>
+<a style="float:right;" href="/blog" class="lab-btn"><span>View More</span></a>
+
         </div>
     </div>
 </section>

@@ -25,7 +25,14 @@
   font-size: 1.2em;
 }
 </style>
-
+<style>
+    .two-line-ellipsis {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>
 <section class="banner">
   <div class="banner-content">
     <h2>Blog</h2>
@@ -149,7 +156,7 @@
             <a href="{{ route('Blog', ['id' => $record->id]) }}"><img src="{{ asset('public/images/' . $record->image) }}" alt="product"></a>
         </div>
         <div class="post-content">
-            <a href="{{ route('Blog', ['id' => $record->id]) }}"><h6>{{ $record->title }}</h6></a>
+            <a href="{{ route('Blog', ['id' => $record->id]) }}"><h6 class="two-line-ellipsis">{{ $record->title }}</h6></a>
             <p>{{ $record->created_at->format('d F Y') }}</p>
         </div>
     </li>

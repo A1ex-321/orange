@@ -47,7 +47,7 @@
 								<img src="/public/orange/assets/images/digi1.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Search Engine Optimization</a></h5>
+								<h5><a>Search Engine Optimization</a></h5>
 								<span>Digital Marketing</span>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
                             <img src="/public/orange/assets/images/digi2.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Off Page SEO</a></h5>
+								<h5><a>Off Page SEO</a></h5>
 								<span>Digital Marketing</span>
 							</div>
 						</div>
@@ -69,7 +69,7 @@
                             <img src="/public/orange/assets/images/digi3.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">On Page SEO</a></h5>
+								<h5><a>On Page SEO</a></h5>
 								<span>Digital Marketing</span>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
                             <img src="/public/orange/assets/images/digi4.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Global SEO Services</a></h5>
+								<h5><a>Global SEO Services</a></h5>
 								<span>Digital Marketing</span>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
                             <img src="/public/orange/assets/images/digi5.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">E-Book Writing Services</a></h5>
+								<h5><a>E-Book Writing Services</a></h5>
 								<span>Digital Marketing</span>
 							</div>
 						</div>
@@ -102,7 +102,7 @@
                             <img src="/public/orange/assets/images/digi6.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Content Marketing</a></h5>
+								<h5><a>Content Marketing</a></h5>
 								<span>Digital Marketing</span>
 							</div>
 						</div>
@@ -113,7 +113,7 @@
                             <img src="/public/orange/assets/images/digi7.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Digital Marketing Trends For 2024</a></h5>
+								<h5><a>Digital Marketing Trends For 2024</a></h5>
 								<span>Digital Marketing</span>
 							</div>
 						</div>

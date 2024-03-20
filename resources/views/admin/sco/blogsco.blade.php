@@ -54,7 +54,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                        <div class="card card-primary">
+                            <div class="card card-primary">
                                 <div class="card-header" style="background-color:
 #6e9ee6
 ;">
@@ -66,6 +66,15 @@
 
 
                                         <div class="card-body">
+                                            <div class="form-group">
+                                                <label for="selectOption">Select Blog Category</label>
+                                                <select name="blog" class="form-control" id="selectOption" required>
+                                                    <option value="" disabled selected>Select an option</option>
+                                                    <option value="0">Blog</option>
+                                                    <option value="1">Update Blog</option>
+                                                </select>
+                                            </div>
+
                                             <div class="form-row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -113,61 +122,61 @@
 
 
             <section class="section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Enabled Blogs</h5>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Enabled Blogs</h5>
 
-                        <!-- Table with stripped rows -->
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover datatable">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Thumb Image</th>
-                                        <th>View Content</th>
-                                        <th>Edit & Delete</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php $counter = 1; @endphp
-                                    @foreach ($getRecord as $value)
-                                    <tr>
-                                        <td>{{ $counter++ }}</td>
-                                        <td>{{ $value->title }}</td>
-                                        <td>{{ $value->description }}</td>
-                                        <td><img src="{{ asset('public/images/' . $value->image) }}" alt="Thumb Image" style="max-width: 100px; max-height: 100px;"></td>
-                                        <td>
-                                            <button class="btn btn-success">
-                                                <a href="{{route('view_blogcontent', ['id' => $value->id])}}" style="color: #fff; text-decoration: none;">
-                                                    <i class="fas fa-eye"></i>  Content
-                                                </a>
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <a href="{{url('admin/blogseo/edit/'.$value->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                            <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/blogseo/delete/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                    <!-- Table with stripped rows -->
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover datatable">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Title</th>
+                                                    <th>Description</th>
+                                                    <th>Thumb Image</th>
+                                                    <th>View Content</th>
+                                                    <th>Edit & Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @php $counter = 1; @endphp
+                                                @foreach ($getRecord as $value)
+                                                <tr>
+                                                    <td>{{ $counter++ }}</td>
+                                                    <td>{{ $value->title }}</td>
+                                                    <td>{{ $value->description }}</td>
+                                                    <td><img src="{{ asset('public/images/' . $value->image) }}" alt="Thumb Image" style="max-width: 100px; max-height: 100px;"></td>
+                                                    <td>
+                                                        <button class="btn btn-success">
+                                                            <a href="{{route('view_blogcontent', ['id' => $value->id])}}" style="color: #fff; text-decoration: none;">
+                                                                <i class="fas fa-eye"></i> Content
+                                                            </a>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <a href="{{url('admin/blogseo/edit/'.$value->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                        <a onclick="return confirm('Are you sure you want to delete?')" href="{{url('admin/blogseo/delete/'.$value->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- End Table with stripped rows -->
+
+                                </div>
+                            </div>
                         </div>
-                        <!-- End Table with stripped rows -->
-
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
             <!-- Main content -->
-           
+
             <!-- /.content -->
         </div>
 

@@ -42,7 +42,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-12">
                     <div class="mr-thumb">
-                        <img src="assets/images/ecom2.png" alt="mr-thumb" style="border-radius: 5%;height:400px;width:600px">
+                        <img src="/public/orange/assets/images/ecom2.png" alt="mr-thumb" style="border-radius: 5%;height:400px;width:600px">
                     </div>
                 </div>
                 <div class="col-lg-6 col-12">
@@ -70,19 +70,21 @@
 </section>
 <!-- Marketing Range Section Start here -->
 
+@include('admin.layouts.message')
 <section class="contact-us padding-tb">
-    <div class="container" style="background-color: antiquewhite;">
+    <div class="container" style="background-color: antiquewhite; ">
         <div class="row">
 
             <div class="col-lg-12 col-md-6 col-xs-12">
                 <h1 style="text-align: center; margin-top:50px">Get In Touch</h1>
-                <form class="contact-form" action="/">
+                <form class="contact-form" action="{{ url('/contacts') }}" method="POST">
+                    @csrf
                     <input type="text" name="name" placeholder="Your Name" class="contact-input">
-                    <input type="email" name="email" placeholder="Your Email" class="contact-input">
-                    <input type="number" name="text" placeholder="Your Phone Number" class="contact-input">
-                    <input type="text" name="text" placeholder="Your Location" class="contact-input">
+                    <input type="email" name="mail" placeholder="Your Email" class="contact-input">
+                    <input type="number" name="phone" placeholder="Your Phone Number" class="contact-input">
 
-                    <textarea rows="5" class="contact-input" placeholder="Your Messages"></textarea>
+
+                    <textarea rows="5" class="contact-input" name="msg" placeholder="Your Messages"></textarea>
                     <input type="submit" name="submit" value="Send  Request" class="lab-btn" style="margin-bottom:50px">
                 </form>
             </div>

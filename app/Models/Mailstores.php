@@ -11,6 +11,6 @@ class Mailstores extends Model
     protected $table = 'mailstores';
 
     protected $fillable = [
-        'name','phone','msg'
+        'name','phone','msg','mail'
     ];
 }

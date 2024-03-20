@@ -47,7 +47,7 @@
 								<img src="/public/orange/assets/images/mob1.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html"> Android App Development</a></h5>
+								<h5><a> Android App Development</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
                             <img src="/public/orange/assets/images/mob2.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">IOS App Development</a></h5>
+								<h5><a>IOS App Development</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>
@@ -69,7 +69,7 @@
                             <img src="/public/orange/assets/images/mob3.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Hybrid App Development</a></h5>
+								<h5><a>Hybrid App Development</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
                             <img src="/public/orange/assets/images/mob4.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Angular JS App Development</a></h5>
+								<h5><a>Angular JS App Development</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
                             <img src="/public/orange/assets/images/mob5.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">React Native App Development</a></h5>
+								<h5><a>React Native App Development</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>
@@ -102,7 +102,7 @@
                             <img src="/public/orange/assets/images/mob6.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Location-Based Mobile App <br>Development</a></h5>
+								<h5><a>Location-Based Mobile App <br>Development</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>
@@ -113,7 +113,7 @@
                             <img src="/public/orange/assets/images/mob7.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Nutrition / Fitness App</a></h5>
+								<h5><a>Nutrition / Fitness App</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>
@@ -124,7 +124,7 @@
                             <img src="/public/orange/assets/images/mob8.png" alt="lab-rcpost" style="height:300px;width:600px">
 							</div>
 							<div class="lab-content">
-								<h5><a href="portfolio-single.html">Flutter App Development</a></h5>
+								<h5><a>Flutter App Development</a></h5>
 								<span>Mobile App Development</span>
 							</div>
 						</div>

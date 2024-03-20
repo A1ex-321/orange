@@ -80,6 +80,13 @@
                                     <li><a href="/mobapp">Mobile App Development</a></li>
                                     <li><a href="/digitalmarketing">Digital Marketing</a></li>
                                     <li><a href="/quality">Quality Assurance</a></li>
+                                    <li>
+    <button style="width:50%;height:60px;"type="button" class="btn btn-success">
+        <i class="fas fa-check-circle"></i> Updates
+    </button>
+</li>
+
+
                                 </ul>
                             </div>
                         </div>

@@ -13,7 +13,8 @@ class OrangeController extends Controller
 {
    public function product()
    {
-      return view('screens.home');
+      $data['getRecord'] = blogsco::where('is_blog', 0)->get();
+      return view('screens.home',$data);
    }
    public function product1()
    {
@@ -26,8 +27,8 @@ class OrangeController extends Controller
    }
    public function product4()
    {
-      $data['getRecord'] = blogsco::all();
-      $data['getRecord1'] = blogsco::all();
+      $data['getRecord'] = blogsco::where('is_blog', 0)->get();
+      $data['getRecord1'] = blogsco::where('is_blog', 0)->get();
       return view('screens.blog', $data);
    }
 
@@ -46,7 +47,7 @@ class OrangeController extends Controller
    public function product9(Request $request,$id)
    {
        $data['getRecord'] = blogsco::find($id);
-       $data['getRecord1'] = blogsco::all();
+       $data['getRecord1'] = blogsco::where('is_blog', 0)->get();
 
       return view('screens.blogdetail',$data);
    }
@@ -290,12 +291,14 @@ class OrangeController extends Controller
       $name = $request->input('name');
       $phone = $request->input('phone');
       $message = $request->input('msg');
+      $mail = $request->input('mail');
 
       // Create a new record in the database
       Mailstores::create([
          'name' => $name,
          'phone' => $phone,
          'msg' => $message,
+         'mail' => $mail,
       ]);
 
       // Redirect or return a response
@@ -340,5 +343,8 @@ class OrangeController extends Controller
        // Redirect or return a response
        return redirect('/contact')->with('success', 'Message sent successfully');
    }
-   
+   public function update()
+   {
+      return view('screens.update');
+   }
 }

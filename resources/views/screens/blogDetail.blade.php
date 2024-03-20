@@ -1,6 +1,13 @@
 @extends('partials.app')
 @section('content')
-
+<style>
+    .two-line-ellipsis {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>
 <style>
     .banner {
         background-color: #E9F2FE;
@@ -98,7 +105,7 @@
                                     </div>
                                     <div class="post-content">
                                         <a href="{{ route('Blog', ['id' => $record->id]) }}">
-                                            <h6>{{ $record->title }}</h6>
+                                        <h6 class="two-line-ellipsis">{{ $record->title }}</h6>
                                         </a>
                                         <p>{{ $record->created_at->format('d F Y') }}</p>
                                     </div>

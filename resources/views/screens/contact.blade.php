@@ -87,7 +87,7 @@
                         @csrf
                             <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
                             <input type="number" name="phone" placeholder="Your phone Number" class="contact-input" required>
-                        
+                            <input type="email" name="mail" placeholder="Your Email " class="contact-input" required>
                             <textarea rows="5" name="msg"class="contact-input" placeholder="Your Messages" required></textarea>
                             <input type="submit" value="Send Message" class="lab-btn">
                         </form>
