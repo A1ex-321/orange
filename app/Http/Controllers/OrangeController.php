@@ -345,6 +345,14 @@ class OrangeController extends Controller
    }
    public function update()
    {
-      return view('screens.update');
+      $data['getRecord1'] = blogsco::where('is_blog', 1)->get();
+      return view('screens.update',$data);
+   }
+   public function up_date(Request $request,$id)
+   {
+       $data['getRecord'] = blogsco::find($id);
+       $data['getRecord1'] = blogsco::where('is_blog', 1)->get();
+
+      return view('screens.updateDetails',$data);
    }
 }

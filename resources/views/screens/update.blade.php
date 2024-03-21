@@ -25,10 +25,17 @@
   font-size: 1.2em;
 }
 </style>
-
+<style>
+    .two-line-ellipsis {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>
 <section class="banner">
   <div class="banner-content">
-    <h2>update</h2>
+    <h2>Updates</h2>
    
   </div>
 </section>
@@ -41,27 +48,57 @@
                         <article>
                             <div class="section-wrapper">
                                 <div class="row justify-content-center">
-                                    <div class="col-12">
-                                        <div class="post-item">
-                                            <div class="post-item-inner">
-                                                <div class="post-thumb">
-                                                    <a href="blogDetail"><img src="/public/orange/assets/images/blog5.png" alt="lab-blog"></a>
-                                                </div>
-                                                <div class="post-content">
-                                                    <h4><a href="blogDetail">What are the benefits of using version control in software development?</a></h4>
-                                                    <div class="author-date">
-                                                        <a href="#" class="date"><i class="icofont-calendar"></i>July 12, 2023</a>
-                                                        <a href="#" class="admin"><i class="icofont-ui-user"></i>Somrat Islam</a>
-                                                        <a href="#" class="comments"><i class="fa fa-comments"></i>24 Comments</a>
-                                                    </div>
-                                                    <p>CVersion control systems like Git offer numerous benefits, including collaboration facilitation, code organization, tracking changes, and enabling rollbacks to previous versions. They enhance team productivity, streamline development workflows, and ensure code integrity and reliability.</p>
-                                                    <a href="blogDetail" class="lab-btn"><span>Read More</span></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
+                                @foreach($getRecord1 as $record)
+    <div class="col-12">
+        <div class="post-item">
+            <div class="post-item-inner">
+                <div class="post-thumb">
+                <a href="{{ route('updates', ['id' => $record->id]) }}"><img src="{{ asset('/public/images/' . $record->image) }}" alt="lab-blog"></a>
+
+                </div>
+                <div class="post-content">
+                    <h4><a href="{{ route('updates', ['id' => $record->id]) }}">{{ $record->title }}</a></h4>
+                    <div class="author-date">
+                        <a  class="date"><i class="icofont-calendar"></i>{{ $record->created_at->format('F d, Y') }}</a>
+                        
+                        
+                    </div>
+                    <p>{{ $record->description }}</p>
+                    <a href="{{ route('updates', ['id' => $record->id]) }}" class="lab-btn"><span>Read More</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
+
                                    
+                                    <!-- <div class="col-12">
+                                        <div class="paginations">
+                                            <ul class="d-flex flex-wrap justify-content-center">
+                                                <li>
+                                                    <a href="#">1</a>
+                                                </li>
+                                                <li class="d-none d-sm-block">
+                                                    <a href="#">2</a>
+                                                </li>
+                                                <li class="d-none d-sm-block">
+                                                    <a href="#" class="active">3</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dot">...</a>
+                                                </li>
+                                                <li class="d-none d-sm-block">
+                                                    <a href="#">9</a>
+                                                </li>
+                                                <li class="d-none d-sm-block">
+                                                    <a href="#">10</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">11</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </article>
@@ -69,27 +106,81 @@
                     
                     <div class="col-lg-4 col-md-7 col-12">
                         <aside>
-                    
+                            <!-- <div class="widget widget-search">
+                                <form action="/" class="search-wrapper">
+                                    <input type="text" name="s" placeholder="Search...">
+                                    <button type="submit"><i class="icofont-search-2"></i></button>
+                                </form>
+                            </div> -->
 
-                       
+                            <!-- <div class="widget widget-category">
+                                <div class="widget-header">
+                                    <h5>Post Categorys</h5>
+                                </div>
+                                <ul class="widget-wrapper">
+                                    <li>
+                                        <a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Technical Tutorials</span><span>06</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Best Practices & Tips</span><span>11</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex active flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Industry Trends & Insights</span><span>07</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Case Studies & Success Stories</span><span>09</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Interviews & Profiles</span><span>50</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Product Updates & Announcements</span><span>20</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Coding Challenges & Exercise</span><span>93</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>Community & Events</span><span>27</span></a>
+                                    </li>
+                                </ul>
+                            </div> -->
+        
                             <div class="widget widget-post">
                                 <div class="widget-header">
                                     <h5>Recent Updates</h5>
                                 </div>
                                 <ul class="widget-wrapper">
-                                    <li class="d-flex flex-wrap justify-content-between">
-                                        <div class="post-thumb">
-                                            <a href="#"><img src="/public/orange/assets/images/blog1.png" alt="product"></a>
-                                        </div>
-                                        <div class="post-content">
-                                            <a href="#"><h6>What role does automated testing play in the software development process?</h6></a>
-                                            <p>04 February 2021</p>
-                                        </div>
-                                    </li>
+                                @foreach($getRecord1 as $record)
+    <li class="d-flex flex-wrap justify-content-between">
+        <div class="post-thumb">
+            <a href="{{ route('updates', ['id' => $record->id]) }}"><img src="{{ asset('public/images/' . $record->image) }}" alt="product"></a>
+        </div>
+        <div class="post-content">
+            <a href="{{ route('updates', ['id' => $record->id]) }}"><h6 class="two-line-ellipsis">{{ $record->title }}</h6></a>
+            <p>{{ $record->created_at->format('d F Y') }}</p>
+        </div>
+    </li>
+@endforeach
+
+
+                                    
                                 </ul>
                             </div>
         
-                            
+                            <!-- <div class="widget widget-archive">
+                                <div class="widget-header">
+                                    <h5>Archives</h5>
+                                </div>
+                                <ul class="widget-wrapper">
+                                    <li><a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>January</span><span>2021</span></a> </li>
+                                    <li><a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>February</span><span>2018</span></a></li>
+                                    <li><a href="#" class="d-flex active flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>March</span><span>2017</span></a></li>
+                                    <li><a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>April</span><span>2016</span></a></li>
+                                    <li><a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>June</span><span>2015</span></a></li>
+                                    <li><a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>July</span><span>2014</span></a></li>
+                                    <li><a href="#" class="d-flex flex-wrap justify-content-between"><span><i class="icofont-double-right"></i>August</span><span>2013</span></a></li>
+                                </ul>
+                            </div> -->
 
                             <div class="widget widget-instagram">
                                 <div class="widget-header">

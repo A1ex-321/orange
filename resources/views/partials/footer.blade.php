@@ -81,9 +81,9 @@
                                     <li><a href="/digitalmarketing">Digital Marketing</a></li>
                                     <li><a href="/quality">Quality Assurance</a></li>
                                     <li>
-    <button style="width:50%;height:60px;"type="button" class="btn btn-success">
-        <i class="fas fa-check-circle"></i> Updates
-    </button>
+                                    <button id="redirectButton" style="width:50%;height:60px;" type="button" class="btn btn-success">
+    <i class="fas fa-check-circle"></i> Updates
+</button>
 </li>
 
 
@@ -147,3 +147,13 @@
                     </div>
                 </div>
             </div>
+            <script>
+    // Get the button element
+    var button = document.getElementById('redirectButton');
+
+    // Add click event listener
+    button.addEventListener('click', function() {
+        // Redirect to the Laravel route
+        window.location.href = "{{ route('update1') }}";
+    });
+</script>
