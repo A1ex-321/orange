@@ -111,7 +111,7 @@
                                     <div class="team-item-inner">
 
                                         <div class="team-content">
-                                            <a href="team-single.html">
+                                            <a>
                                                 <h5 class="member-name">Software Engineer(Backend Development) </h5>
                                             </a>
 
@@ -131,7 +131,7 @@
 
                                         </div>
                                         <div class="team-content">
-                                            <a href="team-single.html">
+                                            <a>
                                                 <h5 class="member-name">Full Stack Developer</h5>
                                             </a>
 
@@ -151,7 +151,7 @@
 
                                         </div>
                                         <div class="team-content">
-                                            <a href="team-single.html">
+                                            <a>
                                                 <h5 class="member-name">UI/UX Designer</h5>
                                             </a>
 
@@ -171,7 +171,7 @@
 
                                         </div>
                                         <div class="team-content">
-                                            <a href="team-single.html">
+                                            <a>
                                                 <h5 class="member-name">Quality Assurance Engineer</h5>
                                             </a>
 
@@ -191,7 +191,7 @@
 
                                         </div>
                                         <div class="team-content">
-                                            <a href="team-single.html">
+                                            <a>
                                                 <h5 class="member-name">DevOps Engineer</h5>
                                             </a>
                                             <span class="member-dagi">Founder & CEO</span>
@@ -206,7 +206,7 @@
                                     <div class="team-item-inner">
 
                                         <div class="team-content">
-                                            <a href="team-single.html">
+                                            <a>
                                                 <h5 class="member-name">Software Architect</h5>
                                             </a>
 

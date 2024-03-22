@@ -489,15 +489,12 @@ class ScoController extends Controller
     }
     public function blogsco_update($id, Request $request)
     {
-
-      
         $data = blogsco::find($id);
         $data->title = $request->title;
         $data->description = $request->description;
         $data->content = $request->content;
         if ($request->hasFile('image')) {
             $images = $request->file('image');
-
             $filename = time() . '_' . str_replace(' ', '_', $images->getClientOriginalName());
             $images->move(public_path('images'), $filename);
             $data->image = $filename;

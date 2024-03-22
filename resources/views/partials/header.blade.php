@@ -38,7 +38,7 @@
 <div class="mobile-menu marketing-bg">
   <nav class="mobile-header">
     <div class="header-logo" style="display: flex;">
-      <a href="home"><img src="/public/orange/assets/images/logo1.png" alt="logo"></a>
+      <a href="/"><img src="/public/orange/assets/images/logo1.png" alt="logo"></a>
       <h5 style="margin-top: 5px;padding:10px">OrangeMegaSoftware</h5>
     </div>
     <div class="header-bar">
@@ -51,7 +51,7 @@
     <div class="mobile-menu-area">
       <div class="mobile-menu-area-inner">
         <ul>
-          <li><a href="/home">Home</a>
+          <li><a href="/">Home</a>
 
           </li>
           <li class="nav-item">
@@ -60,7 +60,7 @@
           <li><a href="/service">Services</a>
             <ul>
 
-              <li><a href="webdesign">Web Design</a>
+              <li><a href="/webdesign">Web Design</a>
                 <ul>
                   <li><a href="/affordable">Affordable Web Design</a></li>
                   <li><a href="/corporate">Corporate Web Design</a></li>
@@ -147,7 +147,7 @@
 
           <li><a href="/product">Products</a>
             <ul>
-              <li><a href="productHospital">Hospital Management System </a></li>
+              <li><a href="/productHospital">Hospital Management System </a></li>
               <li><a href="/school">School Management System </a></li>
               <li><a href="/restaurant">Restaurant Food Delivery App </a></li>
               <li><a href="/car">Car Booking App Uber Ola <br>Clone </a></li>
@@ -186,7 +186,7 @@
 <header class="sticky-element" style="position: sticky; top:-1%;z-index:9999">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="logo" style="display: flex;">
-      <a href="index-vpn.html"><img src="/public/orange/assets/images/logo1.png" alt="logo"></a>
+      <a href="/"><img src="/public/orange/assets/images/logo1.png" alt="logo"></a>
       <h5 style="margin-top: 5px;padding:10px">Orange<span style="color: #E84E0D;">Mega</span>Software</h5>
     </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 50px;">
