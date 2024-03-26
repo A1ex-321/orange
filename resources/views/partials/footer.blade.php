@@ -31,25 +31,23 @@
                                 <ul>
                                     <li>
                                         <p><span>Phone:</span>+91-8148160694 \+91-7845158684</p>
-
-                                     
-
                                     </li>
-                                   
                                 </ul>
                             </div>
                             <div class="" style="position: fixed; left: 0px; bottom: 7%; z-index: 999;">
-                            <div class="text-center">
-                                <div style="display: flex; flex-direction: column;  ">
-                                    <a href="whatsapp://send?phone=7845158684" target="_blank"  >
-                                    <img src="/public/orange/assets/images/whatsapp2.png" alt="mr-thumb" style="height: 60px; width: 80px;">
-                                    </a>
-                                    <a href="tel:7845158684" >
-                                    <img src="/public/orange/assets/images/call.png"  alt="Image Not Found" style="height: 45px; width: 45px;">
-                                    </a>
+                                <div class="text-center">
+                                    <div style="display: flex; flex-direction: column;  ">
+                                        <a href="whatsapp://send?phone=+918148160694" target="_blank">
+                                            <img src="/public/orange/assets/images/whatsapp2.png" alt="mr-thumb" style="height: 60px; width: 80px;">
+                                        </a>
+                                        <a href="tel:+918148160694">
+    <img src="/public/orange/assets/images/call.png" alt="Call" style="height: 45px; width: 45px;">
+</a>
+
+
+                                    </div>
                                 </div>
                             </div>
-                          </div>
 
 
                             <div class="content">
@@ -81,10 +79,10 @@
                                     <li><a href="/digitalmarketing">Digital Marketing</a></li>
                                     <li><a href="/quality">Quality Assurance</a></li>
                                     <li>
-                                    <button id="redirectButton" style="width:50%;height:60px;" type="button" class="btn btn-success">
+                                        <!-- <button id="redirectButton" style="width:50%;height:60px;" type="button" class="btn btn-success">
     <i class="fas fa-check-circle"></i> Updates
 </button>
-</li>
+</li> -->
 
 
                                 </ul>
@@ -124,36 +122,31 @@
                                 <h6>Quick links</h6>
                             </div>
                             <div class="content">
-                                <ul>
+                                <ul> 
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/about">About</a></li>                                  
+                                    <li><a href="/about">About</a></li>
                                     <li><a href="/portfolio">Portfolio</a></li>
                                     <li><a href="/blog">Blog</a></li>
                                     <li><a href="/career">Career</a></li>
                                     <li><a href="/faq">FAQ</a></li>
                                     <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/update1">Updates</a></li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div></div></div></div>
-
-
-            <div class="footer-bottom style-2" >
-                <div class="container">
-                    <div class="section-wrapper">
-                        <p>&copy; 2024 All Rights Reserved. <a href="#">Orange<span style="color:#E84E0D;">Mega</span>Software</a></p>
-                    </div>
-                </div>
             </div>
-            <script>
-    // Get the button element
-    var button = document.getElementById('redirectButton');
+        </div>
+    </div>
+</div>
 
-    // Add click event listener
-    button.addEventListener('click', function() {
-        // Redirect to the Laravel route
-        window.location.href = "{{ route('update1') }}";
-    });
-</script>
+
+<div class="footer-bottom style-2">
+    <div class="container">
+        <div class="section-wrapper">
+            <p>&copy; 2024 All Rights Reserved. <a href="#">Orange<span style="color:#E84E0D;">Mega</span>Software</a></p>
+        </div>
+    </div>
+</div>

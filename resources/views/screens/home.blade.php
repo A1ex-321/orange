@@ -51,6 +51,27 @@
         border: 1px solid #ccc;
         border-radius: 5px;
     }
+
+    @media screen and (max-width: 768px) {
+        .header-btn {
+            margin-left: 5%;
+            /* Adjust as needed for smaller screens */
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .header-btn {
+            margin-left: 5%;
+            /* Adjust as needed for smaller screens */
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .header-btn {
+            margin-left: 5%;
+            /* Adjust as needed for smaller screens */
+        }
+    }
 </style>
 
 
@@ -144,9 +165,10 @@
         </div>
 
     </div>
-    <div class="header-btn" style="margin-left: 600px;">
+    <div class="header-btn" style="margin-left: 10%;"><!-- Adjust the percentage as needed -->
         <a href="about" class="lab-btn"><span>View More</span></a>
     </div>
+
 </section>
 <!-- Marketing Range Section Start here -->
 
@@ -216,9 +238,10 @@
 
     </div>
     <!-- Add more items here if needed -->
-    <div class="header-btn" style="margin-left: 600px;">
+    <div class="header-btn" style="margin-left: 10%;"><!-- Adjust the percentage as needed -->
         <a href="webdesign" class="lab-btn"><span>All Services</span></a>
     </div>
+
     </div>
 
 </section>
@@ -380,12 +403,6 @@
     </div>
 </section>
 <!-- Marketing Range Section Start here -->
-
-
-
-
-
-
 <!-- Service Section Start Here -->
 <section class="service-section style-4 padding-tb" style="background-color: #DFFDFF;">
     <div class="container">
@@ -462,12 +479,9 @@
             </div>
         </div>
     </div>
-   
+
 </section>
 <!-- Service Section Ending Here -->
-
-
-
 <!-- faq section start here -->
 <section class="faq-section padding-tb">
     <div class="container">
@@ -572,9 +586,10 @@
             </div>
         </div>
     </div>
-    <div class="header-btn" style="margin-left: 600px;">
+    <div class="header-btn" style="margin-left: 10%;">
         <a href="faq" class="lab-btn"><span>View More</span></a>
     </div>
+
 </section>
 <!-- faq section ending here -->
 <!-- testimonial section start here -->
@@ -977,40 +992,40 @@
         </div>
         <div class="section-wrapper">
             <div class="row justify-content-center">
-            @foreach($getRecord->take(3) as $record)
-    <div class="col-lg-4 col-sm-6 col-12">
-        <div class="post-item">
-            <div class="post-item-inner">
-                <div class="post-thumb">
-                    <!-- Assuming $record->image contains the image URL -->
-                    <a href="{{ route('Blog', ['id' => $record->id]) }}"><img  src="{{ asset('public/images/' . $record->image) }}" alt="lab-blog"></a>
-                </div>
-                <div class="post-content">
-                <h4 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: 2.4em;">
-    <a href="{{ route('Blog', ['id' => $record->id]) }}" style="display: block;">{{ $record->title }}</a>
-</h4>
-                    <div class="author-date">
-                        <!-- Assuming $record->date contains the date -->
-                        <a class="date"><i class="icofont-calendar"></i>{{ $record->created_at->format('F j, Y') }}</a>
+                @foreach($getRecord->take(3) as $record)
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="post-item">
+                        <div class="post-item-inner">
+                            <div class="post-thumb">
+                                <!-- Assuming $record->image contains the image URL -->
+                                <a href="{{ route('Blog', ['id' => $record->id]) }}"><img src="{{ asset('public/images/' . $record->image) }}" alt="lab-blog"></a>
+                            </div>
+                            <div class="post-content">
+                                <h4 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-height: 2.4em;">
+                                    <a href="{{ route('Blog', ['id' => $record->id]) }}" style="display: block;">{{ $record->title }}</a>
+                                </h4>
+                                <div class="author-date">
+                                    <!-- Assuming $record->date contains the date -->
+                                    <a class="date"><i class="icofont-calendar"></i>{{ $record->created_at->format('F j, Y') }}</a>
 
-                        <!-- Assuming $record->author contains the author name -->
-                        
+                                    <!-- Assuming $record->author contains the author name -->
+
+                                </div>
+                                <div class="post-footer">
+                                    <!-- You can change the href attribute to the appropriate URL -->
+                                    <a href="{{ route('Blog', ['id' => $record->id]) }}" class="text-btn">Read More<i class="icofont-double-right"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="post-footer">
-                        <!-- You can change the href attribute to the appropriate URL -->
-                        <a href="{{ route('Blog', ['id' => $record->id]) }}" class="text-btn">Read More<i class="icofont-double-right"></i></a>
-                    
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-@endforeach
+                @endforeach
 
 
-                
+
             </div>
-<a style="float:right;" href="/blog" class="lab-btn"><span>View More</span></a>
+            <a style="float:right;" href="/blog" class="lab-btn"><span>View More</span></a>
 
         </div>
     </div>
