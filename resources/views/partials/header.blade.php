@@ -27,7 +27,10 @@
       display: none;
     }
   }
-  
+    .banner
+  {
+    margin-top: 72px;
+  }
 </style>
 
 
@@ -38,7 +41,7 @@
 <div class="mobile-menu marketing-bg">
   <nav class="mobile-header">
     <div class="header-logo" style="display: flex;">
-      <a href="/"><img src="/public/orange/assets/images/logo1.png" alt="logo"></a>
+      <a href="/"><img src="/public/orange/assets/images/lo.png" alt="logo"></a>
       <h5 style="margin-top: 5px;padding:10px">OrangeMegaSoftware</h5>
     </div>
     <div class="header-bar">
@@ -186,7 +189,7 @@
 <header class="sticky-element" style="position: sticky; top:-1%;z-index:9999">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="logo" style="display: flex;">
-      <a href="/"><img src="/public/orange/assets/images/logo1.png" alt="logo"></a>
+      <a href="/"><img src="/public/orange/assets/images/lo.png" alt="logo"></a>
       <h5 style="margin-top: 5px;padding:10px">Orange<span style="color: #E84E0D;">Mega</span>Software</h5>
     </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 50px;">

@@ -52,6 +52,18 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
                         <ul class="contact-area">
+                             <li class="contact-item">
+                            <div class="contact-icon">
+                               <img src="/public/orange/assets/images/location.png" alt="contact">
+                            </div>
+
+                            <div class="content">
+                                <h6>Our Location</h6>
+                                #249,1st floor,2nd St, TNHB Colony,<br> Tamil Nadu 629165
+                                Periyar Nagr West,
+                                Korattur,Chennai-600080</p>
+                            </div>
+                        </li>
                             <li class="contact-item">
                                 <div class="contact-icon">
                                     <img src="/public/orange/assets/images/location.png" alt="contact">
@@ -100,7 +112,8 @@
         <!-- G-Map Section Start Here -->
         <div class="gmaps-section">
             <div class="map-area">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7895.9723124106085!2d77.22020469134735!3d8.304173666924013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGround%20Floor%2C%20Clover%20Plaza%2C%20Market%20Road%2C%20Marthandam%2C%20map%5C!5e0!3m2!1sen!2sin!4v1709635588763!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7895.9723124106085!2d77.22020469134735!3d8.304173666924013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGround%20Floor%2C%20Clover%20Plaza%2C%20Market%20Road%2C%20Marthandam%2C%20map%5C!5e0!3m2!1sen!2sin!4v1709635588763!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.931068928148!2d80.18287920999748!3d13.10355328717077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526332270fc4ff%3A0x19b14671c6dbe5cd!2sRankraze!5e0!3m2!1sen!2sin!4v1715322113551!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <!-- G-Map Section Ending Here -->

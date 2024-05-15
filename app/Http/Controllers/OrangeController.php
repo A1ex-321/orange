@@ -20,7 +20,26 @@ class OrangeController extends Controller
    {
       return view('screens.about');
    }
-
+  public function product613()
+       {
+        return view('screens.term');
+       }
+        public function product6131()
+       {
+        return view('screens.condition');
+       }
+          public function product61311()
+       {
+        return view('screens.disclaimer');
+       }
+          public function refund()
+       {
+        return view('screens.refind');
+       }
+           public function gallery()
+       {
+        return view('screens.gallery');
+       }
    public function product3()
    {
       return view('screens.portfolio');
@@ -49,7 +68,7 @@ class OrangeController extends Controller
        $data['getRecord'] = blogsco::find($id);
        $data['getRecord1'] = blogsco::where('is_blog', 0)->get();
 
-      return view('screens.blogdetail',$data);
+      return view('screens.blogDetail',$data);
    }
 //    public function singleevent(Request $request,$id){
 //       $data['getRecord'] = blogsco::find($id);

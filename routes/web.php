@@ -46,6 +46,11 @@ use App\Http\Controllers\SitemapController;
 */
 Route::get('/', [OrangeController::class, 'product']);
 Route::get('/about', [OrangeController::class, 'product1']);
+Route::get('/term', [OrangeController::class, 'product613']);
+Route::get('/condition', [OrangeController::class, 'product6131']);
+Route::get('/disclaimer', [OrangeController::class, 'product61311']);
+Route::get('/refund', [OrangeController::class, 'refund']);
+Route::get('/gallery', [OrangeController::class, 'gallery']);
 
 Route::get('/portfolio', [OrangeController::class, 'product3']);
 Route::get('/blog', [OrangeController::class, 'product4']);
