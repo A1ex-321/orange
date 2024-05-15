@@ -2,6 +2,7 @@
 <html lang="en">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="public/orange/assets/images/logo1.png">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 <link rel="stylesheet" href="/public/orange/assets/css/animate.css">
 <link rel="stylesheet" href="/public/orange/assets/css/bootstrap.min.css">

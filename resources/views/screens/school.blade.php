@@ -25,6 +25,33 @@
     .banner p {
         font-size: 1.2em;
     }
+
+
+    /* Center align the button */
+.lab-btn {
+    display: block;
+    text-align: center;
+}
+
+/* Style the button */
+.lab-btn span {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Adjust button styles for mobile */
+@media (max-width: 768px) {
+    .lab-btn span {
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
 </style>
 
 <section class="banner">
@@ -61,7 +88,7 @@
                         <h2>Benefits and Impact</h2>
                         <p>Implemented by numerous educational institutions, our School Management System has demonstrated tangible benefits such as increased administrative efficiency, improved communication between stakeholders, enhanced student engagement, and better resource utilization. By leveraging cutting-edge technology, our system drives positive outcomes and fosters a conducive learning environment for students while simplifying administrative tasks for staff and administrators. </p>
                     </div>
-
+                    <a href="contact" class="lab-btn"><span>pay Rs1000</span></a>
                 </div>
             </div>
         </div>

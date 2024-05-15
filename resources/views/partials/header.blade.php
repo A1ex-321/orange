@@ -27,7 +27,10 @@
       display: none;
     }
   }
-  
+  .banner
+  {
+    margin-top: 72px;
+  }
 </style>
 
 
